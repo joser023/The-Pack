@@ -1,9 +1,15 @@
 ﻿# The script of the game goes in this file.
 
 # Declare Character variables here so it is easier to call them when making the dialogue
+#You can use capital or lowerscase letters and numbers. No spaces though.
 # The color part changes the text color of that characters specifically so change it to what you like
+
+#Minor Characters
 define n = Character("Narrator")
 define t = Character("Tree")
+define p = Character("Pixies")
+
+#The Main cast of characters
 define b = Character("Bear", color="#e0c7ff") # Light purple
 define r = Character("Racoon", color="#6e7b8b") # Gray
 define tl = Character("Turtle", color="#6dc066") # Green
@@ -44,13 +50,15 @@ label start:
     "How does that apply in the case of living in a forest teeming with critters, magical entities, and humans who all come with separate goals."
     
     menu: 
+    #These if statements are using the variable Branch variables to confirm whether the player has completed this branch or not.
+    #If they have, the game will not allow them to pick that route again.
+    #That way there is no risk of the player repeating the same route over and over again.    
 
-        
-        "Follow the Raccoon":
+        "Follow the Raccoon" if RacoonBranch is False:
             jump Choose_Raccoon
-        "Follow the Bear":
+        "Follow the Bear" if BearBranch is False:
             jump Choose_Bear
-        "Follow the Dragonfly":
+        "Follow the Dragonfly" if DragonflyBranch is False:
             jump Choose_Dragonfly
 
 
