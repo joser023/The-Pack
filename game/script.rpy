@@ -40,8 +40,18 @@ default DragonflyBranch = False
 #--------------------------
 
 label start:
-"In order to understand the inner workings of a machine, it is said one must become one with the machine. What does it mean to become one?"
-"How does that apply in the case of living in a forest teeming with critters, magical entities, and humans who all come with separate goals."
+    "…"
+    "\“Who are you?\”"
+    "A question that rings throughout your fleeting thoughts."
+    "You were here. You were just here. And now…"
+    "…"
+    "You were doing something. What were you doing? Now you…"
+    "Can't…remember…"
+    "You…what kind of……beast…"
+    "…the Lake…get to…"
+    "…all that's…left…"
+    "…your Pack…"
+
     menu: 
         "Follow the Raccoon":
             jump Choose_Raccoon
@@ -59,10 +69,10 @@ label start:
 #------------------------------------------
 #-Start Raccoon Branch
 #------------------------------------------
-label Choose_Raccoon
+label Choose_Raccoon:
 
-"The Raccoon, a funny little fella who has a funny face"
-"Do not be fooled however, the Raccoon is agile and acrobatic. Furthermore it carries the innate trait of {i} magic pocket{/i}"
+    "The Raccoon, a funny little fella who has a funny face"
+    "Do not be fooled however, the Raccoon is agile and acrobatic. Furthermore it carries the innate trait of {i} magic pocket{/i}"
 
     menu: 
         "Choose the Raccoon"
@@ -72,7 +82,7 @@ label Choose_Raccoon
         "No?":
             jump start
 
-label Begin_Raccoon
+label Begin_Raccoon:
 #------------------------------------------
 #-End Raccoon Branch
 #------------------------------------------
@@ -81,9 +91,9 @@ label Begin_Raccoon
 #------------------------------------------
 #-Start Bear Branch
 #------------------------------------------
-label Choose_Bear
-"The Bear, a stoic grumpy creature."
-"It's strength dominates the forest and its intuition gives its innate {i} path sensing{/i} abilities. "
+label Choose_Bear:
+    "The Bear, a stoic grumpy creature."
+    "It's strength dominates the forest and its intuition gives its innate {i} path sensing{/i} abilities. "
 
     menu: 
         "Choose the Bear"
@@ -93,7 +103,7 @@ label Choose_Bear
         "No?":
             jump start
 
-label Begin_Bear
+label Begin_Bear:
 
 #------------------------------------------
 #-End Bear Branch
@@ -103,10 +113,10 @@ label Begin_Bear
 #------------------------------------------
 #-Start Dragonfly Branch
 #------------------------------------------
-label Choose_Dragonfly
+label Choose_Dragonfly:
 
-"The Dragonfly, the aerial assassin of the insect kingdom"
-"The Dragonfly sees many things, its eyes can detect the motions of the unknown. Many call it {i} Future sight{/i}. "
+    "The Dragonfly, the aerial assassin of the insect kingdom"
+    "The Dragonfly sees many things, its eyes can detect the motions of the unknown. Many call it {i} Future sight]{/i}. "
 
     menu: 
         "Choose the Dragonfly"
@@ -116,7 +126,7 @@ label Choose_Dragonfly
         "No?":
             jump start
 
-label Begin_Dragonfly
+label Begin_Dragonfly:
 #------------------------------------------
 #- End Dragonfly Branch
 #------------------------------------------
