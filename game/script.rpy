@@ -43,6 +43,8 @@ label start:
 "In order to understand the inner workings of a machine, it is said one must become one with the machine. What does it mean to become one?"
 "How does that apply in the case of living in a forest teeming with critters, magical entities, and humans who all come with separate goals."
     menu: 
+
+        
         "Follow the Raccoon":
             jump Choose_Raccoon
         "Follow the Bear":
