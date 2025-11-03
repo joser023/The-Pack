@@ -61,20 +61,19 @@ label start:
 #------------------------------------------
 #-Start Raccoon Branch
 #------------------------------------------
-label Choose_Raccoon
+label Choose_Raccoon:
 
 "The Raccoon, a funny little fella who has a funny face"
 "Do not be fooled however, the Raccoon is agile and acrobatic. Furthermore it carries the innate trait of {i} magic pocket{/i}"
 
+"Choose the Raccoon?"
     menu: 
-        "Choose the Raccoon"
-
-        "Yes?":
+        "Yes":
             jump Begin_Raccoon
-        "No?":
+        "No":
             jump start
 
-label Begin_Raccoon
+label Begin_Raccoon:
 #------------------------------------------
 #-End Raccoon Branch
 #------------------------------------------
@@ -83,19 +82,46 @@ label Begin_Raccoon
 #------------------------------------------
 #-Start Bear Branch
 #------------------------------------------
-label Choose_Bear
+label Choose_Bear:
 "The Bear, a stoic grumpy creature."
 "It's strength dominates the forest and its intuition gives its innate {i} path sensing{/i} abilities. "
 
-    menu: 
-        "Choose the Bear"
-
-        "Yes?":
+"Choose the Bear?"
+    menu:
+        "Yes":
             jump Begin_Bear
-        "No?":
+        "No":
             jump start
 
-label Begin_Bear
+
+
+#---------------------------
+#--Begin Bear Tile 1
+#--------------------------
+
+label Begin_Bear:
+
+" The forest lay dormant. The sun rests a few hours before reaching its peak. It's quiet."
+" The wind rattles the leaves on trees and brushes the fur of the animals who are awake. One resident however, feels there is too much wind and not enough clouds in sight."
+
+    b "I can't tell if there is going to be a storm approaching or if there is a separate force that is manipulating the wind? It does not matter. I need to keep following this weaving trail of string that I see."
+
+    if RunCount <= 1:
+        b "The string carries a soft blue hue, if I wack it with my paw it simply turns to air and then comes back. I don't see anything it is tied to either."
+        b "My body wants to follow it by instinct, so I let it do so."
+
+    b "No other strings have appeared since I started following this blue string."
+
+    b " I'm not even sure if other animals see it as well."
+
+" N: The bear follows the blue string further into the forest. Will there be a reward, or misery at the end?"
+
+return
+#---------------------------
+#--End Bear Tile 1
+#--------------------------
+
+
 
 #------------------------------------------
 #-End Bear Branch
@@ -105,20 +131,19 @@ label Begin_Bear
 #------------------------------------------
 #-Start Dragonfly Branch
 #------------------------------------------
-label Choose_Dragonfly
+label Choose_Dragonfly:
 
 "The Dragonfly, the aerial assassin of the insect kingdom"
 "The Dragonfly sees many things, its eyes can detect the motions of the unknown. Many call it {i} Future sight{/i}. "
 
+ "Choose the Dragonfly?"
     menu: 
-        "Choose the Dragonfly"
-
-        "Yes?":
+        "Yes":
             jump Begin_Dragonfly
-        "No?":
+        "No":
             jump start
 
-label Begin_Dragonfly
+label Begin_Dragonfly:
 #------------------------------------------
 #- End Dragonfly Branch
 #------------------------------------------
