@@ -40,8 +40,9 @@ default DragonflyBranch = False
 #--------------------------
 
 label start:
-"In order to understand the inner workings of a machine, it is said one must become one with the machine. What does it mean to become one?"
-"How does that apply in the case of living in a forest teeming with critters, magical entities, and humans who all come with separate goals."
+    "In order to understand the inner workings of a machine, it is said one must become one with the machine. What does it mean to become one?"
+    "How does that apply in the case of living in a forest teeming with critters, magical entities, and humans who all come with separate goals."
+    
     menu: 
 
         
@@ -63,10 +64,10 @@ label start:
 #------------------------------------------
 label Choose_Raccoon:
 
-"The Raccoon, a funny little fella who has a funny face"
-"Do not be fooled however, the Raccoon is agile and acrobatic. Furthermore it carries the innate trait of {i} magic pocket{/i}"
+    "The Raccoon, a funny little fella who has a funny face"
+    "Do not be fooled however, the Raccoon is agile and acrobatic. Furthermore it carries the innate trait of {i} magic pocket{/i}"
 
-"Choose the Raccoon?"
+    "Choose the Raccoon?"
     menu: 
         "Yes":
             jump Begin_Raccoon
@@ -83,10 +84,10 @@ label Begin_Raccoon:
 #-Start Bear Branch
 #------------------------------------------
 label Choose_Bear:
-"The Bear, a stoic grumpy creature."
-"It's strength dominates the forest and its intuition gives its innate {i} path sensing{/i} abilities. "
+    "The Bear, a stoic grumpy creature."
+    "It's strength dominates the forest and its intuition gives its innate {i} path sensing{/i} abilities. "
 
-"Choose the Bear?"
+    "Choose the Bear?"
     menu:
         "Yes":
             jump Begin_Bear
@@ -101,8 +102,8 @@ label Choose_Bear:
 
 label Begin_Bear:
 
-" The forest lay dormant. The sun rests a few hours before reaching its peak. It's quiet."
-" The wind rattles the leaves on trees and brushes the fur of the animals who are awake. One resident however, feels there is too much wind and not enough clouds in sight."
+    " The forest lay dormant. The sun rests a few hours before reaching its peak. It's quiet."
+    " The wind rattles the leaves on trees and brushes the fur of the animals who are awake. One resident however, feels there is too much wind and not enough clouds in sight."
 
     b "I can't tell if there is going to be a storm approaching or if there is a separate force that is manipulating the wind? It does not matter. I need to keep following this weaving trail of string that I see."
 
@@ -133,10 +134,10 @@ return
 #------------------------------------------
 label Choose_Dragonfly:
 
-"The Dragonfly, the aerial assassin of the insect kingdom"
-"The Dragonfly sees many things, its eyes can detect the motions of the unknown. Many call it {i} Future sight{/i}. "
+    "The Dragonfly, the aerial assassin of the insect kingdom"
+    "The Dragonfly sees many things, its eyes can detect the motions of the unknown. Many call it {i} Future sight{/i}. "
 
- "Choose the Dragonfly?"
+    "Choose the Dragonfly?"
     menu: 
         "Yes":
             jump Begin_Dragonfly
