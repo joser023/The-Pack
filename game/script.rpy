@@ -4,6 +4,9 @@
 # The color part changes the text color of that characters specifically so change it to what you like
 define n = Character("Narrator")
 define t = Character("Tree")
+define p = Character("Pixies")
+
+
 define b = Character("Bear", color="#e0c7ff") # Light purple
 define r = Character("Racoon", color="#6e7b8b") # Gray
 define tl = Character("Turtle", color="#6dc066") # Green
@@ -16,7 +19,7 @@ define df = Character("Dragonfly")
 default RunCount = 0  #Tally how many branches the player has done or started
 
  # Use this to track which branches the players have completed or have not
-default RacoonBranch = False 
+default RaccoonBranch = False 
 default BearBranch = False
 default DragonflyBranch = False
 
@@ -40,19 +43,19 @@ default DragonflyBranch = False
 #--------------------------
 
 label start:
-"In order to understand the inner workings of a machine, it is said one must become one with the machine. What does it mean to become one?"
-"How does that apply in the case of living in a forest teeming with critters, magical entities, and humans who all come with separate goals."
+    "In order to understand the inner workings of a machine, it is said one must become one with the machine. What does it mean to become one?"
+    "How does that apply in the case of living in a forest teeming with critters, magical entities, and humans who all come with separate goals."
     menu: 
 
     #These if statements are using the variable Branch variables to confirm whether the player has completed this branch or not.
     #If they have, the game will not allow them to pick that route again.
     #That way there is no risk of the player repeating the same route over and over again. 
 
-        "Follow the Raccoon" if RacoonBranch is False:
+        "Follow the Raccoon" if RaccoonBranch is False:
             jump Choose_Raccoon
-        "Follow the Bear":
+        "Follow the Bear" if BearBranch is False:
             jump Choose_Bear
-        "Follow the Dragonfly":
+        "Follow the Dragonfly" if DragonflyBranch is False:
             jump Choose_Dragonfly
 
 
@@ -64,17 +67,16 @@ label start:
 #------------------------------------------
 #-Start Raccoon Branch
 #------------------------------------------
-label Choose_Raccoon
-
+label Choose_Raccoon:
+    
     "The Raccoon, a funny little fella who has a funny face"
     "Do not be fooled however, the Raccoon is agile and acrobatic. Furthermore it carries the innate trait of{i} magic pocket{/i}"
 
+    "Choose the Raccoon?"
     menu: 
-        "Choose the Raccoon"
-
-        "Yes?":
+        "Yes":
             jump Begin_Raccoon
-        "No?":
+        "No":
             jump start
 
 label Begin_Raccoon:
@@ -93,12 +95,11 @@ label Choose_Bear:
     "The Bear, a stoic grumpy creature."
     "It's strength dominates the forest and its intuition gives its innate{i} path sensing{/i} abilities. "
 
+    "Choose the Bear?"
     menu: 
-        "Choose the Bear"
-
-        "Yes?":
+        "Yes":
             jump Begin_Bear
-        "No?":
+        "No":
             jump start
 
 
@@ -223,13 +224,126 @@ label Destroy_fairyCircle:
     "These were not scars of honor. No, these were the scars of a fool who did not think twice before acting."
     "With the battle over the Bear passed out in the Fairy forest. Hoping nothing would approach it in its defenseless state"
     
-    " {i} To be continued{/i}"
-    return
-
-
+    jump Bear_Tile_3
+   
 
 #---------------------------
 #--End Bear Tile 2
+#--------------------------
+
+
+#---------------------------
+#--Begin Bear Tile 3
+#--------------------------
+label Bear_Tile_3:
+    "The day flew by instantly as the Bear lay dormant on the forest floor. Nothing disturbed them. Nothing appeared around them. Only the trees watched. The trees said nothing but their eyes and judgement lay on the Bear."
+    "Within the confines of the Bear's mind they played the encounter with the pixies multiple times. Trying to decipher what could have been done. What could be done better? Am I equipped to fight magical creatures?"
+    "What if they fly? These questions passed through the Bear's mind."
+    
+    b " Fear is my greatest enemy. If I cannot control the fear that takes over in those moments then my judgement is not sound. I have never encountered or experienced being attacked by pixies before."
+
+    if RunCount is 0:
+        b "Why did the string lead me through such a dangerous area? Then it helped me in my state of panic. What does this string know that I do not?"
+
+        "The Bear felt unsettled by the idea that this magic string they trust with their life may have a mind of its own."
+
+    if RunCount is 1:
+        b " If I took my time like last time, maybe I would have realized that the dark forest was not a safe choice. "
+
+        " No, then I would lose the string. I needed to follow the string."
+
+    if RunCount is 2:
+        b "The string knows best. I just need to trust it, but if it's going to put me through a gauntlet like that, I may as well deviate off course to not deal with it."
+        b "The string always reappears to me later on so it would simply be an issue of losing time."
+
+    b "This place is changing in mysterious ways. The magical entities who control this forest are reacting to something, and they are definitely not happy. I need to find the source. I need answers to why I see this string."
+
+    b "I need to find a clue. Something that will even give me a slight hint as to what is going on with me and this forest."
+
+    b "What am I doing right now? Am I still alive? I'm not sure... I feel alive. I feel weightless, empty even. Am I still in the pixie patch or has some other foul beast decided to prey on me."
+
+# Happens for the first and second appearance.
+    if RunCount <= 1:
+        b "This space is not normal. There were no animals. No sense of life. It felt cursed even. No, not cursed, protected."
+
+        b "Those pixies seemed rather adamant about not letting me leave this place, but they said I was special. What makes me so special that I deserve to be treated so horribly?"
+
+        b "Could they see the string? Was that why they called me special? No, they didn't even bring it up. I want answers, but who will have them?"
+
+#-----------
+#3rd Run interaction happens here
+#------------
+    if RunCount is 2:
+        t " Lost in thought is the phrase you are looking for stranger."
+
+        b " Who's there?"
+
+        t " Do not worry, I am communicating with you telepathically."
+
+        b " That did not answer my question. Who are you?"
+
+        t " Still stubborn I see."
+
+        b " The one who is stubborn is you."
+
+        t " Stubborn? Maybe. I like rooted better."
+
+        b " Pardon? Rooted? Are you a plant? So even the plants are magical here?"
+
+        t " Well, in this area of the forest, yes. The pixies tend to these woods. The same pixies you scared off."
+
+        b " You here to cast divine judgement?"
+
+        t " I do not intend to be hostile with you. You seemed very deep in thought so I wished to converse about the dilemma you are facing."
+
+        b " You've been reading my mind?"
+
+        t "  Yes."
+
+        b " Great, a plant that can read and talk to me through my mind."
+
+        t " Time is ticking, I do not have all night. You wish for a clue to the mystery correct?"
+
+        b " Yes."
+
+        t " You hold one of the answers to that very mystery. The string you speak of is simply a manifestation of your power. Your connection to magic is not coincidental. It is a gift granted to you by them."
+
+        b " Who is them?"
+
+        t " The spirit of the forest. They are the one who brought you here. They are the one who you should have listened to from the start..."
+
+        b "What do you mean listened to? I haven't heard a thing from this spirit of the forest you speak of. Hey! Plant! Answer me!"
+
+    "The bear lay there in their mind contemplating what they could do now. Silence permeated the space. The night was quiet in the shaded forest. As it always was."
+    return
+
+#---------------------------
+#--End Bear Tile 3
+#--------------------------
+
+#---------------------------
+#--Begin Bear Tile 4
+#--------------------------
+
+#---------------------------
+#--End Bear Tile 4
+#--------------------------
+
+#---------------------------
+#--Begin Bear Tile 5
+#--------------------------
+
+#---------------------------
+#--End Bear Tile 5
+#--------------------------
+
+
+#---------------------------
+#--Begin Bear Tile 6
+#--------------------------
+
+#---------------------------
+#--End Bear Tile 6
 #--------------------------
 
 
@@ -241,17 +355,16 @@ label Destroy_fairyCircle:
 #------------------------------------------
 #-Start Dragonfly Branch
 #------------------------------------------
-label Choose_Dragonfly
+label Choose_Dragonfly:
 
     "The Dragonfly, the aerial assassin of the insect kingdom"
     "The Dragonfly sees many things, its eyes can detect the motions of the unknown. Many call it{i} Future sight{/i}. "
 
+    "Choose the Dragonfly"
     menu: 
-        "Choose the Dragonfly"
-
-        "Yes?":
+        "Yes":
             jump Begin_Dragonfly
-        "No?":
+        "No":
             jump start
 
 label Begin_Dragonfly:
