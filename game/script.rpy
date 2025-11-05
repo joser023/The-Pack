@@ -142,6 +142,7 @@ label Begin_Dragonfly:
 
     df "All in good time."
 
+<<<<<<< Updated upstream
     df "Hmm...now which direction should I go..?"
 
 label dragon_transition_one:
@@ -154,31 +155,65 @@ label dragon_transition_one:
 
 label dragon_tile_two:
     "{i}The winds start to pick up throughout the forest. What was once a gentle breeze has now been whipped into a gale. The small Dragonfly struggles to fly straight in this weather.{i}"
+=======
+    df "Hmm…now which direction should I go..?"
+    jump dragon_transition_one
+
+label dragon_transition_one:
+    menu:
+        "Take the upper route.":
+            jump dragon_tile_two
+        "Take the lower route":
+            jump dragon_tile_two
+    
+label dragon_tile_two:
+    "{i} The winds start to pick up throughout the forest. What was once a gentle breeze has now been whipped into a gale. The small Dragonfly struggles to fly straight in this weather. {i}"
+>>>>>>> Stashed changes
 
     df "Oh dear! These are certainly less-than-ideal flying conditions."
 
     df "I'm not sure how much longer I can stay in the air!"
+<<<<<<< Updated upstream
 
     menu:
         "Take shelter until the winds cease.":
             jump dragon_shelter
+=======
+    menu:
+        "Take shelter until the winds cease.":
+            jump dragon_hide
+>>>>>>> Stashed changes
 
         "Fly on, darting between cover from the wind. [[Compound Eyes]":
             jump dragon_fly
 
+<<<<<<< Updated upstream
     label dragon_shelter:
         "{i}Dragonfly flies down into an old hollow tree stump, where they wait for several hours until the wind has gone back to normal.{i}"
         jump dragon_transition_two
 
     label dragon_fly:
         "{i}Dragonfly flies onward, moving from tree to tree to gain maximum protection from the oncoming flurry. Moving through tree hollows and tiny openings in bushes, they use their [Compound Eyes] to spot which pieces of cover up ahead will provide the best defense from their adversary; the air itself.{i}"
+=======
+    label dragon_hide:
+        "{i} Dragonfly flies down into an old hollow tree stump, where they wait for several hours until the wind has gone back to normal. {i}"
+        jump dragon_transition_two
+
+    label dragon_fly:
+        "{i} Dragonfly flies onward, moving from tree to tree to gain maximum protection from the oncoming flurry. Moving through tree hollows and tiny openings in bushes, they use their [[Compound Eyes] to spot which pieces of cover up ahead will provide the best defense from their adversary; the air itself.{i}"
+>>>>>>> Stashed changes
         jump dragon_transition_two
 
 label dragon_transition_two:
     menu:
+<<<<<<< Updated upstream
         "Take the upper route":
             jump dragon_tile_three
         
+=======
+        "Take the upper route.":
+            jump dragon_tile_three
+>>>>>>> Stashed changes
         "Take the lower route":
             jump dragon_tile_three
 
@@ -189,6 +224,7 @@ label dragon_tile_three:
 
     df "I wonder why I didn't feel that it would be that windy..."
 
+<<<<<<< Updated upstream
     df "I guess it just wasn't important enough for me to see it through [[Foresight]."
 
     df "After all, I got through those winds alright. So it all worked out in the end."
@@ -917,6 +953,20 @@ label dragon_tile_eight:
 
 
 
+=======
+    df "I guess it just wasn't important enough for me to see it through [Foresight]."
+
+    df: "After all, I got through those winds alright. So it all worked out in the end."
+
+(If picking this Branch before Branch 2): Dragonfly: “I’m sure if there’s something really bad to worry about, the universe would let me know somehow.”
+
+(If picking this Branch after Branch 2): Dragonfly: “Although, perhaps I should be a little more cautious in the future.”
+Dragonfly: “Winds like those make me wish that Hummingbird was around. Even if they always seem so upset.”
+
+Dragonfly: “A little insect like me could surely use some company on this lone journey.”
+
+Dragonfly: “Well, I’m sure I’ll run into someone eventually. All in good time.”
+>>>>>>> Stashed changes
 
 
 #------------------------------------------
