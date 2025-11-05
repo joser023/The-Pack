@@ -75,7 +75,7 @@ label start:
         "Follow the Raccoon" if RaccoonBranch is False:
             jump Choose_Raccoon
         "Follow the Bear" if BearBranch is False:
-            jump Bear_Tile4
+            jump BTR_Tile5
         "Follow the Dragonfly" if DragonflyBranch is False:
             jump Choose_Dragonfly
 
@@ -421,7 +421,8 @@ label BHD_Tile4:
     #Intentionally delaying it till the end of the tile in case the player decides to back out from the decision
     $ HBighting += 1
     $ DFsighting += 1
-    return
+    
+    jump BHD_Tile5
 
 
 #---------------------
@@ -478,7 +479,7 @@ label BTR_Tile4:
     " They would soon begin traveling once more after settling on a direction to roam in."
     $ TLsighting += 1
     $ Rsighting += 1
-    return
+    jump BTR_Tile5
 
 #---------------------------
 #--End Bear Tile 4
@@ -487,6 +488,197 @@ label BTR_Tile4:
 #---------------------------
 #--Begin Bear Tile 5
 #--------------------------
+
+#---------------------
+#- Hummingbird/Dragonfly route Tile5
+#-------------------
+label BHD_Tile5:
+    " The Pack wandered aimlessly for some time; Bear's magic string would appear from time to time only to disintegrate after a couple of minutes."
+   
+    df "You seem rather disgruntled? What is on your mind?"
+   
+    b " My ability is not working. I can't get a clear idea of where this string wants me to go."
+    
+    df " That is annoying."
+    " The Dragonfly lands on the Bear's head, and its eyes shine under the light."
+    b "Got any new neat tricks you can pull off?"
+    df "Nope, I can still only see into the future. It's not always clear, but it is useful. Currently one of the futures seems especially odd."
+    b "That is pretty useful."
+    " The Hummingbird returned to the pack after foraging for some nectar and landed on a nearby tree facing the duo."
+    b "Speak, bird. What did you see on your trip for food?"
+    hb "I'm not a peon, you overgrown death machine. Nothing strange. I found a rabbit if you are feeling hungry. Doubt you'll find it though; it probably ran off when it heard me."
+    
+    " Fly up ahead and scout. See if you can find anything else."
+    " The Hummingbird stared down at the Bear with a level of contempt and disrespect. They did not want to listen to the Bear's command, but they obliged as they had nothing better to do. It was better this way."
+    " Neither enjoyed each other's company. The Hummingbird left the branch quietly and zoomed far off ahead."
+    df " You know I can be a mediator for you two?"
+    b " That bird has issues we may never understand. You only bring out the worst in them, Dragon."
+    df " I doubt it."
+    "Some time passes as the Bear and Dragonfly catch up to Hummingbird"
+    b "Hey Bird, where have… You… Been…"
+    df "Oh my goodness."
+    hb "..."
+
+
+# Change scene to stump forest
+    "The Pack gazed over the destitute field of tall grass, tree stumps, and dead trees. It was dead."
+    " Nothing has entered this area since I found it. It appalls me."
+    df "Surely some rats or small rodents who live in tall grass are in there? If that were the case, why is the grass still growing?"
+    b "Grass grows where it pleases; if not kept in check, it will consume everything in a sea of green. Dragon, mind gazing into the future?"
+    " The dragonfly used [[future sight]."
+    df "This is the odd future I spoke of. It was all green. It all makes sense now."
+    hb "You saw this, and you didn't say a word? You have arguably the strongest ability we know of, and you can't decipher Jack?"
+    b "Silence."
+
+    menu:
+        "Enter the stump forest?":
+            jump Stump_forest
+        "Avoid the stump forest?":
+            jump Detour1
+
+#------
+#-Enter Stump forest
+#-----
+label Stump_forest:
+    b " There should be nothing in there, correct?"
+    hb " Oh hell no. I am NOT going through there. If there are no flowers in sight, I am dead. Go through there, and you ain't seeing me until you get out."
+    b " Up for something to keep us on edge, Dragon?"
+    df " I can't say I am. Especially not this." 
+    b " If we intend to follow this direction, the fastest way is to cut through."
+    hb " I'm out; if you want to walk through the dead zone, that's all you. I'll probably remember you if you die."
+    df "I think I am also going to sit this one out. I don't like the feel of that area. Also, I don't think there are many things to eat there either."
+    b "Very well. Stay safe and wait for me. I'll be over there hopefully by nightfall."
+    df "Don't die. That place is a living tomb."
+    " The Pack split up. Hummingbird and Dragonfly flew across the perimeter of the stump forest while the Bear crossed through."
+    "It was an interesting walk for the Bear. The grass was almost as tall as them."
+    b "For the grass to grow to this height means the deer and other herbivores fear this place still. Loggers, I believe, are what the beavers call them. Humans who cut a great amount of trees with creatures of metal."
+    b "Do they truly realize the effects they have on this forest by doing this? Do they know it never recovered?"
+    "The Bear could feel an eerie energy emanating from the stumps. It wasn't directly aimed at them, but it felt malicious towards the ones who cut them."
+    " The night drew on, and finally the Bear crossed the stump forest."
+    hb "Oh, you're still alive?"
+    b "Miss me that much, Bird? I thought all you knew was pain and sorrow."
+    hb "Haha. Don't get much of it after waiting a long time to see you cross that cursed place. Enjoy your little walk through that cemetery?"
+    b "Partially. Helped clear my mind from how quiet it was, but it also made me worry."
+    hb "Yeah, that's nice. Hey Fly!"
+    df "Huh? Wha?"
+    hb "Bear's back, let's go set up camp."
+    df "Oh, sure."
+    "The Pack would now set up camp for the night after reuniting with Bear. The stump forest would lie etched into their mind that night."
+    return
+
+#----------------
+#Avoid stump forest
+#----------------
+label Detour1:
+    b " Let's walk around. I agree; this place gives me the creeps."
+    df " Who? Who would do this?"
+    b " Humans, I believe. They aren't something you reason with. They take what they want and slaughter us if we fight back."
+    hb " Easy for you to say, big guy. You can actually fight them. Us little folk only run for our lives."
+
+    " The pack began walking around. It took much longer than expected to get around the stump forest. The pack set up camp some distance away from the stumps." 
+    hb " You think the ghosts of the dead animals still roam that place?"
+    b "Shut it."
+    hb "It's a valid question. We got all sorts of crazy monsters and creatures here. Why not go see some dead animals?"
+    b "I'll send you to greet them if you don't shut up."
+    hb "Might be a better choice than dealing with the cutthroat vibes that place gives. We aren't even near it, and I feel like something is watching us."
+    b "You never shut up, do you? How about you go look for these ghosts? You seem so scared, yet so excited to talk about them when safe."
+    hb "Nah, I'm feeling a bit sleepy. It felt like a good story to keep us alert."
+    b "You're a coward."
+
+    "The Pack slept through the night, yet they never shook the feeling something was watching them. Bear was on guard duty for part of the night, followed by Dragonfly and then Hummingbird."
+    "They survived another night and began moving around the stumps once more."
+
+    return
+#---------------------
+#- Turtle/Raccoon route Tile5
+#-------------------
+label BTR_Tile5:
+    " The Pack slept through the night, yet they never shook the feeling something was watching them. Bear was on guard duty for part of the night." 
+    " The Pack wandered aimlessly for some time; Bear's [[path sensing] would appear from time to time only to dissipate after a couple of minutes."
+    b " Hmm. This is annoying."
+    r " What is on your mind ya big oaf?"
+    b " My ability is not cooperating. I can see this string, and it leads me to different places, but it hasn't been consistent lately."
+    r " That's pretty unfortunate. Turtle, can't you do something like that?"
+    tl " No. I can't do anything like that."
+    r " Really? I thought it was similar?"
+    tl " You really need to listen to Raccoon. I explained it 3 times, and every time you ended up reaching into that magic pocket of yours for a snack."
+    r " OOO! Great idea. Let's have a snack break."
+    tl " I regret having this conversation. Bear, would you like a refresher on what my ability is?"
+    b "Yes, go on. Raccoon, keep up now; it isn't time for eating."
+    tl "It's a bit complicated, but I can recall past events that have happened in different locations."
+    "So let's say right now, I can use my skill to see what has happened here, and I may possibly see what animals have passed by here."
+    tl "Another ability is I can grow my shell to create a giant wall."
+    r "Hey, do you want some berries? Said the Raccoon with its mouth full."
+    b "No."
+    tl "What kind?"
+    r "Red."
+    tl "Gimme."
+    "While the Raccoon mounted the Bear's back to feed the Turtle, the Bear stopped. The Bear was gazing upon a lake."
+    "The water looked serene on the surface, but as the Bear looked into the depths, it became increasingly dark very quickly."
+    " At the bottom in the darkness, the Bear could see some sort of flickering light. It seemed to be moving rather quickly. Is it a fish?" 
+    b "Hey, you two, take a look at this lake."
+    r "What's up? Woah, it's dark, dark, and it's still daytime."
+    tl "A magic lake, most likely?"
+    b "Most definitely."
+    r "Turtle, isn't this your domain? How about you use your ability and see what's up with the lake?"
+    tl "I don't think it's worth spending the time on something like this. Especially considering only I can go that deep underwater and can see."
+
+    menu:
+        "Convince Turtle?":
+            jump Convince_Turtle
+        "Stand with Turtle?":
+            jump Defend_Turtle
+
+#--------------
+#-Convince Turtle route
+#--------------
+label Convince_Turtle:
+    b "You're getting ahead of yourself, Turtle. Raccoon is wrong to send you in, but I think it would be a good idea to at least scan why it is this way."
+    tl "Oh... You're right, you're right. Okay, let me get off then and bathe in the water; that will help me deepen the connection for my ability to work better."
+    
+    "After unmounting from Bear, the Turtle was placed in the water and floated there in place. The Turtle closed its eyes, and the water began to vibrate around them."
+    "A [[tidal memory] was forming; it was a rather beautiful sight, except for the fact that Raccoon was washing their hands while doing this, which became a memory that Turtle saw."
+    "After about a minute, the vibration stopped and the turtle swam out of the water."
+   
+    tl "You have to be a wild animal."
+    r "I mean, I am."
+    tl "Why did you think it was a great idea to clean your hands while I was doing that?"
+    r "Cause they're dirty? Why else?"
+    tl "Jeez. You are something else, Raccoon. Anyways, this lake is definitely of magical origin."
+    b "How so?"
+    tl "There seemed to be a battle between two elemental spirits in this area; their battle was so intense it left a crater that would later catch water with time. This lake is that very crater."
+    tl "What exists at the bottom of this crater are not fish, but wild spirits who grow in the darkness. They are currently harmless in this state, but I wouldn't trust going in regardless."
+    tl "The water has a sort of heaviness from the concentration of magic energy being released by the spirits. It's making me dizzy."
+    b "Very well."
+    r "So what would happen if I drank the wat-"
+    "NO! Said both Turtle and Bear."
+    return
+
+
+
+
+#------------
+#-Defend Turtle Route
+#--------------
+label Defend_Turtle:
+
+    b " You are being a pushy Raccoon."
+    r " I mean, not really? They are an aquatic creature, so I feel like they have a better shot at doing something here than anyone else."
+    tl " I'm not diving into a pitch-black lake that has twinkling lights at the bottom."
+    r " But what if it's buried treasure?"
+    tl " We don't need treasure."
+    r " I can store it with my magic pocket; it's fine."
+    " The Bear understood quickly how Raccoon was deciding for the uncomfortable Turtle, so they decided to intervene more."
+    " It's not a matter of yes or no, Raccoon. We can't see what is down there. What if it isn't a treasure? Then what do we do?"
+    r "Uh... I don't know..."
+    b "Exactly, we can't because we can't swim enough or even see that well in dark water."
+    tl "Personally I am not feeling like diving into the spooky lake. So, I'll pass on that."
+    r "I thought it was a good idea..."
+    " The Raccoon felt sad that their idea was turned down. The Bear was not worried too much by the Raccoon's reaction, but they did notice the slouch in their walk was more droopy."
+    b " Make a more stable plan next time. That will get the vote of Turtle."
+    r " Huh? Oh, sure."
+    " The Pack made their way around the lake and ventured forward once again into the forest."
+    return
 
 #---------------------------
 #--End Bear Tile 5
