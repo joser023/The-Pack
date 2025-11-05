@@ -81,7 +81,11 @@ label Choose_Raccoon:
 
         "Yes":
             jump Begin_Raccoon
+<<<<<<< Updated upstream
         "No":
+=======
+        "No?":
+>>>>>>> Stashed changes
             jump starting_choice
 
 label Begin_Raccoon:
@@ -102,7 +106,11 @@ label Choose_Bear:
 
         "Yes":
             jump Begin_Bear
+<<<<<<< Updated upstream
         "No":
+=======
+        "No?":
+>>>>>>> Stashed changes
             jump starting_choice
 
 label Begin_Bear:
@@ -124,7 +132,11 @@ label Choose_Dragonfly:
 
         "Yes":
             jump Begin_Dragonfly
+<<<<<<< Updated upstream
         "No":
+=======
+        "No?":
+>>>>>>> Stashed changes
             jump starting_choice
 
 label Begin_Dragonfly:
