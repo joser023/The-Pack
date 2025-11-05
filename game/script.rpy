@@ -16,6 +16,27 @@ define df = Character("Dragonfly")
 
 # Declare permanent or constantly used variables for the game
 
+# List of how many times a character has appeared in the story
+
+# Checks to see how many time Bear appears
+default Bsighting = 0
+
+# Checks to see how many time Raccoon appears
+default Rsighting = 0
+
+# Checks to see how many time Turtle appears
+default TLsighting = 0
+
+# Checks to see how many time Hummingbird appears
+default HBighting = 0
+
+# Checks to see how many time Coyote appears
+default Csighting = 0
+
+# Checks to see how many time Dragonfly appears
+default DFsighting = 0
+
+
 default RunCount = 0  #Tally how many branches the player has done or started
 
  # Use this to track which branches the players have completed or have not
@@ -54,7 +75,7 @@ label start:
         "Follow the Raccoon" if RaccoonBranch is False:
             jump Choose_Raccoon
         "Follow the Bear" if BearBranch is False:
-            jump Choose_Bear
+            jump Bear_Tile4
         "Follow the Dragonfly" if DragonflyBranch is False:
             jump Choose_Dragonfly
 
@@ -109,7 +130,6 @@ label Choose_Bear:
 #--------------------------
 
 label Begin_Bear:
-
     " The forest lay dormant. The sun rests a few hours before reaching its peak. It's quiet."
     " The wind rattles the leaves on trees and brushes the fur of the animals who are awake. One resident however, feels there is too much wind and not enough clouds in sight."
 
@@ -126,6 +146,7 @@ label Begin_Bear:
 
 
     " N: The bear follows the blue string further into the forest. Will there be a reward, or misery at the end?"
+    $ Bsighting += 1
     jump Bear_Tile_2
 
 
@@ -315,7 +336,7 @@ label Bear_Tile_3:
         b "What do you mean listened to? I haven't heard a thing from this spirit of the forest you speak of. Hey! Plant! Answer me!"
 
     "The bear lay there in their mind contemplating what they could do now. Silence permeated the space. The night was quiet in the shaded forest. As it always was."
-    return
+    jump Bear_Tile4
 
 #---------------------------
 #--End Bear Tile 3
@@ -324,6 +345,140 @@ label Bear_Tile_3:
 #---------------------------
 #--Begin Bear Tile 4
 #--------------------------
+label Bear_Tile4:
+    " The Bear finally awoke from their slumber. Time was a blur."
+
+    b "How many days has it been since I passed out?"
+
+    b " The bear could feel cold patches on its body from being attacked by the pixies. Now was not the time to dwell on the discomfort."
+    b " The Bear still has a goal in front of them, follow the string and figure out where it ends."
+
+    " So did the Bear keep following the mysterious blue string out of the shaded forest."
+
+    " The tree line slowly cleared up and color slowly returned to the Bear's eyes as it made it out of the shaded forest. The Bear was happy to have made it out in some form."
+    " The string was acting strange, it was cutting itself and reforming, almost as if it was not sure what to do."
+
+    if RunCount is 0:
+        " The bear stood there perplexed. It had never seen the yarn do this before"
+
+        b " What the heck are you doing now?"
+
+        " The bear swatted at the ethereal yarn. Nothing happened, the paw simply flies through it. The Bear stood there for a second, and thought to itself."
+
+        b "I think I might as well take a short break. I have no idea what this thing is doing and I'm curious if it will do something after a while."
+
+    "The Bear lay there for some time watching the yearn destroy and meld itself together. It was mesmerizing and very hypnotizing to watch."
+    "So much so that the Bear did not realize there were voices getting closer and closer"
+
+#------------------
+#Player will Choose their duo of animals.
+#-------------------
+    menu: 
+        "Meet Hummingbird and Dragonfly?":
+            jump BHD_Tile4
+        "Meet Turtle and Raccoon?":
+            jump BTR_Tile4
+
+
+#---------------------
+#- Hummingbird/Dragonfly route Tile4
+#-------------------
+label BHD_Tile4:
+    hb " You don't know anything Fly. You mean to tell me we are gonna meet the Bear at some point. HAH! In your dreams."
+    
+    df " We aren't dreaming, Bird; my future sight doesn't lie. I can feel it! We have to be nearing that point in the future I saw!"
+   
+    b " Huh? What the? Oh no. No, no, no. Ughhhh. Is that annoying bird with me again? The Dragonfly is tolerable, but that damn Hummingbird makes me want to tear my ears off. The Bear thought to themself."
+    " The bear got up and wandered toward the voices of the doubtful Hummingbird and confident Dragonfly. The Dragonfly quickly sensed the presence of something approaching the duo and focused on it."
+   
+    df " See!? I told you."
+    
+    hb " ... Crap."
+    
+    "The flying duo flew towards the Bear. "
+    
+    b " So I'm stuck with you two this time? Not a word out of your depressed beak, bird. Dragonfly, pleasure seeing you again."
+    
+    df " Likewise. Do you have an idea of where we are going?"
+    
+    b " Unfortunately, no. "
+    
+    df " Hmm. Then let us wander forward. I shall... Oh dear, are you okay?"
+    
+    b " Don't worry about it; I had a run-in with some hostile magic creatures a while back."
+    
+    df " Those marks are bad! You could get an infection from them."
+    
+    hb " If they did, they would already be dead from blood loss. Might be-"
+    
+    " The Bear shoots a glance at the Bird. The bird mumbled the rest under its beak."
+    
+    b " Mind leading the way, Dragon?"
+   
+    df " Certainly! Follow me."
+    
+    "So the pack was united. What mysteries would the trio encounter next?"
+    #Intentionally delaying it till the end of the tile in case the player decides to back out from the decision
+    $ HBighting += 1
+    $ DFsighting += 1
+    return
+
+
+#---------------------
+#- Turtle/Raccoon route Tile4
+#-------------------
+label BTR_Tile4:
+    tl "Please let me go! This is absurdly dangerous!"
+   
+    r "Oh, c'mon, we've done this countless times already, and nothing has happened."
+    
+    tl "You have literally dropped me over 5 times because you tried to run on 2 feet! You can't do that!"
+   
+    r "Says who? All you gotta do is stay tucked in your shell, and you'll be fine. Oof!"
+    
+    " As if on cue, the Raccoon not paying attention, ran straight into the Bear, startling them and dropping Turtle."
+   
+    b " HEY!"
+   
+    tl " AAAAAAAGHHH! I TOLD YOU NOT TO DO IT! WE'RE GONNA DIE NOW!"
+    
+    r " Humph. Owww... Why does everyone gotta be so loud?"
+    
+    " The Bear got into an attack stance on instinct. They stared down at the rather gullible Raccoon and absolutely terrified Turtle that was flipped over."
+    
+    b " Oh. It's you two."
+    
+    " The Bear proceeded to flip the turtle over and push the Raccoon on its back."
+    
+    r " Hey! Not cool, man."
+    
+    tl " Huh? Oh, Bear! I am so glad to see you. Please keep me away from this troublemaker who puts me in danger constantly."
+    
+    b " I think it's funny if you ask me."
+
+    tl " What do you mean it's funny? My life is at stake here."
+
+    r " You make no sense, Bear. So what have you been up to? Ah... Fighting, I see."
+   
+    b " It's a long story, but I'm alive."
+    
+    r " You look like you walked into 5 separate traps, got stuck in all 5, and somehow got out of each one."
+   
+    b  " You could say that."
+    
+    tl " Yes, nice chatter and all, but can you please put me on your back? I prefer not being in the clutches of that gremlin."
+    
+    b " Raccoon, you mind hoisting the Turtle onto my back?"
+   
+    r " Sure, and that's rude after how far I've carried you?"
+   
+    tl " I think it is justified. You are a living hazard to my existence."
+    
+    " With the trio united, they would begin to chatter and almost act in a family manner."
+    " They would soon begin traveling once more after settling on a direction to roam in."
+    $ TLsighting += 1
+    $ Rsighting += 1
+    return
 
 #---------------------------
 #--End Bear Tile 4
