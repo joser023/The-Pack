@@ -51,8 +51,10 @@ label start:
     "…the Lake…get to…"
     "…all that's…left…"
     "…your Pack…"
+    jump starting_choice
 
-    menu: 
+label starting_choice:
+    menu:
         "Follow the Raccoon":
             jump Choose_Raccoon
         "Follow the Bear":
@@ -77,10 +79,10 @@ label Choose_Raccoon:
     menu: 
         "Choose the Raccoon"
 
-        "Yes?":
+        "Yes":
             jump Begin_Raccoon
-        "No?":
-            jump start
+        "No":
+            jump starting_choice
 
 label Begin_Raccoon:
 #------------------------------------------
@@ -98,10 +100,10 @@ label Choose_Bear:
     menu: 
         "Choose the Bear"
 
-        "Yes?":
+        "Yes":
             jump Begin_Bear
-        "No?":
-            jump start
+        "No":
+            jump starting_choice
 
 label Begin_Bear:
 
@@ -115,18 +117,33 @@ label Begin_Bear:
 #------------------------------------------
 label Choose_Dragonfly:
 
-    "The Dragonfly, the aerial assassin of the insect kingdom"
-    "The Dragonfly sees many things, its eyes can detect the motions of the unknown. Many call it {i} Future sight]{/i}. "
+    "{i} Dragonfly, ever full of hope, mostly relies on their [[Foresight] to glimpse the future. If that fails, their [[Compound Eyes] can take in additional information from their present surroundings.{i}"
 
     menu: 
         "Choose the Dragonfly"
 
-        "Yes?":
+        "Yes":
             jump Begin_Dragonfly
-        "No?":
-            jump start
+        "No":
+            jump starting_choice
 
 label Begin_Dragonfly:
+    "{i} A small Dragonfly emerges from the brush, flitting about lazily through the air. {i}"
+
+    df "What a lovely afternoon…the breeze feels just right today."
+
+    df "This is what I love about the forest. Everything seems so warm and inviting on a day like this."
+
+    df "But this is no time to be still. I suppose I should start making my way towards this lake."
+
+    df "Although, it appears I've forgotten where it is. All I know is that it seems…important."
+
+    df "Well, no matter. If it's important, then I'm sure I will come across it sooner or later."
+
+    df "All in good time."
+
+    df "Hmm…now which direction should I go..?"
+
 #------------------------------------------
 #- End Dragonfly Branch
 #------------------------------------------
