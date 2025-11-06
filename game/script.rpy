@@ -57,69 +57,71 @@ default DragonflyBranch = False
 #animal ingame assets . the larger drawings, not the headshots.
 
 
-image bear = “Bear.png”
-image coyote = “Coyote.PNG”
-image dragonfly = “Dragonfly.png”
-image hummingbird = “Hummingbird.PNG”
-image raccoon = “Raccoon.PNG”
-image turtle = “Turtle.PNG”
+image bear = “images/FullBody/Bear.png”
+image coyote = “images/FullBody/Coyote.PNG”
+image dragonfly = “images/FullBody/Dragonfly.png”
+image hummingbird = “images/FullBody/Hummingbird.PNG”
+image raccoon = “images/FullBody/Raccoon.PNG”
+image turtle = “images/FullBody/Turtle.PNG”
+image FishFairy = “images/FullBody/KoiFish.png”
 
 
 #animal headshots. To abbreviate and differentiate between the ingame PNGS, I’m adding a “HS” before the name of each animal. Capital, so it reads more clearly between the name of the animal.
 
 
-image HSbear = “HS-Bear.png”
-image HScoyote = “His-Coyote.PNG”
-image HSdragonfly = “HS-Dragonfly.png”
-image HShummingbird = “HS-Hummingbird.png”
-image HSraccoon = “HS-Raccoon.PNG”
-image HSturtle = “HS-Turtle.PNG”
+image HSbear = “images/HS/HS-Bear.png”
+image HScoyote = “images/HS/His-Coyote.PNG”
+image HSdragonfly = “images/HS/HS-Dragonfly.png”
+image HShummingbird = “images/HS/HS-Hummingbird.png”
+image HSraccoon = “images/HS/HS-Raccoon.PNG”
+image HSturtle = “images/HS/HS-Turtle.PNG”
+image HSfishfairy = “images/HS/HS-Koi.png”
 
 
 # map. The way I structured the naming was with two digits primarily (example, 0.0) the first being the column, the second being the row. So if you wanted the second tile down from column three, it would be 3.2. Think of the numbers like (C.R) , with c/r being column and row respectively.
 
 
-image map1 = “map1.png”
-image map2.1 = “map2.1.png”
-image map2.2 = “map2.2.png”
-image map3.1 = “map3.1.png”
-image map3.2 = “map3.2.png”
-image map3.3 = “map3.3.png”
-image map4.1 = “map4.1.png”
-image map4.2 = “map4.2.png”
-image map4.3 = “map4.3.png”
-image map4.4 = “map4.4.png”
-image map5.1 = “map5.1.png”
-image map5.2 = “map5.2.png”
-image map5.3 = “map5.3.png”
-image map5.4 = “map5.4.png”
-image map6.1 = “map6.1.png”
-image map6.2 = “map6.2.png”
-image map6.3 = “map6.3.png”
-image map7.1 = “map7.1.png”
-image map7.2 = “map7.2.png”
-image map8 = “map8.png”
-image mapBlank = “mapBlank” 
+image map1 = “images/Tiles/map1.png”
+image map2.1 = “images/Tiles/map2.1.png”
+image map2.2 = “images/Tiles/map2.2.png”
+image map3.1 = “images/Tiles/map3.1.png”
+image map3.2 = “images/Tiles/map3.2.png”
+image map3.3 = “images/Tiles/map3.3.png”
+image map4.1 = “images/Tiles/map4.1.png”
+image map4.2 = “images/Tiles/map4.2.png”
+image map4.3 = “images/Tiles/map4.3.png”
+image map4.4 = “images/Tiles/map4.4.png”
+image map5.1 = “images/Tiles/map5.1.png”
+image map5.2 = “images/Tiles/map5.2.png”
+image map5.3 = “images/Tiles/map5.3.png”
+image map5.4 = “images/Tiles/map5.4.png”
+image map6.1 = “images/Tiles/map6.1.png”
+image map6.2 = “images/Tiles/map6.2.png”
+image map6.3 = “images/Tiles/map6.3.png”
+image map7.1 = “images/Tiles/map7.1.png”
+image map7.2 = “images/Tiles/map7.2.png”
+image map8 = “images/Tiles/map8.png”
+image mapBlank = “images/Tiles/mapBlank” 
 
 
 # backgrounds. I noticed the file names were quite long, so I condensed by removing the “BG” from each name when you call the file, and simplifying the longer names. I also removed any spaces. The first initial of each word is capital to help readability.
 
 
-image Base = “BG-base.png”
-image BriarElement = “BG-Briar Elemental Variant.png”
-image Campfire = “BG-Campfire.PNG”
-image DeforestedStumps = “BG-Deforested Stumps Variant.png”
-image ElkCarcass = “BG-ElkCarcass.png”
-image FairySwarm = “BG-FairySwarm.png”
-image FlowerField = “BG-FlowerField.png”
-image HollowTree = “BG-HollowTree.png”
-image MudPatch = “BG-MudPatch.png”
-image MushroomPatch = “BG-MushroomPatch.png”
-image RagingRiver = “BG-Raging River Variant.png”
-image RainDroplets = “BG-RainDroplets.png”
-image SmallLake = “BG-SmallLake.png”
-image StrongWind = “BG-StrongWind.png”
-image Lake = “BG-Lake.png”
+image Base = “images/Background/BG-base.png”
+image BriarElement = “images/Background/BG-Briar Elemental Variant.png”
+image Campfire = “images/Background/BG-Campfire.PNG”
+image DeforestedStumps = “images/Background/BG-Deforested Stumps Variant.png”
+image ElkCarcass = “images/Background/BG-ElkCarcass.png”
+image FairySwarm = “images/Background/BG-FairySwarm.png”
+image FlowerField = “images/Background/BG-FlowerField.png”
+image HollowTree = “images/Background/BG-HollowTree.png”
+image MudPatch = “images/Background/BG-MudPatch.png”
+image MushroomPatch = “images/Background/BG-MushroomPatch.png”
+image RagingRiver = “images/Background/BG-Raging River Variant.png”
+image RainDroplets = “images/Background/BG-RainDroplets.png”
+image SmallLake = “images/Background/BG-SmallLake.png”
+image StrongWind = “images/Background/BG-StrongWind.png”
+image Lake = “images/Background/BG-Lake.png”
 
 
 define config.detatched_layers += [ "Background" ]
@@ -200,7 +202,7 @@ label Choose_Raccoon:
        "Yes":
            jump Begin_Raccoon
        "No":
-           jump start
+           jump starting_choice
 
 
 label Begin_Raccoon:
@@ -245,6 +247,12 @@ label Begin_Raccoon:
 
 
     r "Now... which way was that lake again?"
+    scene map1 onlayer Background
+    menu:
+        "Take upper route":
+            
+
+        "Take lower route":
 
 
     # Tile 2
