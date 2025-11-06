@@ -185,6 +185,14 @@ label starting_choice:
 
 
 
+
+# Raccoon branch starts in line 200's-875
+# Bear branch starts in line 885-1770
+# Dragonfly branch starts in line 1780-2586
+
+
+
+
 #------------------------------------------
 #-Start Raccoon Branch
 #------------------------------------------
@@ -896,20 +904,24 @@ label Begin_Bear:
     b "I can't tell if there is going to be a storm approaching or if there is a separate force that is manipulating the wind? It does not matter."
     b "I need to keep following this weaving trail of string that I see."
 
-    if RunCount <= 1:
+    if Bsighting <= 1:
         b "The string carries a soft blue hue, if I wack it with my paw it simply turns to air and then comes back. I don't see anything it is tied to either."
         b "My body wants to follow it by instinct, so I let it do so."
         b "No other strings have appeared since I started following this blue string."
         b " I'm not even sure if other animals see it as well."
 
-    if RunCount >= 2:
+    if Bsighting >= 2:
         b "I gotta keep moving, this string is the key to finding them. Once I find them we need to find that lake and end this once and for all."
 
 
     " N: The bear follows the blue string further into the forest. Will there be a reward, or misery at the end?"
     $ Bsighting += 1
-    jump Bear_Tile_2
 
+    menu:
+        "Take the upper route?":
+            jump Bear_Tile_2
+        "Take the lower route?":
+            jump Bear_Tile_2
 
 #---------------------------
 #--End Bear Tile 1
@@ -1006,7 +1018,11 @@ label Destroy_fairyCircle:
     "These were not scars of honor. No, these were the scars of a fool who did not think twice before acting."
     "With the battle over the Bear passed out in the Fairy forest. Hoping nothing would approach it in its defenseless state"
     
-    jump Bear_Tile_3
+    menu:
+        "Take the upper route?":
+            jump Bear_Tile_3
+        "Take the lower route?":
+            jump Bear_Tile_3
    
 
 #---------------------------
@@ -1024,17 +1040,17 @@ label Bear_Tile_3:
     
     b " Fear is my greatest enemy. If I cannot control the fear that takes over in those moments then my judgement is not sound. I have never encountered or experienced being attacked by pixies before."
 
-    if RunCount is 0:
+    if Bsighting is 0:
         b "Why did the string lead me through such a dangerous area? Then it helped me in my state of panic. What does this string know that I do not?"
 
         "The Bear felt unsettled by the idea that this magic string they trust with their life may have a mind of its own."
 
-    if RunCount is 1:
+    if Bsighting is 1:
         b " If I took my time like last time, maybe I would have realized that the dark forest was not a safe choice. "
 
         " No, then I would lose the string. I needed to follow the string."
 
-    if RunCount is 2:
+    if Bsighting is 2:
         b "The string knows best. I just need to trust it, but if it's going to put me through a gauntlet like that, I may as well deviate off course to not deal with it."
         b "The string always reappears to me later on so it would simply be an issue of losing time."
 
@@ -1045,7 +1061,7 @@ label Bear_Tile_3:
     b "What am I doing right now? Am I still alive? I'm not sure... I feel alive. I feel weightless, empty even. Am I still in the pixie patch or has some other foul beast decided to prey on me."
 
 # Happens for the first and second appearance.
-    if RunCount <= 1:
+    if Bsighting <= 1:
         b "This space is not normal. There were no animals. No sense of life. It felt cursed even. No, not cursed, protected."
 
         b "Those pixies seemed rather adamant about not letting me leave this place, but they said I was special. What makes me so special that I deserve to be treated so horribly?"
@@ -1055,7 +1071,7 @@ label Bear_Tile_3:
 #-----------
 #3rd Run interaction happens here
 #------------
-    if RunCount is 2:
+    if Bsighting is 2:
         t " Lost in thought is the phrase you are looking for stranger."
 
         b " Who's there?"
@@ -1097,7 +1113,13 @@ label Bear_Tile_3:
         b "What do you mean listened to? I haven't heard a thing from this spirit of the forest you speak of. Hey! Plant! Answer me!"
 
     "The bear lay there in their mind contemplating what they could do now. Silence permeated the space. The night was quiet in the shaded forest. As it always was."
-    jump Bear_Tile4
+        
+    menu:
+        "Take the upper route?":
+            jump Bear_Tile_4
+        "Take the lower route?":
+            jump Bear_Tile_4
+
 
 #---------------------------
 #--End Bear Tile 3
@@ -1119,7 +1141,7 @@ label Bear_Tile4:
     " The tree line slowly cleared up and color slowly returned to the Bear's eyes as it made it out of the shaded forest. The Bear was happy to have made it out in some form."
     " The string was acting strange, it was cutting itself and reforming, almost as if it was not sure what to do."
 
-    if RunCount is 0:
+    if Bsighting is 1:
         " The bear stood there perplexed. It had never seen the yarn do this before"
 
         b " What the heck are you doing now?"
@@ -1183,7 +1205,11 @@ label BHD_Tile4:
     $ HBighting += 1
     $ DFsighting += 1
     
-    jump BHD_Tile5
+    menu:
+        "Follow the Dragonfly througn the meadow?":
+            jump BHD_Tile5
+        "Change course to the hills?":
+            jump BHD_Tile5
 
 
 #---------------------
@@ -1240,7 +1266,12 @@ label BTR_Tile4:
     " They would soon begin traveling once more after settling on a direction to roam in."
     $ TLsighting += 1
     $ Rsighting += 1
-    jump BTR_Tile5
+    menu:
+        "Lead the way?":
+            jump BTR_Tile5
+        "Follow the Raccoon?":
+            jump BTR_Tile5
+  
 
 #---------------------------
 #--End Bear Tile 4
@@ -1325,7 +1356,12 @@ label Stump_forest:
     hb "Bear's back, let's go set up camp."
     df "Oh, sure."
     "The Pack would now set up camp for the night after reuniting with Bear. The stump forest would lie etched into their mind that night."
-    jump BHD_Tile6
+    menu:
+        "Leave at dawn?":
+            jump BHD_Tile6
+        "Scavenge the area?":
+            jump BHD_Tile6
+
 
 #----------------
 #Avoid stump forest
@@ -1348,8 +1384,12 @@ label Detour1:
 
     "The Pack slept through the night, yet they never shook the feeling something was watching them. Bear was on guard duty for part of the night, followed by Dragonfly and then Hummingbird."
     "They survived another night and began moving around the stumps once more."
+    menu:
+        "Leave at dawn?":
+            jump BHD_Tile6
+        "Scavenge the area?":
+            jump BHD_Tile6
 
-    jump BHD_Tile6
 #---------------------
 #- Turtle/Raccoon route Tile5
 #-------------------
@@ -1415,7 +1455,11 @@ label Convince_Turtle:
     "NO! Said both Turtle and Bear."
     jump BTR_Tile6
 
-
+    menu:
+        "Go through the valley?":
+            jump BTR_Tile6
+        "Go through the birch forest?":
+            jump BTR_Tile6
 
 
 #------------
@@ -1439,7 +1483,12 @@ label Defend_Turtle:
     b " Make a more stable plan next time. That will get the vote of Turtle."
     r " Huh? Oh, sure."
     " The Pack made their way around the lake and ventured forward once again into the forest."
-    jump BTR_Tile6
+    menu:
+        "Go through the valley?":
+            jump BTR_Tile6
+        "Go through the birch forest?":
+            jump BTR_Tile6
+
 
 #---------------------------
 #--End Bear Tile 5
@@ -1499,7 +1548,12 @@ label BHD_Tile6:
     b " Lead me; I think I will manage for the time being."
     " The Pack would enter a rather interesting performative act; the two flying animals would relay very conflicting messages while the Bear would attempt to climb, walk around, or crawl under different types of debris."
     " The process did not take very long, but it did test the patience of all 3 members."
-    jump BHD_Tile7
+    menu:
+        "Bicker with the Hummingbird?":
+            jump BTR_Tile7
+        "Ask the Dragonfly for directions?":
+            jump BTR_Tile7
+
 
 #----
 # BTR Tile 6 route
@@ -1561,7 +1615,12 @@ label ChaseTile6:
     r "You are saved from the herbs and spices this time, but you will not be once we get out of this."
     b "Screw your damn herbs and spices!"
     "The Pack finished their discourse and began running once more away from the hunter's sight."
-    jump BTR_Tile7
+    menu:
+        "Calm the Turtle down?":
+            jump BTR_Tile7
+        "Ask the Raccoon for food?":
+            jump BTR_Tile7
+
 
 #---------------------------
 #--End Bear Tile 6
@@ -1617,7 +1676,11 @@ label BHD_Tile7:
     "The Pack fell silent. The fire crackled and hummed. No one said a word."
     "The Hummingbird shined and began to generate a [[gust of wind] and pushed it to the fire. The Hummingbird kindled the fire; the fire must live so everyone can stay warm."
     "What is my purpose? They all thought."
-    jump BHD_Tile8
+    menu:
+        "Go to sleep?":
+            jump BHD_Tile8
+        "Stare at the Fire?":
+            jump BHD_Tile8
 
 
 #-------
@@ -1685,7 +1748,11 @@ label BTR_Tile7:
     b "Yeah. ME!"
     r "Hey! No moving and whining; I need you to stay still. I'm cleaning the wound."
     "The Turtle watched this all happen with a smile on their face. This team was good. They will make it. The Turtle was sure of it. The only issue is. What would they do when they reached it?"
-    jump BTR_Tile8
+    menu:
+        "Go to sleep?":
+            jump BTR_Tile8
+        "Stare at the Fire?":
+            jump BTR_Tile8
 
 #---------------------------
 #--End Bear Tile 7
