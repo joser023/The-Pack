@@ -122,7 +122,9 @@ image StrongWind = “BG-StrongWind.png”
 image Lake = “BG-Lake.png”
 
 
+define config.detatched_layers += [ "Background" ]
 
+define config.detatched_layers += [ "Headshot" ]
 
 
 
