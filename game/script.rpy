@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 
 
 # Declare Character variables here so it is easier to call them when making the dialogue
@@ -92,7 +92,7 @@ label Choose_Raccoon:
 
 
    "The Raccoon, a funny little fella who has a funny face"
-   "Do not be fooled however, the Raccoon is agile and acrobatic. Furthermore it carries the innate trait of {i} magic pocket{/i}"
+   "Do not be fooled however, the Raccoon has great [[Agility]. Furthermore it carries the innate trait of {i} [[magic pocket]{/i}"
 
 
    "Choose the Raccoon?"
@@ -124,7 +124,7 @@ label Begin_Raccoon:
     "Raccoon stretches and yawns, then rolls onto their back, watching sunlight flicker between branches."
 
 
-    r "Had the weirdest dream last night... there was a lake. Big, shiny, like a mirror that swallowed the sky."
+    r "...Had the weirdest dream last night... there was a lake. Big, shiny, like a mirror that swallowed the sky."
     "They pause, squinting at the treetops."
     r "I think something was waiting for me there."
 
@@ -174,30 +174,30 @@ label Begin_Raccoon:
     "They thrash as thick resin threads stretch between their paws."
 
 
-    r "Why do all good things turn into bad ideas?"
+    r "Why do all my good ideas turn bad so quickly?"
 
 
-    "They struggle, half-laughing, half-panicking."
+    "They struggle, half-amused, half-frustrated."
 
 
     r "Okay, Raccoon. Think. Time to deploy your legendary training. Which you... definitely have."
 
 
     menu:
-        "Use Agility to twist free":
+        "Use [[Agility] to twist free":
             "Raccoon twists, somersaults, and pops free with a dramatic spin."
-            r "Ha! And they said gymnastics class was pointless!"
-        "Use Magic Pocket to escape":
+            r "Ha! Elegant as always!"
+        "Use [[Magic Pocket] to escape":
             "They dig into a small satchel tied to their fur, pulling out a spoon, a feather, and finally a shiny pebble."
             r "Aha! The magic pebble of... goo-dissolving? Let's find out!"
             "They tap the sap with the pebble; it melts away like sugar in tea."
-            r "Science!"
+            r "Magic!"
 
 
     "They stand, covered in flecks of mud and resin."
 
 
-    r "Either the cleverest animal in the forest... or the dumbest."
+    r "I'm either the cleverest animal in the forest... or the dumbest."
 
 
     "They glance back at the sticky patch, where sunlight still glints off the sap."
@@ -215,13 +215,13 @@ label Begin_Raccoon:
     # Tile 3
 
 
-    "The air smells sweeter as the forest opens again. Light plays on the leaves; each rustle feels like a whisper from something watching kindly-or curiously."
+    "The air smells sweeter as the forest opens again. Light plays on the leaves; each rustle feels like a whisper from something watching kindly, or curiously."
 
 
     r "Note to self: shiny equals sticky. Got it. I totally learned my lesson. Probably."
 
 
-    "They shake out their paws, pretending to march proudly forward."
+    "They act like a solider, marching proudly forward."
 
 
     r "Bet Bear would've told me to 'use my head before my tail.'"
@@ -239,12 +239,17 @@ label Begin_Raccoon:
     "They chuckle, then sigh."
 
 
-    r "But... maybe they're right sometimes. I keep diving into things headfirst. One day that's gonna hurt someone else, not just me."
+    r "But... maybe they're right. At least sometimes. I keep diving into things headfirst. One day that's gonna hurt someone else, not just me."
 
 
     if RunCount > 1:
-        r "At least I'm starting to think before leaping. That's progress, right? Baby steps. Stylish baby steps."
+        r "At least I'm starting to think before acting. That's progress, right? Baby steps. Stylish baby steps."
 
+
+
+
+
+    # Tile 4 - choose companion pair
 
     "They stop, hearing a rustle in the underbrush."
 
@@ -256,10 +261,6 @@ label Begin_Raccoon:
 
 
     r "Finally! Maybe someone who appreciates my charm."
-
-
-    # Tile 4 - choose companion pair
-
 
     "Shapes move in the greenery ahead. Familiar silhouettes step into the light."
 
@@ -291,7 +292,7 @@ label Raccoon_RouteA:
     r "Short? Excuse you, this is called compact excellence."
 
 
-    tl "You two arguing already? We just met."
+    tl "You two arguing already? We just found each other."
 
 
     c "Not arguing! Just bonding aggressively."
@@ -324,7 +325,7 @@ label Raccoon_RouteA:
     r "So. You two on your way to the lake too?"
 
 
-    tl "We're always on our way somewhere. Hopefully not to our deaths."
+    tl "We're always on our way somewhere. Just hopefully not to our deaths."
 
 
     c "Don't say that! The forest is full of cool stuff! Maybe treasure! Maybe ghosts!"
@@ -360,7 +361,7 @@ label Raccoon_RouteA:
     c "Maybe it's forest ghosts! Hi ghosts!"
 
 
-    r "If they like jokes, they're welcome."
+    r "You're welcome for the jokes, by the way!"
 
 
     "The echo replies faintly, barely more than a breath."
@@ -396,21 +397,21 @@ label Raccoon_RouteA:
     r "Finally! A natural water slide!"
 
 
-    tl "Absolutely not."
+    tl "Absolutely not, Raccoon."
 
 
     c "It does look fun..."
 
 
-    tl "I take that back-absolutely not, for both of you."
+    tl "I take that back. Absolutely not, for both of you."
 
 
     menu:
-        "Raccoon leads, using Agility across the rocks":
+        "Raccoon leads, using [[Agility] across the rocks":
             "Raccoon leaps from rock to rock, paws slipping on the spray but somehow keeping their balance."
-        "Turtle leads, using Swimming to steady the current":
+        "Turtle leads, using [[Swimming] to steady the current":
             "Turtle slips into the water, steady as stone, letting the others use their shell as a moving bridge."
-        "Coyote leads, using Scent to find a calmer crossing":
+        "Coyote leads, using [[Scent] to find a calmer crossing":
             "Coyote lifts their nose, tracing the air until they find a narrower, calmer stretch of river to cross."
 
 
@@ -423,7 +424,7 @@ label Raccoon_RouteA:
     tl "Remind me to travel alone next time."
 
 
-    c "But then who'd bring the snacks?"
+    c "But then who would bring the snacks?"
 
 
     "They all laugh as they reach the opposite shore, dripping but alive."
@@ -444,19 +445,19 @@ label Raccoon_RouteA:
     tl "And yet we're alive, somehow."
 
 
-    "Raccoon grins, piling twigs into a bonfire."
+    "Raccoon grins, piling twigs onto a bonfire."
 
 
     r "Alright, no moping tonight. We survived the sticky, the scary, and the soggy. We deserve a party."
 
 
-    "They light the fire, sparks rising into the starlight. Someone laughs. Someone groans. But they stay."
+    "They light the fire, sparks rising into the starlight. Someone laughs. Someone groans. But tonight, they are all together."
 
 
     r "Look around, folks. For once, the forest doesn't feel like it's judging us."
 
 
-    tl "Give it time."
+    tl "Probably won't last long. Give it time."
 
 
     r "Nah. Tonight it listens."
@@ -465,7 +466,7 @@ label Raccoon_RouteA:
     "Raccoon starts humming, spinning clumsily around the fire. The others eventually join-awkwardly, reluctantly, sincerely."
 
 
-    "The laughter feels alive. Even the turtle relaxes a little."
+    "The laughter feels alive. Even Turtle relaxes a little."
 
 
     r "You know... I think laughter's like light. Doesn't matter how dark the forest gets-it still finds a way through."
@@ -474,15 +475,15 @@ label Raccoon_RouteA:
        # Tile 8A - Ending
 
 
-    "The Pack was able to navigate through the forest, following the faint pull of Turtle's {i}tidal memory{/i} as it tugged them down the trail."
-    "In a short span of time, they emerged from the trees and stood in front of a giant lake."
+    "The Pack is able to navigate through the forest, following the faint pull of Turtle's [[Tide Memory] as it tugs them down the trail."
+    "Before long, they emerge from the trees, and stand in front of a giant lake."
 
 
     r "So this is it."
     tl "I remember this place. There should be a lake somewhere up ahead."
-    r "Feeling lucky and wanting to dive?"
+    r "Feeling lucky enough to dive?"
     tl "No. This one's different."
-    c "Different how? Looks like free bath time to me."
+    c "Different how? Looks like a standard lake to me."
 
 
     "They move closer to the water's edge, the air around them growing heavy and still."
@@ -535,7 +536,7 @@ label Raccoon_RouteB:
     b "You say that every ten steps."
 
 
-    r "Hey! Speaking of combusting-look who I ran into!"
+    r "Hey! Speaking of combusting-look who it is!"
 
 
     hb "Oh great. The forest comedian."
@@ -571,7 +572,7 @@ label Raccoon_RouteB:
     r "Semantics!"
 
 
-    "Bear grumbles; Hummingbird mutters under their breath; Raccoon just laughs."
+    "Bear grumbles. Hummingbird mutters under their breath. Raccoon just laughs."
 
 
     r "Alright, grumpy squad, I'll lead. Someone's gotta bring personality to this trio."
@@ -613,7 +614,7 @@ label Raccoon_RouteB:
     hb "You're both exhausting."
 
 
-    "They continue walking, light flickering underfoot. For a moment, all three are quiet-then Raccoon hums a tune, breaking the tension."
+    "They continue walking, light flickering underfoot. For a moment, all three are quiet. Then Raccoon hums a tune, breaking the tension."
 
 
     r "If I die glowing, make sure I look fabulous."
@@ -649,7 +650,7 @@ label Raccoon_RouteB:
     "Raccoon pulls a scrap of cloth from their magic pocket and ties it around their face."
 
 
-    r "Mask time! Safety first-fashion second."
+    r "Mask time! Safety first, fashion second."
 
 
     hb "You're ridiculous."
@@ -658,10 +659,10 @@ label Raccoon_RouteB:
     r "Ridiculously prepared."
 
 
-    b "Hummingbird, clear the air with Wind Gale."
+    b "Hummingbird, clear the air with your wind."
 
 
-    "Wind surges through the meadow; the pollen scatters and the air clears."
+    "Wind surges through the meadow; the pollen scatters and the air clears [[Wind Gale]."
 
 
     r "See? Teamwork! We're unstoppable."
@@ -694,19 +695,19 @@ label Raccoon_RouteB:
     b "Could be worse."
 
 
-    "Raccoon grins, piling twigs into a bonfire."
+    "Raccoon grins, piling twigs onto a bonfire."
 
 
     r "Alright, no moping tonight. We survived the sticky, the scary, and the soggy. We deserve a party."
 
 
-    "They light the fire, sparks rising into the starlight. Someone laughs. Someone groans. But they stay."
+    "They light the fire, sparks rising into the starlight. Someone laughs. Someone groans. But tonight, they're all together."
 
 
     r "Look around, folks. For once, the forest doesn't feel like it's judging us."
 
 
-    b "Give it time."
+    b "Maybe it's just sizing us up."
 
 
     r "Nah. Tonight it listens."
@@ -724,7 +725,7 @@ label Raccoon_RouteB:
            # Tile 8B - Ending
 
 
-    "The Pack was able to navigate through the forest using Bear's {i}path sensing{/i} string, which had returned to them the night before."
+    "The Pack is able to navigate through the forest using Bear's [[Pathsense] string."
     "The thread guides them through the last stretch of trees until the forest opens up around a wide, shimmering lake."
 
 
@@ -742,7 +743,7 @@ label Raccoon_RouteB:
     "For a moment, the water around them is strangely calm."
 
 
-    "Then they feel it-the water underneath them slowly, surely being pulled downward."
+    "Then they feel it. The water underneath them slowly, surely being pulled downward."
     hb "Do you feel that?"
     r "I'm trying, but I'm being pulled in! Bear, I think we're-"
 
