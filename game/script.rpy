@@ -51,6 +51,77 @@ default BearBranch = False
 default DragonflyBranch = False
 
 
+#i’m taking the filenames based directly on what is in our google drive art folder! I’ll leave comments breaking up the art by category
+
+
+#animal ingame assets . the larger drawings, not the headshots.
+
+
+image bear = “Bear.png”
+image coyote = “Coyote.PNG”
+image dragonfly = “Dragonfly.png”
+image hummingbird = “Hummingbird.PNG”
+image raccoon = “Raccoon.PNG”
+image turtle = “Turtle.PNG”
+
+
+#animal headshots. To abbreviate and differentiate between the ingame PNGS, I’m adding a “HS” before the name of each animal. Capital, so it reads more clearly between the name of the animal.
+
+
+image HSbear = “HS-Bear.png”
+image HScoyote = “His-Coyote.PNG”
+image HSdragonfly = “HS-Dragonfly.png”
+image HShummingbird = “HS-Hummingbird.png”
+image HSraccoon = “HS-Raccoon.PNG”
+image HSturtle = “HS-Turtle.PNG”
+
+
+# map. The way I structured the naming was with two digits primarily (example, 0.0) the first being the column, the second being the row. So if you wanted the second tile down from column three, it would be 3.2. Think of the numbers like (C.R) , with c/r being column and row respectively.
+
+
+image map1 = “map1.png”
+image map2.1 = “map2.1.png”
+image map2.2 = “map2.2.png”
+image map3.1 = “map3.1.png”
+image map3.2 = “map3.2.png”
+image map3.3 = “map3.3.png”
+image map4.1 = “map4.1.png”
+image map4.2 = “map4.2.png”
+image map4.3 = “map4.3.png”
+image map4.4 = “map4.4.png”
+image map5.1 = “map5.1.png”
+image map5.2 = “map5.2.png”
+image map5.3 = “map5.3.png”
+image map5.4 = “map5.4.png”
+image map6.1 = “map6.1.png”
+image map6.2 = “map6.2.png”
+image map6.3 = “map6.3.png”
+image map7.1 = “map7.1.png”
+image map7.2 = “map7.2.png”
+image map8 = “map8.png”
+image mapBlank = “mapBlank” 
+
+
+# backgrounds. I noticed the file names were quite long, so I condensed by removing the “BG” from each name when you call the file, and simplifying the longer names. I also removed any spaces. The first initial of each word is capital to help readability.
+
+
+image Base = “BG-base.png”
+image BriarElement = “BG-Briar Elemental Variant.png”
+image Campfire = “BG-Campfire.PNG”
+image DeforestedStumps = “BG-Deforested Stumps Variant.png”
+image ElkCarcass = “BG-ElkCarcass.png”
+image FairySwarm = “BG-FairySwarm.png”
+image FlowerField = “BG-FlowerField.png”
+image HollowTree = “BG-HollowTree.png”
+image MudPatch = “BG-MudPatch.png”
+image MushroomPatch = “BG-MushroomPatch.png”
+image RagingRiver = “BG-Raging River Variant.png”
+image RainDroplets = “BG-RainDroplets.png”
+image SmallLake = “BG-SmallLake.png”
+image StrongWind = “BG-StrongWind.png”
+image Lake = “BG-Lake.png”
+
+
 
 
 
@@ -98,7 +169,7 @@ label starting_choice:
             jump Choose_Raccoon
         "Follow the Bear" if BearBranch is False:
             jump Choose_Bear
-    menu: 
+
 
     #These if statements are using the variable Branch variables to confirm whether the player has completed this branch or not.
     #If they have, the game will not allow them to pick that route again.
