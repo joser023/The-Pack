@@ -164,13 +164,6 @@ label start:
     jump starting_choice
 
 label starting_choice:
-    menu:
-        "Follow the Raccoon" if RacoonBranch is False:
-            jump Choose_Raccoon
-        "Follow the Bear" if BearBranch is False:
-            jump Choose_Bear
-
-
     #These if statements are using the variable Branch variables to confirm whether the player has completed this branch or not.
     #If they have, the game will not allow them to pick that route again.
     #That way there is no risk of the player repeating the same route over and over again. 
@@ -178,7 +171,7 @@ label starting_choice:
         "Follow the Raccoon" if RaccoonBranch is False:
             jump Choose_Raccoon
         "Follow the Bear" if BearBranch is False:
-            jump 
+            jump Choose_Bear
         "Follow the Dragonfly" if DragonflyBranch is False:
             jump Choose_Dragonfly
 
