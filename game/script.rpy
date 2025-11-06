@@ -75,7 +75,7 @@ label start:
         "Follow the Raccoon" if RaccoonBranch is False:
             jump Choose_Raccoon
         "Follow the Bear" if BearBranch is False:
-            jump BTR_Tile5
+            jump BTR_Tile6
         "Follow the Dragonfly" if DragonflyBranch is False:
             jump Choose_Dragonfly
 
@@ -564,7 +564,7 @@ label Stump_forest:
     hb "Bear's back, let's go set up camp."
     df "Oh, sure."
     "The Pack would now set up camp for the night after reuniting with Bear. The stump forest would lie etched into their mind that night."
-    return
+    jump BHD_Tile6
 
 #----------------
 #Avoid stump forest
@@ -588,7 +588,7 @@ label Detour1:
     "The Pack slept through the night, yet they never shook the feeling something was watching them. Bear was on guard duty for part of the night, followed by Dragonfly and then Hummingbird."
     "They survived another night and began moving around the stumps once more."
 
-    return
+    jump BHD_Tile6
 #---------------------
 #- Turtle/Raccoon route Tile5
 #-------------------
@@ -652,7 +652,7 @@ label Convince_Turtle:
     b "Very well."
     r "So what would happen if I drank the wat-"
     "NO! Said both Turtle and Bear."
-    return
+    jump BTR_Tile6
 
 
 
@@ -678,7 +678,7 @@ label Defend_Turtle:
     b " Make a more stable plan next time. That will get the vote of Turtle."
     r " Huh? Oh, sure."
     " The Pack made their way around the lake and ventured forward once again into the forest."
-    return
+    jump BTR_Tile6
 
 #---------------------------
 #--End Bear Tile 5
@@ -689,10 +689,147 @@ label Defend_Turtle:
 #--Begin Bear Tile 6
 #--------------------------
 
+
+#----
+# BHD Tile 6 route
+#----
+label BHD_Tile6:
+    df " Oh dear. This is not good."
+    
+    b " What's wrong?"
+    
+    df " My [[foresight] detects a storm coming. And this one is not going to be nice to anyone or anything."
+    b " Does your foresight give you an estimate of the time it will take to reach us?"
+    df " No, it doesn't. It's all just a premonition with an unknown time frame."
+    hb " Even if we did have time, it's not like we are anywhere near some sort of shelter to speak of. Plus, having a time frame for the Fly's abilities would be hell."
+    b " You see time as a constant hell bird. I see it as convenient information to have. Change your perspective, and it will be much easier to digest."
+    b " Enough chit-chat; both of you start scouting the area. We need to find shelter now!"
+    df " Roger that!"
+    hb " If you don't find me, presume I'm hiding in a tree."
+    " The Pack split up quickly in search of some form of shelter. The dark clouds quickly rolled into the forest and brought with them a wicked storm."
+    " Lightning began striking the forest, wind speeds began rising high, and the rain was more typhoon-like."
+    df " AHHHHHH!"
+    hb " WE'RE GONNA DIE!"
+    b " Hold onto me! I think I see a cliff face up ahead."
+    hb " Please, if there is a higher power, make me something other than a Hummingbird; please let me be a bit bigger. I will take a sparrow."
+    hb " I just don't want to be suffering from acute starvation every few hours. It's a simple ask, really."
+    b " Enough with the prayers! If you can see, look for something that looks like a cave or shelter."
+    df " Left! Left! I see an opening!"
+    " The Bear lunged towards the hole in the cliff. Fortunately, it was big enough to fit all of them."
+    "{i}BOOM!{/i} the lighting responded. The storm kept raging relentlessly. Everything in its path was suffering greatly."
+    b " Are you two alright?"
+    df " I think so?"
+    hb " I felt like my body almost got torn off of my legs by the wind."
+    b " We will stay here till the storm settles."
+    " The storm did not pass by so easily. Hours passed, and to no avail, it had yet to pass. This storm would last a full day."
+    b " Bird. Are you sure you can survive a full day without flowers?"
+    hb " Yeah... So long as I ain't flying, I probably won't die."
+    df " I think he is dying of starvation."
+    b "{i}sigh{/i} I'll be back."
+    " The Pack rested in the cave for a full night. Only after sunrise did the storm settle down. The forest was in shambles. "
+    " Fallen trees, overflowing rivers, mudslides, and landslides littered the area."
+    b " This storm really did a number on the forest. "
+    hb " Hey! I can get a decent view now thanks to the fallen trees! I can see things, kind of."
+    b " Do you see any way for me around these giant trees?"
+    hb " Just break them. You ain't making it around."
+    b " I'll just climb them instead at the cleaner spots."
+    " The fallen trees had posed a greater problem to the Bear who was on the ground, compared to their flying allies."
+    df " I'm back. It seems like there are tons of trees that were knocked down by the storm. Do you think you have the energy to move around or climb some trees?"
+    b " Lead me; I think I will manage for the time being."
+    " The Pack would enter a rather interesting performative act; the two flying animals would relay very conflicting messages while the Bear would attempt to climb, walk around, or crawl under different types of debris."
+    " The process did not take very long, but it did test the patience of all 3 members."
+    jump BHD_Tile7
+
+#----
+# BTR Tile 6 route
+#----
+label BTR_Tile6:
+    r "You ever wonder if other animals have these weird powers we have?"
+    "Yes, Turtle and Bear replied."
+    r "It feels like every ability is tied to us as animals. Turtles got that weird shell thing with the memory thing. Then you got a magic string."
+    r "I think I am not right about the power thing."
+    tl "It may just be related to us as individuals?"
+    r "Like every other raccoon has a separate ability from mine?"
+    tl "Yes."
+    r "That would be pretty cool actually. Imagine an army of Raccoons each with their own unique ability."
+    tl "At that point it's just power in numbers for who has more powers."
+    "The wind picked up from behind the Pack. Bear stopped momentarily. They felt the whiff of something odd. Something out of place."
+    "{i}BOOM!{/i} A nearby tree snapped from the impact of the bullet piercing it."
+    menu:
+        "Run":
+            jump ChaseTile6
+
+label ChaseTile6:
+    b "MOVE! NOW!"
+    "{i}BOOM!{/i} Another bullet fired, landing near the Raccoons legs."
+    r "OH MY GOD! That almost hit me!"
+    b " Don't speak! RUN!"
+    tl "Oh god! Oh god! Oh god! This can't be happening. This can't be happening."
+    b "Turtle, grab on; you're slipping!"
+    "The turtle in a panic used [[tidal memory] to scan the memories of this area of the forest"
+
+    tl "Crap, we made a mistake; my ability tells me we stumbled on human hunting ground!"
+    r "That's a thing?!"
+    b "Always has been! I've seen them before! Those giant sticks shoot fire! Do not get hit by them!"
+    "Right on cue, another {i}BOOM!{/i} followed by a whistling sound seared the side of Bear's face."
+    b "URGHH!"
+    tl "Ah Crap, crap, crap. Not good Bear got hit. What do we do? Do I bring up my shell?"
+    r "Friend, that magic is piercing into the trees. Imagine what it will do to your shell."
+    tl "Right! Right. AHH! What do we do here?!"
+    b "Hide and run! AHHH, damn it!"
+    tl "Did they get your eye?"
+    b "No, I can see, but I can taste blood in my mouth. Turtle, what direction leads us out of the hunting ground?"
+    tl "Uh, uh, uh. It doesn't matter at this point. Just run straight!"
+    "The group advanced at quick speeds as far from the hunter as possible."
+    b " I think we lost them."
+
+    "The Turtle activated [[Tidal memory] on the land"
+    tl "Hmmm... Yes. Oh, thank goodness. I can see the footprints; they stopped following us some time ago."
+    r "Here, I might have something for the bleeding." 
+    "Raccoon scavenged through the magic pocket for some leaves." 
+    r "Here, these flowers and leaves should help."
+    b "What are they for?"
+    r "It's my special mix of herbs and spices."
+    "Raccoon began to dab the assortment of flowers and leaves against Bear's face." 
+    b "Ow! That stings."
+    r "Oh good! It's working then."
+    b "No. Not good, that stuff hurts. Keep it away."
+    r "Believe in the herbs and spices, Bear; they will cure all your problems." 
+    b "I refuse if they are going to hurt me."
+    tl "Going to sour the mood here, but I am detecting sudden movement of the hunter moving once again. We need to move."
+    r "You are saved from the herbs and spices this time, but you will not be once we get out of this."
+    b "Screw your damn herbs and spices!"
+    "The Pack finished their discourse and began running once more away from the hunter's sight."
+    jump BTR_Tile7
+
 #---------------------------
 #--End Bear Tile 6
 #--------------------------
 
+#---------------------------
+#--Begin Bear Tile 7
+#--------------------------
+
+#------------
+#- BHD Tile 7 route
+#-------
+
+
+#-------
+#- BTR Tile 7 Route
+#------
+
+
+#---------------------------
+#--End Bear Tile 7
+#--------------------------
+#---------------------------
+#--Begin Bear Tile 8
+#--------------------------
+
+#---------------------------
+#--End Bear Tile 8
+#--------------------------
 
 #------------------------------------------
 #-End Bear Branch
