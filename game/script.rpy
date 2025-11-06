@@ -813,19 +813,183 @@ label ChaseTile6:
 #------------
 #- BHD Tile 7 route
 #-------
+label BHD_Tile7:
+    "The night was dark, emptier than a drained ocean. In the midst of this darkness lay an orb of light. A beacon for all who cared to see."
+    b "Bird, what can you do?"
+    hb "I can fly, I can eat from flowers, and I can channel a gust of wind to blow a leaf."
+    df " They can do better than blow a gust of wind. They just tend... to not be able to do much more than that. What, it's true!"
+    "The Hummingbird gave the Dragonfly an annoyed stare to drill holes into them."
+    b "That will do. Use your skill to blow some more air on the fire. I'll go find some branches to add to it."
+    hb "You don't know when to shut your mouth, do you?"
+    df "Neither of us do."
+    hb "Oh no. {b}Don't{/b} lump me with you."
+    df "I think this is the time we both admit that we are wrong."
+    hb "Wrong? I have been realistic, honest, and truthful."
+    df "You have said little to nothing since we met the Bear. You're lying to yourself."
+    " The Hummingbird had never seen this shift in Dragonfly before; it made them uncomfortable. It felt like staring at a pool of water, and the reflection was talking back to them."
+    " The Hummingbird stood there motionless in shock."
+    df " Hahaha. Guess my impression of Bear was that good. In all seriousness though, we really need to figure out what-"
+    " The Hummingbird darted at the Dragonfly and attempted to peck at the bug."
+    df " Hey! Quit it!"
+    hb " Is this a game to you? Putting me in the hot seat while toying with me? Why can you find joy even in a screwed up moment like this?"
+    df "We live, we eat, we die! Can I not try to enjoy myself? My lifespan is shorter than yours, and even I can admire the fleeting moments."
+    df "You whine and moan that nothing was set perfectly for you. You are spoiled."
+    hb "Can I not be? Can I not have wants?"
+    b "You carry a wound that cannot be contained in that small body of yours."
+    "The Bear reappeared from the darkness carrying a bundle of sticks in its mouth. They dropped them and smacked them one by one closer to the fire."
+    b "When we saw the stumps, I noticed you were more vulnerable than I had seen before. You've suffered something on that level."
+    b "Something so terrifying it needs you to be a monster to survive it."
+    b "Give up."
+    hb "Excuse me?"
+    b "If you had my body, my strength, my experience. Would it be enough?"
+    hb "...Yes."
+    df "You're lying again."
+    hb "Can you not butt in anymore? You've been a thorn in my side, a zit I couldn't pop, a sickness that never dies."
+    b "Then leave. The Dragon has been your voice of reason since you've met them. They are the small voice you've kept-"
+    hb "Shut up."
+    b "locked away."
+    hb "SHUT UP!"
+    b "-The voice you wish you could let speak out but won't admit is right."
+    "The Hummingbird's heart raced intensely. A rage boiled within the small body but was only a defense mechanism. The Hummingbird did not want to admit they were read so easily."
+    hb "You will never understand... What I saw. We.... lost everything. I was hopeless. Desperate for survival. Death has been hunting me for too long. Not a single moment do I go without feeling its gaze upon me."
+    b  "You carry a will to live that some wish they had. To be able to keep moving forward is to live. You are the only one holding yourself back."
+    "The Pack fell silent. The fire crackled and hummed. No one said a word."
+    "The Hummingbird shined and began to generate a [[gust of wind] and pushed it to the fire. The Hummingbird kindled the fire; the fire must live so everyone can stay warm."
+    "What is my purpose? They all thought."
+    jump BHD_Tile8
 
 
 #-------
 #- BTR Tile 7 Route
 #------
-
+label BTR_Tile7:
+    "The day quickly vanished. The fear, adrenaline, and unrest settled as the sun set."
+    b "I think we can rest here."
+    tl "How are you doing? Are you sure that wound won't be a problem later?"
+    r "It will definitely be. I knew a raccoon who got caught in a human trap once. Buddy was dead a week later from some weird mucus growing on their leg."
+    r "Sit down now and let me use my herbs and spices on ya."
+    "The Bear did not want to, but it seems the Raccoon is more knowledgeable in this aspect than they thought."
+    tl "Hey Raccoon, do you mind doing that thing you usually do when the sun goes down?"
+    r "Yeah mean starting the fire? Yeah, I should. Won't be able to tend to the wound without being able to see. Good call."
+    " The Turtle nodded. Guilt consumed the Turtle as they were unable to do anything to help their friends in an extremely dire scenario."
+    " The Raccoon reached into their [[magic pocket] and pulled out a piece of flint and a rock."
+    r "Hey Bear, you mind clawing at the ground for me? I need a clean patch to set up this fire. Imma grab some sticks real quick."
+    r "Gotta keep this fire up and running long enough to tend to your wounds."
+    b "Mind getting the Turtle off my back?"
+    r "Yeah, no problem."
+    "This constant dynamic between the Raccoon and Bear is something the Turtle wishes it could do. Land really is not a turtle's domain."
+    r "Alright, you two can hang here; I'll go grab the sticks and stuff. Be back in a jiffy!"
+    " The Raccoon scampered off into the brush. The Bear began to stab and pick at the soil to create the patch the Raccoon wanted."
+    "The Turtle walked around and stared at the digging process."
+    b "What's on your mind? I can tell you're still shaken up from the human incident."
+    tl "Ah, well, Yeah... I felt like I really couldn't do much per se. All I did was bite down on your back and hope for the best. There really haven't been any moments I look back on and say, \"I did good there.\""
+    "The Turtle hoped for a response from the Bear, but they did not respond. Turtle wanted some form of criticism, but nothing was returned."
+    b "That's it?"
+    tl "What?"
+    b "That's what worries you? Heh"
+    tl "Wha-Wha- What's funny? Did I sound like a fool?"
+    b "No. You dwell too much on the small things, Turtle. You did well, and you don't realize it."
+    tl "When?"
+    b "Who realized the human was still chasing us after we thought we lost them? Who was immediately voluntold to explore the lake because they are the best diver?"
+    b "Who has the ability to protect and tell the stories of the past?"
+    tl "Me. Huh."
+    b "I think you just get so frightened and panicked that you don't realize that you do contribute in your own ways."
+    "The Bear completed their small hole for the fire. The Bear felt proud of making a hole."
+    "The Turtle realized that maybe they are better at some things than they realized; it's just a matter of perspective that blinded them."
+    " The Raccoon returned running with some sticks in its mouth and presumably more in its magic bag."
+    " Alright, Turtles and Bears let us begin."
+    " The Raccoon pulled out more sticks from its [[magic pocket] and began throwing them into the small hole."
+    "After that they pulled out some dried grass and made a ball. Next they grabbed the piece of flint and a rock and began smashing them together. Sparks began to fly."
+    "The Bear and Turtle looked baffled in amazement at the sorcery the Raccoon was doing before their very eyes. Soon enough, the grass caught fire."
+    r "Okay! Hot! Hot! Hot!"
+    "The Raccoon grabbed the ball and tossed it into the pile of sticks. Then the Bear grabbed sticks and put them on top of the small fire."
+    r "Blow on the fire please!"
+    b "Oh, sure!"
+    "With the help of Bear blowing on the fire, it almost went out, but Raccoon's guidance helped keep it alight, and finally, the bigger sticks caught fire."
+    r "It lives! Yes! Thank you, spirits of the forest."
+    "The Bear and Turtle looked in amazement at the fire. This destructive force, right in front of them, wasn't spreading."
+    "It stayed there, but it felt terrifying in its own way, yet it also felt pleasing and warm to be next to."
+    b "How did you do this?"
+    r " Well, I'm not really sure where I learned it from. I just kind of knew how to do it. Pretty neat, right?"
+    "The Bear couldn't help but be amazed. The silly Raccoon had many tricks up its sleeve. What else did they know?"
+    r "Alright, lend me your face."
+    "The Raccoon gestured with its little paws for the Bear's face with bundles of herbs and spices ready. The Bear was extremely reluctant."
+    " It hurt a lot last time, and they weren't sure about this."
+    "The Raccoon was not taking no for an answer and got closer. The Bear dropped to the floor accepting defeat."
+    r " Put this in your mouth. Next to the inside of the wound."
+    b "It tastes bitter. Ouw! If Horphs!"
+    r "Oh good. That means it's working."
+    b "I domph like dis."
+    r "Did not say you would. Just know that means it's working, I think?  Had another animal I tried it on. Hehe. They want me dead buut, they are still alive."
+    b "Yeah. ME!"
+    r "Hey! No moving and whining; I need you to stay still. I'm cleaning the wound."
+    "The Turtle watched this all happen with a smile on their face. This team was good. They will make it. The Turtle was sure of it. The only issue is. What would they do when they reached it?"
+    jump BTR_Tile8
 
 #---------------------------
 #--End Bear Tile 7
 #--------------------------
+
+
 #---------------------------
 #--Begin Bear Tile 8
 #--------------------------
+
+#-------
+#-BHD Tile 8 route
+#-------
+label BHD_Tile8:
+    "The Pack was able to navigate through the forest using the Bear's [[path sensing] string, which had returned to them the night before."
+    hb "Does this string of yours ever end?"
+    b "If it did, I would have said so."
+    df "Seems like it. My [[foresight] is getting a bit hazy, but I see us stopping somewhere."
+    b "Good."
+    "After a few more hours of traveling, they reached the foreseen stopping point. A giant lake stood in their path."
+    df "This is exactly what I saw."
+    hb "A lake?"
+    b "Strange, the string ends here at the water's edge."
+    df "You know any magic words? Might be a riddle!"
+    hb "It looks like an ordinary lake..."
+    "The Hummingbird felt it for a split second. The chill they felt that night. It all came rushing back in an instant, only to be snapped away. The Hummingbird slowly flew to the water."
+    b "Bird? Bird!"
+    "The hummingbird flew into the water and, like a drop of water, was gone in an instant. Consumed by the lake's existence."
+    b "Dragon! Can you see anything?"
+    "The Dragonfly was gone as well. Only the Bear remained in the middle of the lake."
+    b "When did I get so far into the lake? Where is everyone?"
+    "All valid questions, but no one answered them. The Bear saw something below them shining. They weren't sure what it was, but they were attracted to it. As they descended, the water began beating."
+    "It got darker and darker. The beating kept going. Then it went quiet."
+    $ BearBranch = True
+    return
+
+#-------
+#-BTR Tile 8 route
+#-------
+label BTR_Tile8:
+    "The Pack was able to navigate through the forest using the Bear's [[path sensing] string, which had returned to them the night before."
+    r "How's your cheek feeling?"
+    b "It stings a lot."
+    r "I think that's, good?"
+    tl "I feel strange."
+    r "How so?"
+    tl "I remember this path. There should be a lake somewhere up ahead."
+    r "Feeling lucky and wanting to dive?"
+    tl "No. This one's different."
+    b "Let's move faster."
+    "The Pack advanced quickly down the path following the Turtle's guidance. In a short span of time they were in front of a giant lake."
+    tl "Get me down, please?"
+    r "Yeah, give me a second."
+    b "You gonna use your magic?"
+    tl "Yes. Put me at the water's edge, please."
+    " The Raccoon did as it was told and plopped the Turtle in the sandbar. The turtle walked to the water and began to float. The Turtle began the ritual of the [[tidal memory]."
+    " The water began to ripple and change. Waves formed, and the water got violent. The Bear and Raccoon looked at each other and rushed into the water. Something was going wrong with the ritual."
+    " As the two approached the Turtle. The waves got more violent and began pushing them away. Suddenly a big wave appeared."
+    r " That's not good!"
+    b " Get out of the water!"
+    r "I'm trying, but I'm being pulled in! Bear I think we're-"
+    "The wave crashed with a hard thud. Consuming all three animals. Each getting pulled into the dark depths of the lake."
+    $ BearBranch = True
+    return
+
 
 #---------------------------
 #--End Bear Tile 8
