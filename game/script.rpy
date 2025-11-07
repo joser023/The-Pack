@@ -57,76 +57,207 @@ default DragonflyBranch = False
 #animal ingame assets . the larger drawings, not the headshots.
 
 
-image bear = "Bear.png"
-image coyote = "Coyote.PNG"
-image dragonfly = "Dragonfly.png"
-image hummingbird = "Hummingbird.PNG"
-image raccoon = "Raccoon.PNG"
-image turtle = "Turtle.PNG"
+image bear = "images/FullBody/Bear.png"
+image coyote = "images/FullBody/Coyote.PNG"
+image dragonfly = "images/FullBody/Dragonfly.png"
+image hummingbird = "images/FullBody/Hummingbird.PNG"
+image raccoon = "images/FullBody/Raccoon.PNG"
+image turtle = "images/FullBody/Turtle.PNG"
 
 
 #animal headshots. To abbreviate and differentiate between the ingame PNGS, I'm adding a "HS" before the name of each animal. Capital, so it reads more clearly between the name of the animal.
 
 
-image HSbear = "HS-Bear.png"
-image HScoyote = "His-Coyote.PNG"
-image HSdragonfly = "HS-Dragonfly.png"
-image HShummingbird = "HS-Hummingbird.png"
-image HSraccoon = "HS-Raccoon.PNG"
-image HSturtle = "HS-Turtle.PNG"
+image HSbear = "images/HS/HS-Bear.png"
+image HScoyote = "images/HS/HS-Coyote.PNG"
+image HSdragonfly = "images/HS/HS-Dragonfly.png"
+image HShummingbird = "images/HS/HS-Hummingbird.png"
+image HSraccoon = "images/HS/HS-Raccoon(1).PNG"
+image HSturtle = "images/HS/HS-Turtle(1).PNG"
 
 
 # map. The way I structured the naming was with two digits primarily (example, 0.0) the first being the column, the second being the row. So if you wanted the second tile down from column three, it would be 3.2. Think of the numbers like (C.R) , with c/r being column and row respectively.
 
 
-image map1 = "map1.png"
-image map2.1 = "map2.1.png"
-image map2.2 = "map2.2.png"
-image map3.1 = "map3.1.png"
-image map3.2 = "map3.2.png"
-image map3.3 = "map3.3.png"
-image map4.1 = "map4.1.png"
-image map4.2 = "map4.2.png"
-image map4.3 = "map4.3.png"
-image map4.4 = "map4.4.png"
-image map5.1 = "map5.1.png"
-image map5.2 = "map5.2.png"
-image map5.3 = "map5.3.png"
-image map5.4 = "map5.4.png"
-image map6.1 = "map6.1.png"
-image map6.2 = "map6.2.png"
-image map6.3 = "map6.3.png"
-image map7.1 = "map7.1.png"
-image map7.2 = "map7.2.png"
-image map8 = "map8.png"
-image mapBlank = "mapBlank" 
+image map1 = "images/Tiles/map1.png"
+image map2_1 = "images/Tiles/map2.1.png"
+image map2_2 = "images/Tiles/map2.2.png"
+image map3_1 = "images/Tiles/map3.1.png"
+image map3_2 = "images/Tiles/map3.2.png"
+image map3_3 = "images/Tiles/map3.3.png"
+image map4_1 = "images/Tiles/map4.1.png"
+image map4_2 = "images/Tiles/map4.2.png"
+image map4_3 = "images/Tiles/map4.3.png"
+image map4_4 = "images/Tiles/map4.4.png"
+image map5_1 = "images/Tiles/map5.1.png"
+image map5_2 = "images/Tiles/map5.2.png"
+image map5_3 = "images/Tiles/map5.3.png"
+image map5_4 = "images/Tiles/map5.4.png"
+image map6_1 = "images/Tiles/map6.1.png"
+image map6_2 = "images/Tiles/map6.2.png"
+image map6_3 = "images/Tiles/map6.3.png"
+image map7_1 = "images/Tiles/map7.1.png"
+image map7_2 = "images/Tiles/map7.2.png"
+image map8 = "images/Tiles/map8.png"
+image mapBlank = "images/Tiles/mapBlank" 
 
 
 # backgrounds. I noticed the file names were quite long, so I condensed by removing the "BG" from each name when you call the file, and simplifying the longer names. I also removed any spaces. The first initial of each word is capital to help readability.
 
+# The backgrounds image definitions
 
-image Base = "BG-base.png"
-image BriarElement = "BG-Briar Elemental Variant.png"
-image Campfire = "BG-Campfire.PNG"
-image DeforestedStumps = "BG-Deforested Stumps Variant.png"
-image ElkCarcass = "BG-ElkCarcass.png"
-image FairySwarm = "BG-FairySwarm.png"
-image FlowerField = "BG-FlowerField.png"
-image HollowTree = "BG-HollowTree.png"
-image MudPatch = "BG-MudPatch.png"
-image MushroomPatch = "BG-MushroomPatch.png"
-image RagingRiver = "BG-Raging River Variant.png"
-image RainDroplets = "BG-RainDroplets.png"
-image SmallLake = "BG-SmallLake.png"
-image StrongWind = "BG-StrongWind.png"
-image Lake = "BG-Lake.png"
+# ... update all other background definitions here
+image Base = "images/Backgrounds/BG-base.png"
+image BriarElement = "images/Backgrounds/BG-Briar Elemental Variant.png"
+image Campfire = "images/Backgrounds/BG-Campfire.PNG"
+image DeforestedStumps = "images/Backgrounds/BG-Deforested Stumps Variant.png"
+image ElkCarcass = "images/Backgrounds/BG-ElkCarcass.png"
+image FairySwarm = "images/Backgrounds/BG-FairySwarm.png"
+image FlowerField = "images/Backgrounds/BG-FlowerField.png"
+image HollowTree = "images/Backgrounds/BG-HollowTree.png"
+image MudPatch = "images/Backgrounds/BG-MudPatch.png"
+image MushroomPatch = "images/Backgrounds/BG-MushroomPatch.png"
+image RagingRiver = "images/Backgrounds/BG-Raging River Variant.png"
+image RainDroplets = "images/Backgrounds/BG-RainDroplets.png"
+image SmallLake = "images/Backgrounds/BG-SmallLake.png"
+image StrongWind = "images/Backgrounds/BG-StrongWind.png"
+image Lake = "images/Backgrounds/BG-Lake.png"
+
+#define config.detached_layers += [ "Background" ]
+
+#define config.detached_layers += [ "Headshot" ]
+init python:
+    # 1. Define the layer stack (this is still necessary)
+    config.layers = [ 
+        'master','transient','screens', 'overlay','headshot'
+    ]
+
+#Alignment range for xalignment is -0.6 for far left. and 1.0 for far right. 0.3 is roughly middle
+#Alignment ranfe for yalignment is 0.0 for top of the screen and 1.0 for the bottom of the screen
+
+# Place this with your image/character definitions
+# 1. Scaling (Sizing)
+transform small_size5:
+    zoom 0.5
+transform small_size4:
+    zoom 0.4
+transform small_size2:
+    zoom 0.2
+
+# 2. Positioning (Centering at the bottom)
+transform center_middle:
+    xalign 0.6
+    yalign 0.5
+
+transform center_middleS:
+    xalign 0.6
+    yalign 0.7
+transform center_bottom:
+    xalign 0.4
+    yalign 0.8
+
+# Positions above text box far left
+transform center_FarLeft:
+    xalign 0.0
+    yalign 0.7
+    xanchor 0.0
+
+transform center_FarLeft2:
+    xalign -0.01
+    yalign 0.7
+    xanchor 0.0
+
+transform center_Left1:
+    xalign 0.1
+    yalign 0.7
+    xanchor 0.5
+transform center_Left:
+    xalign 0.2
+    yalign 0.7
+    xanchor 0.5
+# Positions above text box far left
+transform center_Left3:
+    xalign 0.3
+    yalign 0.7
+    xanchor 0.5
+transform center_Left4:
+    xalign 0.4
+    yalign 0.7
+    xanchor 0.5
+transform top_FarLeft:
+    xalign 0.0
+    yalign 0.3
+
+transform top_Left:
+    xalign 0.2
+    yalign 0.3
 
 
-define config.detatched_layers += [ "Background" ]
+#Positions above text box far right
+transform center_FarRight:
+    xalign 1.0
+    yalign 0.5
+    xanchor 1.0
 
-define config.detatched_layers += [ "Headshot" ]
+transform center_FarRight2:
+    xalign 1.2
+    yalign 0.5
+    xanchor 1.0
+transform center_Right:
+    xalign 0.7
+    yalign 0.5
+    xanchor 0.5
 
-
+transform center_RightS:
+    xalign 0.7
+    yalign 0.7
+    xanchor 0.5
+transform center_FarRightS:
+    xalign 1.0
+    yalign 0.7
+    xanchor 1.0
+#Sets the headshot just a bit above the text box to the right
+transform HS_Right6:
+    xalign 0.6
+    yalign 0.7
+    zoom 0.2
+#Sets the headshot just a bit above the text box further to the right
+transform HS_Right8:
+    xalign 0.8
+    yalign 0.7
+    zoom 0.2
+#Sets the headshot just a bit above the text box to the left
+transform HS_Left3:
+    xalign 0.2
+    yalign 0.7
+    zoom 0.2
+#Sets the headshot just a bit above the text box further to the left
+transform HS_Left5b:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.2
+transform HS_Left5h:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.5
+transform HS_Left5r:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.34
+transform HS_Left5t:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.32
+transform HS_Left5d:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.2
+transform HS_Left5c:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.32
+transform flip_center:
+    xzoom -1.0
 
 #-----------------------
 #-Scene and character commands
@@ -152,7 +283,7 @@ label start:
     #These if statements are using the variable Branch variables to confirm whether the player has completed this branch or not.
     #If they have, the game will not allow them to pick that route again.
     #That way there is no risk of the player repeating the same route over and over again.    
-    "..."
+    "..." 
     "\"Who are you?\""
     "A question that rings throughout your fleeting thoughts."
     "You were here. You were just here. And now..."
@@ -169,7 +300,7 @@ label starting_choice:
     #These if statements are using the variable Branch variables to confirm whether the player has completed this branch or not.
     #If they have, the game will not allow them to pick that route again.
     #That way there is no risk of the player repeating the same route over and over again. 
-
+    menu:
         "Follow the Raccoon" if RaccoonBranch is False:
             jump Choose_Raccoon
         "Follow the Bear" if BearBranch is False:
@@ -863,7 +994,7 @@ label Raccoon_RouteB:
     "They fight to swim back, but every stroke only drags them deeper into the invisible current."
     "One by one, they're swallowed by the lake, their shapes vanishing beneath the churning water."
 
-
+    $ RaccoonBranch = True
     scene black with fade
 
 
@@ -898,9 +1029,11 @@ label Choose_Bear:
 #--------------------------
 
 label Begin_Bear:
+    scene Base
     " The forest lay dormant. The sun rests a few hours before reaching its peak. It's quiet."
     " The wind rattles the leaves on trees and brushes the fur of the animals who are awake. One resident however, feels there is too much wind and not enough clouds in sight."
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    show bear at center_Right, small_size5
     b "I can't tell if there is going to be a storm approaching or if there is a separate force that is manipulating the wind? It does not matter."
     b "I need to keep following this weaving trail of string that I see."
 
@@ -914,7 +1047,7 @@ label Begin_Bear:
         b "I gotta keep moving, this string is the key to finding them. Once I find them we need to find that lake and end this once and for all."
 
 
-    " N: The bear follows the blue string further into the forest. Will there be a reward, or misery at the end?"
+    " The bear follows the blue string further into the forest. Will there be a reward, or misery at the end?"
     $ Bsighting += 1
 
     menu:
@@ -933,39 +1066,41 @@ label Begin_Bear:
 #--------------------------
 
 label Bear_Tile_2:
+    hide HSbear onlayer headshot
     "The sun was now past the midway point. The Bear roamed through the forest, rather annoyed as to how long the string goes."
     "It endlessly reaches through the forest, weaving through the trees, the bushes, and the horizon at times."
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " This part of the forest is different. Bigger trees, mushrooms, and it smells more humid. The trees are blocking more of the sun around here. This area is going to be dangerous at night."
     
     b "The darkness will appear here faster. I need to move out of here quickly before nightfall."
-
+    hide HSbear onlayer headshot
     "Bear picked up the pace through this part of the forest. But something felt off. The Bear rounded around the rock wall once more, only to find themselves facing it again in front of them."
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " What is going on here?"
-
+    hide HSbear onlayer headshot
     " The Bear pauses, scans their surroundings and runs in a different direction. They round trees and bushes only to find themselves next to the giant rock again."
-
+    
     p " Hehehehe..."
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Who's there? Show yourself!"
-
+    hide HSbear onlayer headshot
     p " Hahaha!"
-
+    scene FairySwarm
     " Out of thin air, balls of light manifest brightly before the Bear's eyes. These glowing lights are the local pixies of the forest. They love to play tricks on the local wildlife and this time they found something extraordinary."
     
     p " It. Yes. Yes. Yes. Yes. This one is special. Special. Special. Special. "
-
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Who are you calling special? "
-
+    
     b " The Bear lunges at the flying pixies who gracefully flutter out of harm's way."
-
+    hide HSbear onlayer headshot
     p " Oh. Oh. Oh. Oh... Mean creature. Yes, mean creature. Punishment needed. Yes, punishment needed! Fight! Fight! Fight! Fight!"
 
     " The Bear got a bad feeling from this. Rightfully so as a spark bolt hit them in the body"
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "OW! HEY STOP THAT! CRAP!"
-
+    hide HSbear onlayer headshot
     " The Bear realized quickly it is not the predator here. It is prey being hunted by a pack of psychotic predators who can fly and use all forms of magic. Bolts of magic, levitation, minor teleport."
     " The Bear suffered constantly trying to find an exit out of this trap."
 
@@ -974,8 +1109,9 @@ label Bear_Tile_2:
             jump escape_plan
 
 label escape_plan:
-    " As the bear surveyed the area for anything useful they spotted something peculiar. They ran again, taking a magical beating. They were once again teleported back by the pixies, and there it was in front of the Bear: A fairy circle clear as day." 
-    " The toadstools made the perfect circle that pixies would come out of."
+    " As the bear surveyed the area for anything useful they spotted something peculiar. They ran again, taking a magical beating. They were once again teleported back by the pixies, and there it was in front of the Bear: A bundle toadstools" 
+    scene MushroomPatch
+    " The toadstools made the perfect fairy circle that pixies would come out of."
     " The Bear sprinted immediately for the toadstools in order to destroy the fairy circle."
 
     p " No! No! NO! Do not interrupt the circle! Yes! Yes!"
@@ -984,19 +1120,19 @@ label escape_plan:
     " Unfortunately one pixie did not anticipate they would miss and hit a toadstool."
 
     p " AHH! No! No! Bad! Bad! Not good!"
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Perfect... I need to... swipe at those... mushrooms... Thought the Bear to themself."
-
+    hide HSbear onlayer headshot
     " The Bear's energy was sapped from the barrage of attacks and constant running. They needed one chance. The pixies all in desperation used teleport wildly. Moving the Bear everywhere in their domain."
     " The Bear was getting nauseous, but they could tell that they were still in the general area of the fairy circle. How would they know if they were in front of the circle? It happened for a quick second." 
     " They saw the{i} blue thread{/i} followed by a quick flash of the toadstools."
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " That's it! They thought."
-
+    hide HSbear onlayer headshot
     "The Bear concentrated their focus on waiting for that one moment. One good swipe would destroy most of the fairy circle"
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Please... Please..."
-
+    hide HSbear onlayer headshot
     "The nausea was getting to the Bear's head. They needed to stay focused. They had one chance at this."
     "Right on time, the{i} blue thread {/i}appeared."
     
@@ -1008,20 +1144,19 @@ label escape_plan:
 label Destroy_fairyCircle:
    
     " The Bear swiped mid teleport and as anticipated, their claws landed on the fairy circle. Shredding the toadstools into tiny pieces."
-
+    
     p "NO! NO! NO! NO! RUN! RUN! RUN!"
-
+    scene FlowerField
     " The pixies without their fairy circle are nothing. The glow the pixies created dissipated faintly into the forest."
     " The sunlight became more apparent to the Bear who was now laying on the floor throwing up from the nausea induced teleporting spree."
-
     " Fatigue took over the Bear's body. The pain and exhaustion of being attacked with magic left clear scars and burns across the bear's fur."
     "These were not scars of honor. No, these were the scars of a fool who did not think twice before acting."
     "With the battle over the Bear passed out in the Fairy forest. Hoping nothing would approach it in its defenseless state"
     
     menu:
-        "Take the upper route?":
+        "Try to wake up?":
             jump Bear_Tile_3
-        "Take the lower route?":
+        "Try to dream?":
             jump Bear_Tile_3
    
 
@@ -1037,23 +1172,23 @@ label Bear_Tile_3:
     "The day flew by instantly as the Bear lay dormant on the forest floor. Nothing disturbed them. Nothing appeared around them. Only the trees watched. The trees said nothing but their eyes and judgement lay on the Bear."
     "Within the confines of the Bear's mind they played the encounter with the pixies multiple times. Trying to decipher what could have been done. What could be done better? Am I equipped to fight magical creatures?"
     "What if they fly? These questions passed through the Bear's mind."
-    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Fear is my greatest enemy. If I cannot control the fear that takes over in those moments then my judgement is not sound. I have never encountered or experienced being attacked by pixies before."
 
     if Bsighting is 0:
         b "Why did the string lead me through such a dangerous area? Then it helped me in my state of panic. What does this string know that I do not?"
-
+        hide HSbear onlayer headshot
         "The Bear felt unsettled by the idea that this magic string they trust with their life may have a mind of its own."
 
     if Bsighting is 1:
         b " If I took my time like last time, maybe I would have realized that the dark forest was not a safe choice. "
-
+        hide HSbear onlayer headshot
         " No, then I would lose the string. I needed to follow the string."
 
-    if Bsighting is 2:
+    if Bsighting >= 2:
         b "The string knows best. I just need to trust it, but if it's going to put me through a gauntlet like that, I may as well deviate off course to not deal with it."
         b "The string always reappears to me later on so it would simply be an issue of losing time."
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "This place is changing in mysterious ways. The magical entities who control this forest are reacting to something, and they are definitely not happy. I need to find the source. I need answers to why I see this string."
 
     b "I need to find a clue. Something that will even give me a slight hint as to what is going on with me and this forest."
@@ -1071,54 +1206,57 @@ label Bear_Tile_3:
 #-----------
 #3rd Run interaction happens here
 #------------
-    if Bsighting is 2:
+    if Bsighting >= 2:
+        scene HollowTree
+        hide HSbear onlayer headshot
         t " Lost in thought is the phrase you are looking for stranger."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " Who's there?"
-
+        hide HSbear onlayer headshot
         t " Do not worry, I am communicating with you telepathically."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " That did not answer my question. Who are you?"
-
+        hide HSbear onlayer headshot
         t " Still stubborn I see."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " The one who is stubborn is you."
-
+        hide HSbear onlayer headshot
         t " Stubborn? Maybe. I like rooted better."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " Pardon? Rooted? Are you a plant? So even the plants are magical here?"
-
+        hide HSbear onlayer headshot
         t " Well, in this area of the forest, yes. The pixies tend to these woods. The same pixies you scared off."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " You here to cast divine judgement?"
-
+        hide HSbear onlayer headshot
         t " I do not intend to be hostile with you. You seemed very deep in thought so I wished to converse about the dilemma you are facing."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " You've been reading my mind?"
-
+        hide HSbear onlayer headshot
         t "  Yes."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " Great, a plant that can read and talk to me through my mind."
-
+        hide HSbear onlayer headshot
         t " Time is ticking, I do not have all night. You wish for a clue to the mystery correct?"
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " Yes."
-
+        hide HSbear onlayer headshot
         t " You hold one of the answers to that very mystery. The string you speak of is simply a manifestation of your power. Your connection to magic is not coincidental. It is a gift granted to you by them."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b " Who is them?"
-
+        hide HSbear onlayer headshot
         t " The spirit of the forest. They are the one who brought you here. They are the one who you should have listened to from the start..."
-
+        show HSbear onlayer headshot at HS_Left5b, flip_center
         b "What do you mean listened to? I haven't heard a thing from this spirit of the forest you speak of. Hey! Plant! Answer me!"
-
+        hide HSbear onlayer headshot
+    hide HSbear onlayer headshot
     "The bear lay there in their mind contemplating what they could do now. Silence permeated the space. The night was quiet in the shaded forest. As it always was."
         
     menu:
-        "Take the upper route?":
-            jump Bear_Tile_4
-        "Take the lower route?":
-            jump Bear_Tile_4
+        "Keep calling to the tree?":
+            jump Bear_Tile4
+        "Sleep for longer?":
+            jump Bear_Tile4
 
 
 #---------------------------
@@ -1129,30 +1267,29 @@ label Bear_Tile_3:
 #--Begin Bear Tile 4
 #--------------------------
 label Bear_Tile4:
+    scene Base
     " The Bear finally awoke from their slumber. Time was a blur."
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "How many days has it been since I passed out?"
-
     b " The bear could feel cold patches on its body from being attacked by the pixies. Now was not the time to dwell on the discomfort."
     b " The Bear still has a goal in front of them, follow the string and figure out where it ends."
-
+    hide HSbear onlayer headshot
     " So did the Bear keep following the mysterious blue string out of the shaded forest."
 
     " The tree line slowly cleared up and color slowly returned to the Bear's eyes as it made it out of the shaded forest. The Bear was happy to have made it out in some form."
     " The string was acting strange, it was cutting itself and reforming, almost as if it was not sure what to do."
 
-    if Bsighting is 1:
+    if Bsighting < 1:
         " The bear stood there perplexed. It had never seen the yarn do this before"
 
         b " What the heck are you doing now?"
-
+        hide HSbear onlayer headshot
         " The bear swatted at the ethereal yarn. Nothing happened, the paw simply flies through it. The Bear stood there for a second, and thought to itself."
-
+        hide HSbear onlayer headshot
         b "I think I might as well take a short break. I have no idea what this thing is doing and I'm curious if it will do something after a while."
-
+    hide HSbear onlayer headshot
     "The Bear lay there for some time watching the yearn destroy and meld itself together. It was mesmerizing and very hypnotizing to watch."
     "So much so that the Bear did not realize there were voices getting closer and closer"
-
 #------------------
 #Player will Choose their duo of animals.
 #-------------------
@@ -1167,39 +1304,62 @@ label Bear_Tile4:
 #- Hummingbird/Dragonfly route Tile4
 #-------------------
 label BHD_Tile4:
+    scene Base
+    show hummingbird at center_Left, small_size2
+    show dragonfly at center_Right, small_size2
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " You don't know anything Fly. You mean to tell me we are gonna meet the Bear at some point. HAH! In your dreams."
-    
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " We aren't dreaming, Bird; my future sight doesn't lie. I can feel it! We have to be nearing that point in the future I saw!"
-   
+    hide layer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    show bear at center_FarRight, small_size5
     b " Huh? What the? Oh no. No, no, no. Ughhhh. Is that annoying bird with me again? The Dragonfly is tolerable, but that damn Hummingbird makes me want to tear my ears off. The Bear thought to themself."
+    hide HSbear onlayer headshot
     " The bear got up and wandered toward the voices of the doubtful Hummingbird and confident Dragonfly. The Dragonfly quickly sensed the presence of something approaching the duo and focused on it."
-   
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " See!? I told you."
-    
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " ... Crap."
-    
+    hide HShummingbird onlayer headshot
     "The flying duo flew towards the Bear. "
-    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " So I'm stuck with you two this time? Not a word out of your depressed beak, bird. Dragonfly, pleasure seeing you again."
-    
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Likewise. Do you have an idea of where we are going?"
+    hide HSdragonfly onlayer headshot
     
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Unfortunately, no. "
+    hide HSbear onlayer headshot
     
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Hmm. Then let us wander forward. I shall... Oh dear, are you okay?"
+    hide HSdragonfly onlayer headshot
     
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Don't worry about it; I had a run-in with some hostile magic creatures a while back."
+    hide HSbear onlayer headshot
     
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Those marks are bad! You could get an infection from them."
+    hide HSdragonfly onlayer headshot
     
+    show HShummingbird onlayer headshot at HS_Left5b, flip_center
     hb " If they did, they would already be dead from blood loss. Might be-"
-    
+    hide HShummingbird onlayer headshot
     "The Bear shoots a glance at the Bird. The bird mumbled the rest under its beak."
     
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Mind leading the way, Dragon?"
-   
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Certainly! Follow me."
     
+    hide HSdragonfly onlayer headshot
     "So the pack was united. What mysteries would the trio encounter next?"
     #Intentionally delaying it till the end of the tile in case the player decides to back out from the decision
     $ HBighting += 1
@@ -1216,24 +1376,30 @@ label BHD_Tile4:
 #- Turtle/Raccoon route Tile4
 #-------------------
 label BTR_Tile4:
+    scene Base
+    show turtle at center_Left3, small_size2, flip_center
     tl "Please let me go! This is absurdly dangerous!"
-   
+    
+    show raccoon at center_FarLeft, small_size2, flip_center
     r "Oh, c'mon, we've done this countless times already, and nothing has happened."
     
     tl "You have literally dropped me over 5 times because you tried to run on 2 feet! You can't do that!"
    
     r "Says who? All you gotta do is stay tucked in your shell, and you'll be fine. Oof!"
-    
+    show bear at center_FarRight, small_size5, flip_center
     " As if on cue, the Raccoon not paying attention, ran straight into the Bear, startling them and dropping Turtle."
-   
+    hide bear
+    show bear at center_Right, small_size5
     b " HEY!"
    
     tl " AAAAAAAGHHH! I TOLD YOU NOT TO DO IT! WE'RE GONNA DIE NOW!"
     
     r " Humph. Owww... Why does everyone gotta be so loud?"
     
+ 
     " The Bear got into an attack stance on instinct. They stared down at the rather gullible Raccoon and absolutely terrified Turtle that was flipped over."
     
+  
     b " Oh. It's you two."
     
     " The Bear proceeded to flip the turtle over and push the Raccoon on its back."
@@ -1242,30 +1408,36 @@ label BTR_Tile4:
     
     tl " Huh? Oh, Bear! I am so glad to see you. Please keep me away from this troublemaker who puts me in danger constantly."
     
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " I think it's funny if you ask me."
-
+    hide HSbear onlayer headshot
     tl " What do you mean it's funny? My life is at stake here."
 
     r " You make no sense, Bear. So what have you been up to? Ah... Fighting, I see."
-   
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " It's a long story, but I'm alive."
+    hide HSbear onlayer headshot
     
     r " You look like you walked into 5 separate traps, got stuck in all 5, and somehow got out of each one."
-   
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b  " You could say that."
     
+    hide HSbear onlayer headshot
     tl " Yes, nice chatter and all, but can you please put me on your back? I prefer not being in the clutches of that gremlin."
-    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Raccoon, you mind hoisting the Turtle onto my back?"
-   
+    hide HSbear onlayer headshot
     r " Sure, and that's rude after how far I've carried you?"
    
     tl " I think it is justified. You are a living hazard to my existence."
-    
     " With the trio united, they would begin to chatter and almost act in a family manner."
     " They would soon begin traveling once more after settling on a direction to roam in."
     $ TLsighting += 1
     $ Rsighting += 1
+    hide turtle
+    hide raccoon
+    hide bear
     menu:
         "Lead the way?":
             jump BTR_Tile5
@@ -1285,43 +1457,82 @@ label BTR_Tile4:
 #- Hummingbird/Dragonfly route Tile5
 #-------------------
 label BHD_Tile5:
+    scene Base
+    hide layer headshot
     " The Pack wandered aimlessly for some time; Bear's magic string would appear from time to time only to disintegrate after a couple of minutes."
-   
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "You seem rather disgruntled? What is on your mind?"
-   
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " My ability is not working. I can't get a clear idea of where this string wants me to go."
-    
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " That is annoying."
+    hide HSdragonfly onlayer headshot
     " The Dragonfly lands on the Bear's head, and its eyes shine under the light."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Got any new neat tricks you can pull off?"
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "Nope, I can still only see into the future. It's not always clear, but it is useful. Currently one of the futures seems especially odd."
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "That is pretty useful."
-    " The Hummingbird returned to the pack after foraging for some nectar and landed on a nearby tree facing the duo."
-    b "Speak, bird. What did you see on your trip for food?"
-    hb "I'm not a peon, you overgrown death machine. Nothing strange. I found a rabbit if you are feeling hungry. Doubt you'll find it though; it probably ran off when it heard me."
+    hide HSbear onlayer headshot
     
+    " The Hummingbird returned to the pack after foraging for some nectar and landed on a nearby tree facing the duo."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    b "Speak, bird. What did you see on your trip for food?"
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
+    hb "I'm not a peon, you overgrown death machine. Nothing strange. I found a rabbit if you are feeling hungry. Doubt you'll find it though; it probably ran off when it heard me."
+    hide HShummingbird onlayer headshot
     " Fly up ahead and scout. See if you can find anything else."
     " The Hummingbird stared down at the Bear with a level of contempt and disrespect. They did not want to listen to the Bear's command, but they obliged as they had nothing better to do. It was better this way."
     " Neither enjoyed each other's company. The Hummingbird left the branch quietly and zoomed far off ahead."
+    
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " You know I can be a mediator for you two?"
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot  at HS_Left5b, flip_center
     b " That bird has issues we may never understand. You only bring out the worst in them, Dragon."
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " I doubt it."
+    hide HSdragonfly onlayer headshot
     "Some time passes as the Bear and Dragonfly catch up to Hummingbird"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Hey Bird, where have... You... Been..."
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "Oh my goodness."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "..."
-
+    hide HShummingbird onlayer headshot
 
 # Change scene to stump forest
+    
     "The Pack gazed over the destitute field of tall grass, tree stumps, and dead trees. It was dead."
     " Nothing has entered this area since I found it. It appalls me."
+    
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "Surely some rats or small rodents who live in tall grass are in there? If that were the case, why is the grass still growing?"
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Grass grows where it pleases; if not kept in check, it will consume everything in a sea of green. Dragon, mind gazing into the future?"
+    hide HSbear onlayer headshot
     " The dragonfly used [[future sight]."
+    
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "This is the odd future I spoke of. It was all green. It all makes sense now."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "You saw this, and you didn't say a word? You have arguably the strongest ability we know of, and you can't decipher Jack?"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Silence."
-
+    hide HSbear onlayer headshot
     menu:
         "Enter the stump forest?":
             jump Stump_forest
@@ -1332,29 +1543,65 @@ label BHD_Tile5:
 #-Enter Stump forest
 #-----
 label Stump_forest:
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " There should be nothing in there, correct?"
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Oh hell no. I am NOT going through there. If there are no flowers in sight, I am dead. Go through there, and you ain't seeing me until you get out."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Up for something to keep us on edge, Dragon?"
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " I can't say I am. Especially not this." 
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " If we intend to follow this direction, the fastest way is to cut through."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " I'm out; if you want to walk through the dead zone, that's all you. I'll probably remember you if you die."
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "I think I am also going to sit this one out. I don't like the feel of that area. Also, I don't think there are many things to eat there either."
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Very well. Stay safe and wait for me. I'll be over there hopefully by nightfall."
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "Don't die. That place is a living tomb."
+    hide HSdragonfly onlayer headshot
+    hide HSdragonfly onlayer headshot
     " The Pack split up. Hummingbird and Dragonfly flew across the perimeter of the stump forest while the Bear crossed through."
     "It was an interesting walk for the Bear. The grass was almost as tall as them."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "For the grass to grow to this height means the deer and other herbivores fear this place still. Loggers, I believe, are what the beavers call them. Humans who cut a great amount of trees with creatures of metal."
     b "Do they truly realize the effects they have on this forest by doing this? Do they know it never recovered?"
+    hide HSbear onlayer headshot
     "The Bear could feel an eerie energy emanating from the stumps. It wasn't directly aimed at them, but it felt malicious towards the ones who cut them."
     " The night drew on, and finally the Bear crossed the stump forest."
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Oh, you're still alive?"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Miss me that much, Bird? I thought all you knew was pain and sorrow."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Haha. Don't get much of it after waiting a long time to see you cross that cursed place. Enjoy your little walk through that cemetery?"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Partially. Helped clear my mind from how quiet it was, but it also made me worry."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Yeah, that's nice. Hey Fly!"
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "Huh? Wha?"
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Bear's back, let's go set up camp."
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center 
     df "Oh, sure."
+    hide HSdragonfly onlayer headshot
     "The Pack would now set up camp for the night after reuniting with Bear. The stump forest would lie etched into their mind that night."
     menu:
         "Leave at dawn?":
@@ -1367,21 +1614,47 @@ label Stump_forest:
 #Avoid stump forest
 #----------------
 label Detour1:
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Let's walk around. I agree; this place gives me the creeps."
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Who? Who would do this?"
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot  at HS_Left5b, flip_center
     b " Humans, I believe. They aren't something you reason with. They take what they want and slaughter us if we fight back."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Easy for you to say, big guy. You can actually fight them. Us little folk only run for our lives."
-
+    hide HShummingbird onlayer headshot
     " The pack began walking around. It took much longer than expected to get around the stump forest. The pack set up camp some distance away from the stumps." 
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " You think the ghosts of the dead animals still roam that place?"
-    b "Shut it."
-    hb "It's a valid question. We got all sorts of crazy monsters and creatures here. Why not go see some dead animals?"
-    b "I'll send you to greet them if you don't shut up."
-    hb "Might be a better choice than dealing with the cutthroat vibes that place gives. We aren't even near it, and I feel like something is watching us."
-    b "You never shut up, do you? How about you go look for these ghosts? You seem so scared, yet so excited to talk about them when safe."
-    hb "Nah, I'm feeling a bit sleepy. It felt like a good story to keep us alert."
-    b "You're a coward."
+    hide HShummingbird onlayer headshot
 
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    b "Shut it."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
+    hb "It's a valid question. We got all sorts of crazy monsters and creatures here. Why not go see some dead animals?"
+    hide HShummingbird onlayer headshot
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    b "I'll send you to greet them if you don't shut up."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
+    hb "Might be a better choice than dealing with the cutthroat vibes that place gives. We aren't even near it, and I feel like something is watching us."
+    hide HShummingbird onlayer headshot
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    b "You never shut up, do you? How about you go look for these ghosts? You seem so scared, yet so excited to talk about them when safe."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
+    hb "Nah, I'm feeling a bit sleepy. It felt like a good story to keep us alert."
+    hide HShummingbird onlayer headshot
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    b "You're a coward."
+    hide HSbear onlayer headshot
     "The Pack slept through the night, yet they never shook the feeling something was watching them. Bear was on guard duty for part of the night, followed by Dragonfly and then Hummingbird."
     "They survived another night and began moving around the stumps once more."
     menu:
@@ -1394,34 +1667,72 @@ label Detour1:
 #- Turtle/Raccoon route Tile5
 #-------------------
 label BTR_Tile5:
+    hide HSbear onlayer headshot
+    hide bear
+    hide turtle
+    hide raccoon
     " The Pack slept through the night, yet they never shook the feeling something was watching them. Bear was on guard duty for part of the night." 
     " The Pack wandered aimlessly for some time; Bear's [[path sensing] would appear from time to time only to dissipate after a couple of minutes."
+    show bear at center_FarRight2, small_size5, flip_center
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Hmm. This is annoying."
+    hide HSbear onlayer headshot
+    show raccoon at center_FarLeft2, small_size2, flip_center
     r " What is on your mind ya big oaf?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " My ability is not cooperating. I can see this string, and it leads me to different places, but it hasn't been consistent lately."
+    hide HSbear onlayer headshot
     r " That's pretty unfortunate. Turtle, can't you do something like that?"
+    show turtle at center_Left3, small_size2, flip_center
     tl " No. I can't do anything like that."
+    
     r " Really? I thought it was similar?"
+    
     tl " You really need to listen to Raccoon. I explained it 3 times, and every time you ended up reaching into that magic pocket of yours for a snack."
+    
     r " OOO! Great idea. Let's have a snack break."
+    
     tl " I regret having this conversation. Bear, would you like a refresher on what my ability is?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Yes, go on. Raccoon, keep up now; it isn't time for eating."
+    hide HSbear onlayer headshot
     tl "It's a bit complicated, but I can recall past events that have happened in different locations."
     "So let's say right now, I can use my skill to see what has happened here, and I may possibly see what animals have passed by here."
+    
     tl "Another ability is I can grow my shell to create a giant wall."
+    
     r "Hey, do you want some berries? Said the Raccoon with its mouth full."
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "No."
+    hide HSbear onlayer headshot
     tl "What kind?"
+    
     r "Red."
+    hide turtle
+    show turtle at center_Left3, small_size2
     tl "Gimme."
+    scene SmallLake
     "While the Raccoon mounted the Bear's back to feed the Turtle, the Bear stopped. The Bear was gazing upon a lake."
     "The water looked serene on the surface, but as the Bear looked into the depths, it became increasingly dark very quickly."
     " At the bottom in the darkness, the Bear could see some sort of flickering light. It seemed to be moving rather quickly. Is it a fish?" 
+    hide turtle
+    hide bear
+    hide raccoon
+    show turtle at center_RightS, small_size2
+    show bear at center_FarRight, small_size5
+    show raccoon at center_Left, small_size2, flip_center
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Hey, you two, take a look at this lake."
+    hide HSbear onlayer headshot
     r "What's up? Woah, it's dark, dark, and it's still daytime."
+    
     tl "A magic lake, most likely?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Most definitely."
+    hide HSbear onlayer headshot
     r "Turtle, isn't this your domain? How about you use your ability and see what's up with the lake?"
+    
     tl "I don't think it's worth spending the time on something like this. Especially considering only I can go that deep underwater and can see."
 
     menu:
@@ -1434,27 +1745,40 @@ label BTR_Tile5:
 #-Convince Turtle route
 #--------------
 label Convince_Turtle:
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "You're getting ahead of yourself, Turtle. Raccoon is wrong to send you in, but I think it would be a good idea to at least scan why it is this way."
+    hide HSbear onlayer headshot
     tl "Oh... You're right, you're right. Okay, let me get off then and bathe in the water; that will help me deepen the connection for my ability to work better."
-    
+    hide turtle
+    show turtle at center_bottom, small_size2, 
     "After unmounting from Bear, the Turtle was placed in the water and floated there in place. The Turtle closed its eyes, and the water began to vibrate around them."
     "A [[tidal memory] was forming; it was a rather beautiful sight, except for the fact that Raccoon was washing their hands while doing this, which became a memory that Turtle saw."
     "After about a minute, the vibration stopped and the turtle swam out of the water."
    
     tl "You have to be a wild animal."
+    
     r "I mean, I am."
+    
     tl "Why did you think it was a great idea to clean your hands while I was doing that?"
+    
     r "Cause they're dirty? Why else?"
+    
     tl "Jeez. You are something else, Raccoon. Anyways, this lake is definitely of magical origin."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "How so?"
+    hide HSbear onlayer headshot
     tl "There seemed to be a battle between two elemental spirits in this area; their battle was so intense it left a crater that would later catch water with time. This lake is that very crater."
     tl "What exists at the bottom of this crater are not fish, but wild spirits who grow in the darkness. They are currently harmless in this state, but I wouldn't trust going in regardless."
     tl "The water has a sort of heaviness from the concentration of magic energy being released by the spirits. It's making me dizzy."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Very well."
+    hide HSbear onlayer headshot
     r "So what would happen if I drank the wat-"
+    hide layer headshot
     "NO! Said both Turtle and Bear."
-    jump BTR_Tile6
-
+    hide turtle
+    hide bear
+    hide raccoon
     menu:
         "Go through the valley?":
             jump BTR_Tile6
@@ -1466,23 +1790,39 @@ label Convince_Turtle:
 #-Defend Turtle Route
 #--------------
 label Defend_Turtle:
-
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " You are being a pushy Raccoon."
+    hide HSbear onlayer headshot
     r " I mean, not really? They are an aquatic creature, so I feel like they have a better shot at doing something here than anyone else."
+    
     tl " I'm not diving into a pitch-black lake that has twinkling lights at the bottom."
+    
     r " But what if it's buried treasure?"
+   
     tl " We don't need treasure."
     r " I can store it with my magic pocket; it's fine."
+  
     " The Bear understood quickly how Raccoon was deciding for the uncomfortable Turtle, so they decided to intervene more."
     " It's not a matter of yes or no, Raccoon. We can't see what is down there. What if it isn't a treasure? Then what do we do?"
+   
     r "Uh... I don't know..."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Exactly, we can't because we can't swim enough or even see that well in dark water."
+    hide HSbear onlayer headshot
     tl "Personally I am not feeling like diving into the spooky lake. So, I'll pass on that."
+    
     r "I thought it was a good idea..."
+   
     " The Raccoon felt sad that their idea was turned down. The Bear was not worried too much by the Raccoon's reaction, but they did notice the slouch in their walk was more droopy."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Make a more stable plan next time. That will get the vote of Turtle."
+    hide HSbear onlayer headshot
     r " Huh? Oh, sure."
+    
     " The Pack made their way around the lake and ventured forward once again into the forest."
+    hide bear 
+    hide raccoon
+    hide turtle
     menu:
         "Go through the valley?":
             jump BTR_Tile6
@@ -1504,70 +1844,145 @@ label Defend_Turtle:
 # BHD Tile 6 route
 #----
 label BHD_Tile6:
+    scene RainDroplets
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Oh dear. This is not good."
-    
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " What's wrong?"
-    
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " My [[foresight] detects a storm coming. And this one is not going to be nice to anyone or anything."
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Does your foresight give you an estimate of the time it will take to reach us?"
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " No, it doesn't. It's all just a premonition with an unknown time frame."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Even if we did have time, it's not like we are anywhere near some sort of shelter to speak of. Plus, having a time frame for the Fly's abilities would be hell."
+    hide HShummingbird onlayer headshot
+    
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " You see time as a constant hell bird. I see it as convenient information to have. Change your perspective, and it will be much easier to digest."
+    hide HSbear onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Enough chit-chat; both of you start scouting the area. We need to find shelter now!"
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Roger that!"
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " If you don't find me, presume I'm hiding in a tree."
+    hide HShummingbird onlayer headshot
     " The Pack split up quickly in search of some form of shelter. The dark clouds quickly rolled into the forest and brought with them a wicked storm."
     " Lightning began striking the forest, wind speeds began rising high, and the rain was more typhoon-like."
+    scene StrongWind
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " AHHHHHH!"
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " WE'RE GONNA DIE!"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Hold onto me! I think I see a cliff face up ahead."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Please, if there is a higher power, make me something other than a Hummingbird; please let me be a bit bigger. I will take a sparrow."
     hb " I just don't want to be suffering from acute starvation every few hours. It's a simple ask, really."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Enough with the prayers! If you can see, look for something that looks like a cave or shelter."
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Left! Left! I see an opening!"
+    hide HSdragonfly onlayer headshot
     " The Bear lunged towards the hole in the cliff. Fortunately, it was big enough to fit all of them."
     "{i}BOOM!{/i} the lighting responded. The storm kept raging relentlessly. Everything in its path was suffering greatly."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Are you two alright?"
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " I think so?"
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " I felt like my body almost got torn off of my legs by the wind."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot  at HS_Left5b, flip_center
     b " We will stay here till the storm settles."
+    hide HSbear onlayer headshot
     " The storm did not pass by so easily. Hours passed, and to no avail, it had yet to pass. This storm would last a full day."
+    show HSbear onlayer headshot  at HS_Left5b, flip_center
     b " Bird. Are you sure you can survive a full day without flowers?"
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Yeah... So long as I ain't flying, I probably won't die."
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " I think he is dying of starvation."
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "{i}sigh{/i} I'll be back."
+    hide HSbear onlayer headshot
+    hide headshot layer
     " The Pack rested in the cave for a full night. Only after sunrise did the storm settle down. The forest was in shambles. "
     " Fallen trees, overflowing rivers, mudslides, and landslides littered the area."
+    scene Base
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " This storm really did a number on the forest. "
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Hey! I can get a decent view now thanks to the fallen trees! I can see things, kind of."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot  at HS_Left5b, flip_center
     b " Do you see any way for me around these giant trees?"
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Just break them. You ain't making it around."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " I'll just climb them instead at the cleaner spots."
+    hide HSbear onlayer headshot
     " The fallen trees had posed a greater problem to the Bear who was on the ground, compared to their flying allies."
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " I'm back. It seems like there are tons of trees that were knocked down by the storm. Do you think you have the energy to move around or climb some trees?"
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot  at HS_Left5b, flip_center
     b " Lead me; I think I will manage for the time being."
+    hide HSbear onlayer headshot
     " The Pack would enter a rather interesting performative act; the two flying animals would relay very conflicting messages while the Bear would attempt to climb, walk around, or crawl under different types of debris."
     " The process did not take very long, but it did test the patience of all 3 members."
     menu:
         "Bicker with the Hummingbird?":
-            jump BTR_Tile7
+            jump BHD_Tile7
         "Ask the Dragonfly for directions?":
-            jump BTR_Tile7
+            jump BHD_Tile7
 
 
 #----
 # BTR Tile 6 route
 #----
 label BTR_Tile6:
+    scene Base
+    show raccoon at center_FarRightS, small_size2, flip_center
     r "You ever wonder if other animals have these weird powers we have?"
     "Yes, Turtle and Bear replied."
     r "It feels like every ability is tied to us as animals. Turtles got that weird shell thing with the memory thing. Then you got a magic string."
     r "I think I am not right about the power thing."
+    show bear at center_FarLeft, small_size5, flip_center
+    show turtle at center_middleS, small_size2, flip_center
     tl "It may just be related to us as individuals?"
+    
     r "Like every other raccoon has a separate ability from mine?"
+    
     tl "Yes."
+    
     r "That would be pretty cool actually. Imagine an army of Raccoons each with their own unique ability."
+    
     tl "At that point it's just power in numbers for who has more powers."
+    hide layer headshot
     "The wind picked up from behind the Pack. Bear stopped momentarily. They felt the whiff of something odd. Something out of place."
     "{i}BOOM!{/i} A nearby tree snapped from the impact of the bullet piercing it."
     menu:
@@ -1575,46 +1990,85 @@ label BTR_Tile6:
             jump ChaseTile6
 
 label ChaseTile6:
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "MOVE! NOW!"
+    hide HSbear onlayer headshot
     "{i}BOOM!{/i} Another bullet fired, landing near the Raccoons legs."
+    
     r "OH MY GOD! That almost hit me!"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Don't speak! RUN!"
+    hide HSbear onlayer headshot
     tl "Oh god! Oh god! Oh god! This can't be happening. This can't be happening."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Turtle, grab on; you're slipping!"
     "The turtle in a panic used [[tidal memory] to scan the memories of this area of the forest"
-
+    hide HSbear onlayer headshot
     tl "Crap, we made a mistake; my ability tells me we stumbled on human hunting ground!"
+    
     r "That's a thing?!"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Always has been! I've seen them before! Those giant sticks shoot fire! Do not get hit by them!"
+    hide HSbear onlayer headshot
     "Right on cue, another {i}BOOM!{/i} followed by a whistling sound seared the side of Bear's face."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "URGHH!"
+    hide HSbear onlayer headshot
     tl "Ah Crap, crap, crap. Not good Bear got hit. What do we do? Do I bring up my shell?"
+    
     r "Friend, that magic is piercing into the trees. Imagine what it will do to your shell."
+    
     tl "Right! Right. AHH! What do we do here?!"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Hide and run! AHHH, damn it!"
+    hide HSbear onlayer headshot
     tl "Did they get your eye?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "No, I can see, but I can taste blood in my mouth. Turtle, what direction leads us out of the hunting ground?"
+    hide HSbear onlayer headshot
     tl "Uh, uh, uh. It doesn't matter at this point. Just run straight!"
+    
     "The group advanced at quick speeds as far from the hunter as possible."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " I think we lost them."
-
+    hide HSbear onlayer headshot
     "The Turtle activated [[Tidal memory] on the land"
+    
     tl "Hmmm... Yes. Oh, thank goodness. I can see the footprints; they stopped following us some time ago."
+    
     r "Here, I might have something for the bleeding." 
+    hide raccoon
     "Raccoon scavenged through the magic pocket for some leaves." 
+    show raccoon at center_Left4, small_size2
     r "Here, these flowers and leaves should help."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "What are they for?"
+    hide HSbear onlayer headshot
     r "It's my special mix of herbs and spices."
+    
     "Raccoon began to dab the assortment of flowers and leaves against Bear's face." 
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Ow! That stings."
+    hide HSbear onlayer headshot
     r "Oh good! It's working then."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "No. Not good, that stuff hurts. Keep it away."
+    hide HSbear onlayer headshot
     r "Believe in the herbs and spices, Bear; they will cure all your problems." 
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "I refuse if they are going to hurt me."
+    hide HSbear onlayer headshot
     tl "Going to sour the mood here, but I am detecting sudden movement of the hunter moving once again. We need to move."
+    hide raccoon
+    show raccoon at center_Left4, small_size2, flip_center
     r "You are saved from the herbs and spices this time, but you will not be once we get out of this."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Screw your damn herbs and spices!"
+    hide HSbear onlayer headshot
     "The Pack finished their discourse and began running once more away from the hunter's sight."
+    hide turtle
+    hide bear
+    hide raccoon
     menu:
         "Calm the Turtle down?":
             jump BTR_Tile7
@@ -1634,52 +2088,117 @@ label ChaseTile6:
 #- BHD Tile 7 route
 #-------
 label BHD_Tile7:
+    hide layer headshot
+    scene Campfire
     "The night was dark, emptier than a drained ocean. In the midst of this darkness lay an orb of light. A beacon for all who cared to see."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Bird, what can you do?"
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "I can fly, I can eat from flowers, and I can channel a gust of wind to blow a leaf."
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " They can do better than blow a gust of wind. They just tend... to not be able to do much more than that. What, it's true!"
+    hide HSdragonfly onlayer headshot
     "The Hummingbird gave the Dragonfly an annoyed stare to drill holes into them."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "That will do. Use your skill to blow some more air on the fire. I'll go find some branches to add to it."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "You don't know when to shut your mouth, do you?"
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "Neither of us do."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Oh no. {b}Don't{/b} lump me with you."
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "I think this is the time we both admit that we are wrong."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Wrong? I have been realistic, honest, and truthful."
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "You have said little to nothing since we met the Bear. You're lying to yourself."
+    hide HSdragonfly onlayer headshot
+    hide layer headshot
     " The Hummingbird had never seen this shift in Dragonfly before; it made them uncomfortable. It felt like staring at a pool of water, and the reflection was talking back to them."
     " The Hummingbird stood there motionless in shock."
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Hahaha. Guess my impression of Bear was that good. In all seriousness though, we really need to figure out what-"
+    hide HSdragonfly onlayer headshot
     " The Hummingbird darted at the Dragonfly and attempted to peck at the bug."
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Hey! Quit it!"
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb " Is this a game to you? Putting me in the hot seat while toying with me? Why can you find joy even in a screwed up moment like this?"
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "We live, we eat, we die! Can I not try to enjoy myself? My lifespan is shorter than yours, and even I can admire the fleeting moments."
     df "You whine and moan that nothing was set perfectly for you. You are spoiled."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Can I not be? Can I not have wants?"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "You carry a wound that cannot be contained in that small body of yours."
+    
+    hide HSbear onlayer headshot
     "The Bear reappeared from the darkness carrying a bundle of sticks in its mouth. They dropped them and smacked them one by one closer to the fire."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "When we saw the stumps, I noticed you were more vulnerable than I had seen before. You've suffered something on that level."
     b "Something so terrifying it needs you to be a monster to survive it."
     b "Give up."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Excuse me?"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "If you had my body, my strength, my experience. Would it be enough?"
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "...Yes."
+    hide HShummingbird onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "You're lying again."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Can you not butt in anymore? You've been a thorn in my side, a zit I couldn't pop, a sickness that never dies."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Then leave. The Dragon has been your voice of reason since you've met them. They are the small voice you've kept-"
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Shut up."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "locked away."
+    hide HSbear onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "SHUT UP!"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "-The voice you wish you could let speak out but won't admit is right."
+    hide HSbear onlayer headshot
+    hide layer headshot
     "The Hummingbird's heart raced intensely. A rage boiled within the small body but was only a defense mechanism. The Hummingbird did not want to admit they were read so easily."
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "You will never understand... What I saw. We.... lost everything. I was hopeless. Desperate for survival. Death has been hunting me for too long. Not a single moment do I go without feeling its gaze upon me."
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b  "You carry a will to live that some wish they had. To be able to keep moving forward is to live. You are the only one holding yourself back."
+    hide HSbear onlayer headshot
+    hide layer headshot
     "The Pack fell silent. The fire crackled and hummed. No one said a word."
     "The Hummingbird shined and began to generate a [[gust of wind] and pushed it to the fire. The Hummingbird kindled the fire; the fire must live so everyone can stay warm."
     "What is my purpose? They all thought."
+    
     menu:
         "Go to sleep?":
             jump BHD_Tile8
-        "Stare at the Fire?":
+        "Stare at the fire?":
             jump BHD_Tile8
 
 
@@ -1687,67 +2206,121 @@ label BHD_Tile7:
 #- BTR Tile 7 Route
 #------
 label BTR_Tile7:
+    show Campfire
+    hide layer headshot
     "The day quickly vanished. The fear, adrenaline, and unrest settled as the sun set."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    show bear at center_FarRight, small_size5
     b "I think we can rest here."
+    hide HSbear onlayer headshot
+    show turtle at center_FarLeft, small_size2, flip_center
     tl "How are you doing? Are you sure that wound won't be a problem later?"
+    show raccoon at center_Left3, small_size2, flip_center
     r "It will definitely be. I knew a raccoon who got caught in a human trap once. Buddy was dead a week later from some weird mucus growing on their leg."
     r "Sit down now and let me use my herbs and spices on ya."
+    
     "The Bear did not want to, but it seems the Raccoon is more knowledgeable in this aspect than they thought."
+    
     tl "Hey Raccoon, do you mind doing that thing you usually do when the sun goes down?"
+    
     r "Yeah mean starting the fire? Yeah, I should. Won't be able to tend to the wound without being able to see. Good call."
+    
     " The Turtle nodded. Guilt consumed the Turtle as they were unable to do anything to help their friends in an extremely dire scenario."
     " The Raccoon reached into their [[magic pocket] and pulled out a piece of flint and a rock."
+    
     r "Hey Bear, you mind clawing at the ground for me? I need a clean patch to set up this fire. Imma grab some sticks real quick."
     r "Gotta keep this fire up and running long enough to tend to your wounds."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Mind getting the Turtle off my back?"
+    hide HSbear onlayer headshot
     r "Yeah, no problem."
+    
     "This constant dynamic between the Raccoon and Bear is something the Turtle wishes it could do. Land really is not a turtle's domain."
+    
     r "Alright, you two can hang here; I'll go grab the sticks and stuff. Be back in a jiffy!"
+    hide raccoon
     " The Raccoon scampered off into the brush. The Bear began to stab and pick at the soil to create the patch the Raccoon wanted."
     "The Turtle walked around and stared at the digging process."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "What's on your mind? I can tell you're still shaken up from the human incident."
+    hide HSbear onlayer headshot
     tl "Ah, well, Yeah... I felt like I really couldn't do much per se. All I did was bite down on your back and hope for the best. There really haven't been any moments I look back on and say, \"I did good there.\""
+    
     "The Turtle hoped for a response from the Bear, but they did not respond. Turtle wanted some form of criticism, but nothing was returned."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "That's it?"
+    hide HSbear onlayer headshot
     tl "What?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "That's what worries you? Heh"
+    hide HSbear onlayer headshot
     tl "Wha-Wha- What's funny? Did I sound like a fool?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "No. You dwell too much on the small things, Turtle. You did well, and you don't realize it."
+    hide HSbear onlayer headshot
     tl "When?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Who realized the human was still chasing us after we thought we lost them? Who was immediately voluntold to explore the lake because they are the best diver?"
     b "Who has the ability to protect and tell the stories of the past?"
+    hide HSbear onlayer headshot
     tl "Me. Huh."
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "I think you just get so frightened and panicked that you don't realize that you do contribute in your own ways."
+    hide HSbear onlayer headshot
     "The Bear completed their small hole for the fire. The Bear felt proud of making a hole."
     "The Turtle realized that maybe they are better at some things than they realized; it's just a matter of perspective that blinded them."
     " The Raccoon returned running with some sticks in its mouth and presumably more in its magic bag."
-    " Alright, Turtles and Bears let us begin."
+    show raccoon at center_Left3, small_size2, flip_center
+    r " Alright, Turtles and Bears let us begin."
+    
     " The Raccoon pulled out more sticks from its [[magic pocket] and began throwing them into the small hole."
     "After that they pulled out some dried grass and made a ball. Next they grabbed the piece of flint and a rock and began smashing them together. Sparks began to fly."
     "The Bear and Turtle looked baffled in amazement at the sorcery the Raccoon was doing before their very eyes. Soon enough, the grass caught fire."
+   
     r "Okay! Hot! Hot! Hot!"
     "The Raccoon grabbed the ball and tossed it into the pile of sticks. Then the Bear grabbed sticks and put them on top of the small fire."
+    
     r "Blow on the fire please!"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Oh, sure!"
+    hide HSbear onlayer headshot
     "With the help of Bear blowing on the fire, it almost went out, but Raccoon's guidance helped keep it alight, and finally, the bigger sticks caught fire."
+    
     r "It lives! Yes! Thank you, spirits of the forest."
     "The Bear and Turtle looked in amazement at the fire. This destructive force, right in front of them, wasn't spreading."
     "It stayed there, but it felt terrifying in its own way, yet it also felt pleasing and warm to be next to."
+    
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "How did you do this?"
+    hide HSbear onlayer headshot
     r " Well, I'm not really sure where I learned it from. I just kind of knew how to do it. Pretty neat, right?"
+    
     "The Bear couldn't help but be amazed. The silly Raccoon had many tricks up its sleeve. What else did they know?"
+    hide raccoon
+    show raccoon at center_RightS, small_size2, flip_center
     r "Alright, lend me your face."
+
     "The Raccoon gestured with its little paws for the Bear's face with bundles of herbs and spices ready. The Bear was extremely reluctant."
     " It hurt a lot last time, and they weren't sure about this."
     "The Raccoon was not taking no for an answer and got closer. The Bear dropped to the floor accepting defeat."
+    
     r " Put this in your mouth. Next to the inside of the wound."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "It tastes bitter. Ouw! If Horphs!"
+    hide HSbear onlayer headshot
     r "Oh good. That means it's working."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "I domph like dis."
+    hide HSbear onlayer headshot
     r "Did not say you would. Just know that means it's working, I think?  Had another animal I tried it on. Hehe. They want me dead buut, they are still alive."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Yeah. ME!"
+    hide HSbear onlayer headshot
     r "Hey! No moving and whining; I need you to stay still. I'm cleaning the wound."
+    hide layer headshot
     "The Turtle watched this all happen with a smile on their face. This team was good. They will make it. The Turtle was sure of it. The only issue is. What would they do when they reached it?"
+    
     menu:
         "Go to sleep?":
             jump BTR_Tile8
@@ -1767,55 +2340,109 @@ label BTR_Tile7:
 #-BHD Tile 8 route
 #-------
 label BHD_Tile8:
+    scene Base
+    hide layer headshot
     "The Pack was able to navigate through the forest using the Bear's [[path sensing] string, which had returned to them the night before."
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "Does this string of yours ever end?"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "If it did, I would have said so."
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "Seems like it. My [[foresight] is getting a bit hazy, but I see us stopping somewhere."
+    hide HSdragonfly onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Good."
+    hide HSbear onlayer headshot
+    scene Lake
     "After a few more hours of traveling, they reached the foreseen stopping point. A giant lake stood in their path."
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "This is exactly what I saw."
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "A lake?"
+    hide HShummingbird onlayer headshot
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Strange, the string ends here at the water's edge."
+    hide HSbear onlayer headshot
+    show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df "You know any magic words? Might be a riddle!"
+    hide HSdragonfly onlayer headshot
+    show HShummingbird onlayer headshot at HS_Left5h, flip_center
     hb "It looks like an ordinary lake..."
+    hide HShummingbird onlayer headshot
     "The Hummingbird felt it for a split second. The chill they felt that night. It all came rushing back in an instant, only to be snapped away. The Hummingbird slowly flew to the water."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Bird? Bird!"
+    hide HSbear onlayer headshot
     "The hummingbird flew into the water and, like a drop of water, was gone in an instant. Consumed by the lake's existence."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Dragon! Can you see anything?"
+    hide HSbear onlayer headshot
     "The Dragonfly was gone as well. Only the Bear remained in the middle of the lake."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "When did I get so far into the lake? Where is everyone?"
+    hide HSbear onlayer headshot
     "All valid questions, but no one answered them. The Bear saw something below them shining. They weren't sure what it was, but they were attracted to it. As they descended, the water began beating."
     "It got darker and darker. The beating kept going. Then it went quiet."
     $ BearBranch = True
+    scene black with fade
     return
 
 #-------
 #-BTR Tile 8 route
 #-------
 label BTR_Tile8:
+    hide layer headshot
+    scene Base
     "The Pack was able to navigate through the forest using the Bear's [[path sensing] string, which had returned to them the night before."
+    show raccoon at center_middleS, small_size2, flip_center
     r "How's your cheek feeling?"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
+    show bear at center_FarRight2, small_size5, flip_center
     b "It stings a lot."
+    show turtle at center_FarLeft2, small_size2, flip_center
+    hide HSbear onlayer headshot
     r "I think that's, good?"
+    
     tl "I feel strange."
+    
     r "How so?"
+    
     tl "I remember this path. There should be a lake somewhere up ahead."
+    
     r "Feeling lucky and wanting to dive?"
     tl "No. This one's different."
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "Let's move faster."
+    hide HSbear onlayer headshot
+    scene Lake
     "The Pack advanced quickly down the path following the Turtle's guidance. In a short span of time they were in front of a giant lake."
+    show turtle at center_middleS, small_size2
     tl "Get me down, please?"
+    show raccoon at center_FarLeft, small_size2, flip_center
     r "Yeah, give me a second."
+    show bear at center_FarRight, small_size5
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b "You gonna use your magic?"
+    hide HSbear onlayer headshot
     tl "Yes. Put me at the water's edge, please."
+    hide layer headshot
     " The Raccoon did as it was told and plopped the Turtle in the sandbar. The turtle walked to the water and began to float. The Turtle began the ritual of the [[tidal memory]."
     " The water began to ripple and change. Waves formed, and the water got violent. The Bear and Raccoon looked at each other and rushed into the water. Something was going wrong with the ritual."
     " As the two approached the Turtle. The waves got more violent and began pushing them away. Suddenly a big wave appeared."
+    
     r " That's not good!"
+    show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Get out of the water!"
+    hide HSbear onlayer headshot
     r "I'm trying, but I'm being pulled in! Bear I think we're-"
+    
+
     "The wave crashed with a hard thud. Consuming all three animals. Each getting pulled into the dark depths of the lake."
     $ BearBranch = True
+    scene black with fade
     return
 
 
@@ -1843,17 +2470,6 @@ label Choose_Dragonfly:
             jump Begin_Dragonfly
         "No":
             jump start
-
-label Begin_Dragonfly:
-    "Still in progress... :P Dragonfly got distracted staring at dandelion seeds."
-    $ DragonflyBranch = True
-    jump start
-        "Choose the Dragonfly"
-
-        "Yes":
-            jump Begin_Dragonfly
-        "No":
-            jump starting_choice
 
 label Begin_Dragonfly:
     "{i} A small Dragonfly emerges from the brush, flitting about lazily through the air. {i}"
@@ -2637,7 +3253,7 @@ label dragon_tile_eight:
     
     "{i}They stop buzzing their wings, and let themselves be moved downward. Down, down, down, into the depths of the Lake. Whether they like it or not, the rest of the Pack soon follows them.{i}"
     "{i}As they all sink down, the cold water enveloping them, they're taken by an all-encompassing darkness.{i}"
-
+    return
 
 
 #------------------------------------------
@@ -2647,7 +3263,6 @@ label dragon_tile_eight:
 
 
 
-# Using return ends the game but I forgot how change it so it ends depending on a route
-   return
+
 
 
