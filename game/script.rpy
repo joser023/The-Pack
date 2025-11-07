@@ -109,21 +109,22 @@ image mapBlank = "images/Tiles/mapBlank"
 # backgrounds. I noticed the file names were quite long, so I condensed by removing the “BG” from each name when you call the file, and simplifying the longer names. I also removed any spaces. The first initial of each word is capital to help readability.
 
 
-image Base = "images/Background/BG-base.png"
-image BriarElement = "images/Background/BG-Briar Elemental Variant.png"
-image Campfire = "images/Background/BG-Campfire.PNG"
-image DeforestedStumps = "images/Background/BG-Deforested Stumps Variant.png"
-image ElkCarcass = "images/Background/BG-ElkCarcass.png"
-image FairySwarm = "images/Background/BG-FairySwarm.png"
-image FlowerField = "images/Background/BG-FlowerField.png"
-image HollowTree = "images/Background/BG-HollowTree.png"
-image MudPatch = "images/Background/BG-MudPatch.png"
-image MushroomPatch = "images/Background/BG-MushroomPatch.png"
-image RagingRiver = "images/Background/BG-Raging River Variant.png"
-image RainDroplets = "images/Background/BG-RainDroplets.png"
-image SmallLake = "images/Background/BG-SmallLake.png"
-image StrongWind = "images/Background/BG-StrongWind.png"
-image Lake = "images/Background/BG-Lake.png"
+image Base = "images/Backgrounds/BG-base.png"
+image BriarElement = "images/Backgrounds/BG-Briar Elemental Variant.png"
+image Campfire = "images/Backgrounds/BG-Campfire.PNG"
+image DeforestedStumps = "images/Backgrounds/BG-Deforested Stumps Variant.png"
+image ElkCarcass = "images/Backgrounds/BG-ElkCarcass.png"
+image FairySwarm = "images/Backgrounds/BG-FairySwarm.png"
+image FlowerField = "images/Backgrounds/BG-FlowerField.png"
+image HollowTree = "images/Backgrounds/BG-HollowTree.png"
+image MudPatch = "images/Backgrounds/BG-MudPatch.png"
+image MushroomPatch = "images/Backgrounds/BG-MushroomPatch.png"
+image RagingRiver = "images/Backgrounds/BG-Raging River Variant.png"
+image RainDroplets = "images/Backgrounds/BG-RainDroplets.png"
+image SmallLake = "images/Backgrounds/BG-SmallLake.png"
+image StrongWind = "images/Backgrounds/BG-StrongWind.png"
+image Lake = "images/Backgrounds/BG-Lake.png"
+image Void = "images/Backgrounds/BG-Void.png"
 
 define config.layeredimage_offer_screen = True
 
@@ -135,8 +136,51 @@ define config.layers = ["master", "Foreground", "transient", "Headshot", "screen
 
 
 
+transform HS_Left5b:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.2
+transform HS_Left5h:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.5
+transform HS_Left5r:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.34
+transform HS_Left5t:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.32
+transform HS_Left5d:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.2
+transform HS_Left5c:
+    xalign 0.0
+    yalign 1.0
+    zoom 0.32
 
+transform flip_center:
+    xzoom -1.0
 
+transform select_r:
+    zoom 0.5
+
+transform select_c:
+    zoom 0.5
+
+transform select_b:
+    zoom 0.5
+
+transform select_d:
+    zoom 0.5
+
+transform select_h:
+    zoom 0.5
+
+transform select_t:
+    zoom 0.5
 
 
 #-----------------------
@@ -201,13 +245,14 @@ label starting_choice:
 #------------------------------------------
 label Choose_Raccoon:
 
+    show raccoon onlayer Foreground at select_r
 
-   "The Raccoon, a funny little fella who has a funny face"
-   "Do not be fooled however, the Raccoon has great [[Agility]. Furthermore it carries the innate trait of {i} [[magic pocket]{/i}"
+    "The Raccoon, a funny little fella who has a funny face"
+    "Do not be fooled however, the Raccoon has great [[Agility]. Furthermore it carries the innate trait of {i} [[magic pocket]{/i}"
+    hide raccoon onlayer Foreground 
 
-
-   "Choose the Raccoon?"
-   menu:
+    "Choose the Raccoon?"
+    menu:
        "Yes":
            jump Begin_Raccoon
        "No":
@@ -219,16 +264,16 @@ label Begin_Raccoon:
 
     # Mark that the player has started the Raccoon branch
  
-    
+
 
 
     # Tile 1
 
-
+    scene Base onlayer master
     "The forest hums softly in its slow awakening. Shafts of gold cut through the canopy, painting the moss in dancing patches of light."
     "The smell of wet bark and clover lingers in the air. Somewhere, a stream murmurs like a forgotten song."
 
-
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
     r "Mmm... another perfect day for heroics and snacks."
 
 
@@ -240,8 +285,9 @@ label Begin_Raccoon:
     r "I think something was waiting for me there."
 
 
-    "They brush leaves from their fur and grin."
 
+
+    "They brush leaves from their fur and grin."
 
     r "Or maybe it was just me admiring my reflection again. Hard to tell sometimes."
 
@@ -256,6 +302,7 @@ label Begin_Raccoon:
 
 
     r "Now... which way was that lake again?"
+    hide HSraccoon onlayer Headshot
     scene map1 onlayer master
     menu:
         "Take upper route":
@@ -272,10 +319,11 @@ label Begin_Raccoon:
 
 label rc_tile_2:
 
-    "[MapNumber]"
+    scene MudPatch onlayer master
 
     "Further down, the ground softens to mud. A glint of silver flashes beneath the surface, half-buried like treasure waiting to be found."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Oh-ho-ho! Jackpot! The forest rewards those with impeccable taste."
 
@@ -334,6 +382,8 @@ label rc_tile_2:
 
 
     r "Maybe not everything shiny wants to be found."
+    
+    hide HSraccoon onlayer Headshot
     if MapNumber == 2.1:
         scene map2_1 onlayer master 
     elif MapNumber == 2.2:
@@ -357,9 +407,11 @@ label rc_tile_2:
 
 label rc_tile_3:
 
+    scene Base onlayer master
+
     "The air smells sweeter as the forest opens again. Light plays on the leaves; each rustle feels like a whisper from something watching kindly, or curiously."
 
-
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
     r "Note to self: shiny equals sticky. Got it. I totally learned my lesson. Probably."
 
 
@@ -386,7 +438,7 @@ label rc_tile_3:
 
     if RunCount > 1:
         r "At least I'm starting to think before acting. That's progress, right? Baby steps. Stylish baby steps."
-
+    hide HSraccoon onlayer Headshot
     if MapNumber == 3.1:
         scene map3_1 onlayer master
     elif MapNumber == 3.2:
@@ -417,8 +469,10 @@ label rc_tile_3:
 
     # Tile 4 - choose companion pair
 label rc_tile_4:
+    scene Base onlayer master
     "They stop, hearing a rustle in the underbrush."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Hmm? Sounds like company."
 
@@ -429,13 +483,44 @@ label rc_tile_4:
     r "Finally! Maybe someone who appreciates my charm."
 
     "Shapes move in the greenery ahead. Familiar silhouettes step into the light."
+    hide HSraccoon onlayer Headshot
+    jump Raccoon_pairs
 
-
+label Raccoon_pairs:
     menu:
         "Travel with Turtle and Coyote":
-            jump Raccoon_RouteA
+            jump Raccoon_selectA
         "Travel with Bear and Hummingbird":
+            jump Raccoon_selectB
+
+
+label Raccoon_selectA:
+    show turtle onlayer Foreground at select_t
+    "Turtle is slow in steps but steady in soul, with a steady [[Swimming] ability. Beneath that calm shell lies the ancient magic of [[Tide Memory], a gift that lets it sense paths through both water and time."
+    hide turtle onlayer Foreground
+    show coyote onlayer Foreground at select_c
+    "Coyote is clever, reckless, and impossible to ignore. With sharp senses and sharper instincts, its [[Scent] can find anything, except maybe good decisions. They also have the power to detect and resist poisons using [[Poison Immunity]."
+    hide coyote onlayer Foreground
+    "Pick Turtle and Coyote?"
+    menu:
+        "Yes":
+            jump Raccoon_RouteA
+        "No":
+            jump Raccoon_pairs
+
+label Raccoon_selectB:
+    show bear onlayer Foreground at select_b
+    "Bear carries a great [[Strength]. Its gift of [[Pathsense] allows it to feel the heartbeat of the forest and discover trails that no map could ever show."
+    hide bear onlayer Foreground
+    show hummingbird onlayer Foreground at select_h
+    "Hummingbird is small, swift, and endlessly dramatic. Its [[Wind Gale] magic can stir storms or scatter pollen, and it uses [[Flight] to get around."
+    hide hummingbird onlayer Foreground
+    "Pick Bear and Hummingbird?"
+    menu:
+        "Yes":
             jump Raccoon_RouteB
+        "No":
+            jump Raccoon_pairs
 
 
 
@@ -451,22 +536,29 @@ label Raccoon_RouteA:
 
     "A mossy shell glints in the light; beside it, a blur of tan fur bounds through the bushes."
 
+    show HScoyote onlayer Headshot at HS_Left5c, flip_center
 
     c "Woah! Didn't expect to see you here, short stuff!"
 
-
+    hide HScoyote onlayer Headshot
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
     r "Short? Excuse you, this is called compact excellence."
 
 
+    hide HSraccoon onlayer Headshot
     tl "You two arguing already? We just found each other."
 
+    show HScoyote onlayer Headshot at HS_Left5c, flip_center
 
     c "Not arguing! Just bonding aggressively."
 
+    hide HScoyote onlayer Headshot
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Exactly. That's how real friendships start."
 
 
+    hide HSraccoon onlayer Headshot
     "Turtle sighs, stepping over a root with careful precision."
 
 
@@ -475,12 +567,15 @@ label Raccoon_RouteA:
 
     c "Good! Then they can come hang out too."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "See? Team spirit!"
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     tl "Team idiocy..."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Tomato, tomahto."
 
@@ -491,17 +586,22 @@ label Raccoon_RouteA:
     r "So. You two on your way to the lake too?"
 
 
+    hide HSraccoon onlayer Headshot
     tl "We're always on our way somewhere. Just hopefully not to our deaths."
 
+    show HScoyote onlayer Headshot at HS_Left5c, flip_center
 
     c "Don't say that! The forest is full of cool stuff! Maybe treasure! Maybe ghosts!"
 
 
     tl "That's not helping."
 
-
+    hide HScoyote onlayer Headshot
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
+ 
     r "Perfect. I like this dynamic already. Let's find out what shiny mistake waits for us next."
 
+    hide HSraccoon onlayer Headshot
     if MapNumber == 4.1:
         scene map4_1 onlayer master
     elif MapNumber == 4.2:
@@ -535,30 +635,39 @@ label Raccoon_RouteA:
 
 label rc_tile_5A:
 
+    scene HollowTree onlayer master
     "The trio stops near a massive hollow tree whose center hums when they speak."
 
 
     c "Whoa, check this out!"
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Echo! Echo! Echooo!"
 
 
+    hide HSraccoon onlayer Headshot
     "Their voice bounces back, slightly distorted."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "See? The forest loves my voice."
 
 
+    hide HSraccoon onlayer Headshot
     tl "That... doesn't sound like just an echo."
 
+    show HScoyote onlayer Headshot at HS_Left5c, flip_center
 
     c "Maybe it's forest ghosts! Hi ghosts!"
 
+    hide HScoyote onlayer Headshot
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "You're welcome for the jokes, by the way!"
 
-
+ 
+    hide HSraccoon onlayer Headshot
     "The echo replies faintly, barely more than a breath."
 
 
@@ -567,19 +676,22 @@ label rc_tile_5A:
 
     tl "Okay, that's not funny."
 
-
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
     r "Maybe it's just memory. Forests remember laughter too."
 
 
+    hide HSraccoon onlayer Headshot
     c "Creepy but poetic."
 
 
     tl "Let's move before the memories start answering back."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "You're no fun."
 
 
+    hide HSraccoon onlayer Headshot
     "They move on, laughter fading into the hollow's hum."
 
     if MapNumber == 5.1:
@@ -611,14 +723,20 @@ label rc_tile_5A:
 
 label rc_tile_6A:
 
+    scene RagingRiver onlayer master
+
     "A roaring river cuts through the forest, water sparkling violently in moonlight."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Finally! A natural water slide!"
 
 
+    hide HSraccoon onlayer Headshot
+
     tl "Absolutely not, Raccoon."
 
+    show HScoyote onlayer Headshot at HS_Left5c, flip_center
 
     c "It does look fun..."
 
@@ -626,6 +744,7 @@ label rc_tile_6A:
     tl "I take that back. Absolutely not, for both of you."
 
 
+    hide HScoyote onlayer Headshot
     menu:
         "Raccoon leads, using [[Agility] across the rocks":
             "Raccoon leaps from rock to rock, paws slipping on the spray but somehow keeping their balance."
@@ -637,16 +756,19 @@ label rc_tile_6A:
 
     "Midway, a wave almost knocks Raccoon off; Turtle shouts instructions while Coyote barks encouragement."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Remind me to never underestimate physics again!"
-
+ 
+    hide HSraccoon onlayer Headshot
 
     tl "Remind me to travel alone next time."
 
+    show HScoyote onlayer Headshot at HS_Left5c, flip_center
 
     c "But then who would bring the snacks?"
 
-
+    hide HScoyote onlayer Headshot
     "They all laugh as they reach the opposite shore, dripping but alive."
 
     if MapNumber == 6.1:
@@ -673,12 +795,16 @@ label rc_tile_6A:
 
 label rc_tile_7A:
 
+    scene Campfire onlayer master
+
     "Later, the Pack settles by a quiet stream. Fireflies drift like embers from another world."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Finally, the perfect atmosphere for reflection... or snacks. Probably both."
 
 
+    hide HSraccoon onlayer Headshot
     c "You always think with your stomach."
 
 
@@ -687,6 +813,7 @@ label rc_tile_7A:
 
     "Raccoon grins, piling twigs onto a bonfire."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Alright, no moping tonight. We survived the sticky, the scary, and the soggy. We deserve a party."
 
@@ -696,9 +823,11 @@ label rc_tile_7A:
 
     r "Look around, folks. For once, the forest doesn't feel like it's judging us."
 
-
+ 
+    hide HSraccoon onlayer Headshot
     tl "Probably won't last long. Give it time."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Nah. Tonight it listens."
 
@@ -710,7 +839,8 @@ label rc_tile_7A:
 
 
     r "You know... I think laughter's like light. Doesn't matter how dark the forest gets-it still finds a way through."
-
+ 
+    hide HSraccoon onlayer Headshot
     if MapNumber == 7.1:
         scene map7_1 onlayer master
     elif MapNumber == 7.2:
@@ -726,28 +856,45 @@ label rc_tile_7A:
        # Tile 8A - Ending
 
 label rc_tile_8A:
+
+    scene Lake onlayer master
+
     "The Pack is able to navigate through the forest, following the faint pull of Turtle's [[Tide Memory] as it tugs them down the trail."
     "Before long, they emerge from the trees, and stand in front of a giant lake."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "So this is it."
+
+    hide HSraccoon onlayer Headshot
     tl "I remember this place. There should be a lake somewhere up ahead."
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
+
     r "Feeling lucky enough to dive?"
+
+    hide HSraccoon onlayer Headshot
     tl "No. This one's different."
     c "Different how? Looks like a standard lake to me."
 
 
     "They move closer to the water's edge, the air around them growing heavy and still."
     tl "Put me down at the shore, please."
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
+
     r "Yeah, give me a second."
 
 
+    hide HSraccoon onlayer Headshot
     "Raccoon does as they're told and sets Turtle down near the waterline. Gentle waves lap at Turtle's shell as they close their eyes."
     tl "If I can just... remember the tides here..."
 
 
     "The water begins to ripple and change. Little waves form, then grow taller, crashing harder against the shore."
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
+
     r "That's not good!"
+
+    hide HSraccoon onlayer Headshot
     c "Uh, guys? I don't think the lake likes us!"
 
 
@@ -790,48 +937,62 @@ label Raccoon_RouteB:
 
     b "You say that every ten steps."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Hey! Speaking of combusting-look who it is!"
 
 
+    hide HSraccoon onlayer Headshot
     hb "Oh great. The forest comedian."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "You wound me, birdie. I bring joy and chaos in equal measure."
-
+ 
+    hide HSraccoon onlayer Headshot
 
     b "Mostly chaos."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "And yet, you're smiling inside. I can tell."
-
+ 
+    hide HSraccoon onlayer Headshot
 
     b "You can't."
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
 
     r "I can."
 
+    hide HSraccoon onlayer Headshot
 
     "They walk together, the forest darkening toward dusk."
 
 
     hb "We're wasting daylight on jokes. Typical."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Correction: we're using daylight creatively."
 
+    hide HSraccoon onlayer Headshot
 
     b "You mean wasting."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Semantics!"
 
+    hide HSraccoon onlayer Headshot
 
     "Bear grumbles. Hummingbird mutters under their breath. Raccoon just laughs."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Alright, grumpy squad, I'll lead. Someone's gotta bring personality to this trio."
 
+    hide HSraccoon onlayer Headshot
 
     hb "We're doomed."
 
@@ -867,6 +1028,9 @@ label Raccoon_RouteB:
     # Tile 5B
 
 label rc_tile_5B:
+
+    scene MushroomPatch onlayer master
+
     "Night falls. The forest glows faintly blue from clusters of mushrooms lighting the path."
 
 
@@ -878,36 +1042,46 @@ label rc_tile_5B:
 
     hb "You say that until they sprout teeth."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "If they do, at least we'll see them coming!"
 
+    hide HSraccoon onlayer Headshot
 
     "The light reflects in Raccoon's eyes; they look almost dreamlike."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "You know, it's kinda pretty. Like the ground decided to have its own stars."
-
+ 
+    hide HSraccoon onlayer Headshot
 
     b "Pretty doesn't mean safe."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Safe doesn't mean interesting."
 
+    hide HSraccoon onlayer Headshot
 
     hb "You're both exhausting."
 
 
     "They continue walking, light flickering underfoot. For a moment, all three are quiet. Then Raccoon hums a tune, breaking the tension."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "If I die glowing, make sure I look fabulous."
 
+    hide HSraccoon onlayer Headshot
 
     hb "You already look ridiculous."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Close enough."
 
+    hide HSraccoon onlayer Headshot
     if MapNumber == 5.1:
         scene map5_1 onlayer master
     elif MapNumber == 5.2:
@@ -936,6 +1110,9 @@ label rc_tile_5B:
     # Tile 6B
 
 label rc_tile_6B:
+
+    scene FlowerField onlayer master
+
     "A meadow of luminous flowers sways under a faint mist."
 
 
@@ -956,6 +1133,7 @@ label rc_tile_6B:
 
     "Raccoon pulls a scrap of cloth from their magic pocket and ties it around their face."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Mask time! Safety first, fashion second."
 
@@ -966,6 +1144,7 @@ label rc_tile_6B:
     r "Ridiculously prepared."
 
 
+    hide HSraccoon onlayer Headshot
     b "Hummingbird, clear the air with your wind."
 
 
@@ -1008,8 +1187,12 @@ label rc_tile_6B:
     # Tile 7B
 
 label rc_tile_7B:
+
+    scene Campfire onlayer master
+
     "Later, the Pack settles by a quiet stream. Fireflies drift like embers from another world."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Finally, the perfect atmosphere for reflection... or snacks. Probably both."
 
@@ -1046,6 +1229,7 @@ label rc_tile_7B:
 
     r "You know... I think laughter's like light. Doesn't matter how dark the forest gets-it still finds a way through."
 
+    hide HSraccoon onlayer Headshot
     if MapNumber == 7.1:
         scene map7_1 onlayer master
     elif MapNumber == 7.2:
@@ -1061,14 +1245,19 @@ label rc_tile_7B:
            # Tile 8B - Ending
 
 label rc_tile_8B:
+
+    scene Lake onlayer master
+
     "The Pack is able to navigate through the forest using Bear's [[Pathsense] string."
     "The thread guides them through the last stretch of trees until the forest opens up around a wide, shimmering lake."
 
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "We actually made it."
     hb "Yeah. And it feels wrong."
     b "Stay close. We don't know what will happen here."
 
+    hide HSraccoon onlayer Headshot
 
     "They all move closer to the water's edge, stopping where damp earth gives way to sand."
     hb "Whatever comes next, I'd at least like to not drown."
@@ -1081,9 +1270,12 @@ label rc_tile_8B:
 
     "Then they feel it. The water underneath them slowly, surely being pulled downward."
     hb "Do you feel that?"
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
+
     r "I'm trying, but I'm being pulled in! Bear, I think we're-"
 
 
+    hide HSraccoon onlayer Headshot
     "The pull becomes a sudden, violent drag. The lake's surface warps, funneling everything toward its dark center."
     b "Get out of the water!"
 
@@ -2009,8 +2201,9 @@ label BTR_Tile8:
 #------------------------------------------
 label Choose_Dragonfly:
 
+    show dragonfly onlayer Foreground at select_d
     "{i} Dragonfly, ever full of hope, mostly relies on their [[Foresight] to glimpse the future. If that fails, their [[Compound Eyes] can take in additional information from their present surroundings.{i}"
-
+    hide dragonfly onlayer Foreground
     "Choose the Dragonfly"
     menu: 
         "Yes":
@@ -2020,6 +2213,7 @@ label Choose_Dragonfly:
 
 
 label Begin_Dragonfly:
+    scene Base onlayer master 
     "{i} A small Dragonfly emerges from the brush, flitting about lazily through the air. {i}"
 
     df "What a lovely afternoon...the breeze feels just right today."
@@ -2048,6 +2242,9 @@ label dragon_transition_one:
             jump dragon_tile_two
 
 label dragon_tile_two:
+
+    scene StrongWind onlayer master
+
     "{i}The winds start to pick up throughout the forest. What was once a gentle breeze has now been whipped into a gale. The small Dragonfly struggles to fly straight in this weather.{i}"
 
     df "Oh dear! These are certainly less-than-ideal flying conditions."
@@ -2088,6 +2285,9 @@ label dragon_transition_two:
             jump dragon_tile_three
 
 label dragon_tile_three:
+
+    scene Base onlayer master
+
     "{i}Slightly ruffled from the previous gale, Dragonfly travels onward through the forest.{i}"
 
     df "Mmm...it's good to be able to fly without issue again. Hopefully this weather holds up."
@@ -2138,6 +2338,8 @@ label dragon_transition_three:
             jump dragon_tile_four
 
 label dragon_tile_four:
+
+    scene Base onlayer master
     "{i}Dragonfly moves through the trees, admiring the colors of the leaves as they fly.{i}"
 
     df "Ahh... You know, I feel like something is waiting for me just up ahead [[Foresight]."
@@ -2156,10 +2358,12 @@ label dragon_select:
             jump ch_select
 
     label rb_select:
+        show raccoon onlayer Foreground at select_r
         "{i}Curious as ever, Raccoon uses their [[Agility] to get out of sticky situations, and can pull a myriad of objects from their [[Magic Pocket]."
-        
+        hide raccoon onlayer Foreground
+        show bear onlayer Foreground at select_b
         "{i}Headstrong Bear on the other hand likes to use their raw [[Strength] ability to push forward, aided by their magical [[Pathsense] to sniff out the best route.{i}"
-
+        hide bear onlayer Foreground
         menu:
             "{i} Choose Raccoon and Bear?{i}"
 
@@ -2171,18 +2375,21 @@ label dragon_select:
 
     label raccoon_bear:
         "{i}The rustling noise turns to the sound of talking. Not just talking, arguing. As energetic Raccoon and serious Bear emerge from the brush, they appear to be deep in the middle of an argument.{i}"
-
+        show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
+    
         r "Listen, I just thought it could be helpful, that's all! It wasn't even that bad of an idea!"
 
         b "{i}sighs{i} Except that I had to pull you outa the muck in that lake."
 
         r "Well, they're called CATtails, so I just thought that I would be able to find the cat that the tail went to, and then they could travel with us."
 
+        hide HSraccoon onlayer Headshot
         b "You can't even swim well. You had no right to just jump into the water like that."
 
         "{i}Bear looks to Dragonfly, nodding to them as the pair approaches.{i}"
 
         b "At least we found you. Hopefully you've been holding up better than we have."
+        show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
         r "Hey, I don't know what they're talking about. We've been holding up perfectly fine- hey, do we look fine to you?"
 
@@ -2198,6 +2405,7 @@ label dragon_select:
             df "Well, you are all sopping wet. But luckily the remaining sun should be able to dry you off."
 
             b "Lucky? We're lucky that I got you out of that lake at all."
+            show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
             if Rsighting >= 1:
                 r "Well...I guess I could've asked you first before jumping in...sorry about that..."
@@ -2207,20 +2415,26 @@ label dragon_select:
 
         label look_fine:
             df "You both look perfectly fine to me!"
+            show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
             r "Thank you! See what I was saying Bear about being a little more positive?"
             jump bear_raccoon
 
         label bear_raccoon:
+
+            hide HSraccoon onlayer Headshot
             b "All right, whatever. We lost a lot of light thanks to your stunt earlier, so we should keep moving."
 
             df "As you wish. I'm just so glad I came across you two. I think this will be a wonderful journey together."
             jump dragon_transition_fourB
 
     label ch_select:
+        show coyote onlayer Foreground at select_c
         "{i}A bundle of energy, Coyote makes great use of their nose with their [[Scent] ability, and their [[Poison Immunity] lets them identify and consume food that would be deadly to others.{i}"
-
+        hide coyote onlayer Foreground
+        show hummingbird onlayer Foreground at select_h
         "{i}Meanwhile Hummingbird, ever the cynical realist, remains one of the strongest fliers available with [[Flight], aided by their use of their [[Wind Gale] magic.{i}"
+        hide hummingbird onlayer Foreground
         menu:
             "{i}Pick Coyote and Hummingbird?{i}"
             
@@ -2312,6 +2526,9 @@ label dragon_transition_fourB:
             jump dragon_tile_fiveB
 
 label dragon_tile_fiveA:
+
+    scene Base onlayer master
+
     "{i}Coyote trots along happily through the brush, as Dragonfly and Hummingbird follow close behind the best they can.{i}"
 
     hb "Slow down dog! Are you trying to lose us?"
@@ -2339,6 +2556,10 @@ label dragon_tile_fiveA:
     df "Woah, woah. Everything will be alright, don't worry."
 
     hb "Don't worry?! When that rain gets here, it will be too heavy for either of us to fly. That means we'll have to cling to a branch and hang on for dear life so we don't get swept away! Does that sound 'alright' to you?"
+
+    scene black with fade
+
+    scene RainDroplets onlayer master
 
     "{i}The rain starts to fall heavier, further exacerbating Hummingbird.{i}"
 
@@ -2467,6 +2688,8 @@ label dragon_tile_fiveA:
 
 label dragon_tile_fiveB:
 
+    scene ElkCarcass onlayer master
+
     "{i}As the Pack continues, they spot the nearby figure of a resting animal. As they get closer, they realize that it isn't resting. It's dead.{i}"
 
     b "{i}Bear stops suddenly.{i} Everyone stop!"
@@ -2476,6 +2699,7 @@ label dragon_tile_fiveB:
     df "It appears that this one was killed no more than a couple days ago [[Compound Eyes]."
 
     b "And that's a great reason to just leave it alone. Where there's meat, there's bound to be predators, and we don't want to deal with that. Just keep moving."
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Predators? You're scared of other animals? But you're the biggest animal in the whole forest."
 
@@ -2491,6 +2715,7 @@ label dragon_tile_fiveB:
 
     df "Now now. Raccoon won't cause any harm. I'm sure the danger is long past now [[Foresight]."
 
+    hide HSraccoon onlayer Headshot
     "{i}Raccoon turns around to face Bear, swinging the stick wildly and clipping Dragonfly in the process. Dragonfly spirals towards the ground, but rights themselves at the last second, managing to fly up mostly unharmed.{i}"
 
     b "WATCH IT! {i}Bear roars.{i}"
@@ -2511,6 +2736,7 @@ label dragon_tile_fiveB:
     "{i}Bear starts moving again, with Raccoon and Dragonfly trailing behind them.{i}"
 
     "{i}Raccoon walks for a while in silence, before quietly piping up to Dragonfly.{i}"
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "Sorry for hitting you with the stick."
 
@@ -2523,7 +2749,8 @@ label dragon_tile_fiveB:
     "{i}The two of them chuckle nervously.{i}"
 
     r "I just want to be able to be helpful. I want to be a knight and a comedian. Protect people, and make them laugh. But Bear doesn't get it. They're already strong enough to protect people easily."
-
+ 
+    hide HSraccoon onlayer Headshot
     "{i}Dragonfly thinks for a moment.{i}"
 
     df "You are right, Bear is certainly very strong. At least physically. But you are also strong."
@@ -2596,6 +2823,9 @@ label dragon_transition_fiveB:
             jump dragon_tile_sixB
 
 label dragon_tile_sixA:
+
+    scene BriarElement onlayer master
+
     "{i}As the Pack makes their way down a small hill, they find themselves facing a large patch of brambles. The sharp thorns look very intimidating.{i}"
 
     df "Interesting. Will you all be ok crossing this?"
@@ -2657,6 +2887,9 @@ label dragon_tile_sixA:
         jump dragon_transition_sixA
 
 label dragon_tile_sixB:
+
+    scene BriarElement onlayer master
+
     "{i}As the Pack makes their way down a small hill, they find themselves facing a large patch of brambles. The sharp thorns look very intimidating.{i}"
 
     df "Interesting. Will you all be ok crossing this?"
@@ -2695,9 +2928,11 @@ label dragon_tile_sixB:
 
     label briar_goadB:
         df "We need to get it away from the briar patch! Then it'll be out of our way!"
+        show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
         r "Don't worry! I'm a master of distraction! Hey you big ugly blackberry bush! Over here!"
-
+ 
+        hide HSraccoon onlayer Headshot
         "{i}As the elemental takes a step out of the briar patch to pursue the animals, it starts to lose its form, as it disconnects from the vines and bushes. Seizing the moment, the Pack makes a quick getaway through the briar patch.{i}"
         jump dragon_transition_sixB
 
@@ -2715,12 +2950,15 @@ label dragon_tile_sixB:
 
     label briar_agilityB:
         df "Raccoon, go show it your strength!"
+        show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
         r "Aye aye!"
 
         "{i}Raccoon runs into the patch, easily dodging the strikes from the elemental’s thorny arms. They run around the elemental over and over again, weaving in and out of its reach [[Agility].{i}" 
         
         "{i}After a few minutes, the elemental seems sufficiently tangled up and confused. Raccoon grins proudly to the others, and they all quickly make their way through the briar patch, past the dazed elemental.{i}"
+
+        hide HSraccoon onlayer Headshot       
         jump dragon_transition_sixB
 
 label dragon_transition_sixA:
@@ -2770,6 +3008,9 @@ label dragon_transition_sixB:
             jump dragon_tile_sevenB
 
 label dragon_tile_sevenA:
+
+    scene Campfire onlayer master
+
     "{i}The Pack have settled around a campfire for the night, preparing themselves for what's in store tomorrow.{i}"
 
     "{i}Dragonfly stares into the fire thoughtfully.{i}"
@@ -2890,6 +3131,9 @@ label dragon_tile_sevenA:
     jump dragon_transition_sevenA
 
 label dragon_tile_sevenB:
+
+    scene Campfire onlayer master
+
     "{i}The Pack have settled around a campfire for the night, preparing themselves for what's in store tomorrow.{i}"
 
     "{i}Dragonfly stares into the fire thoughtfully.{i}"
@@ -2922,6 +3166,7 @@ label dragon_tile_sevenB:
     b "Must you do that? I'm trying to keep watch."
 
     "{i}Dragonfly brings their hum so low that only they can hear it.{i}"
+    show HSraccoon onlayer Headshot at HS_Left5r, flip_center 
 
     r "I thought it was nice." 
     
@@ -2964,7 +3209,8 @@ label dragon_tile_sevenB:
 
     if Rsighting >= 2:
         r "I think...I think I'll listen more to you all from now on. Can never be too careful, right? Hopefully there will be less accidents this way, and...and I'm very glad to be traveling together."
-
+ 
+    hide HSraccoon onlayer Headshot
     "{i}Bear and Dragonfly nod.{i}"
 
     df "{i}Dragonfly smiles.{i} Thank you."
@@ -3055,6 +3301,9 @@ label dragon_transition_sevenB:
             jump dragon_tile_eightB
 
 label dragon_tile_eightA:
+
+    scene Lake onlayer master
+
     "{i}The Pack emerges through the tree line, coming across a shimmering lake. The air feels oddly inviting, the surrounding forest growing quiet.{i}"
 
     df "...we're here."
@@ -3088,7 +3337,7 @@ label dragon_tile_eightA:
 
     $ DFsighting += 1
     $ Csighting += 1
-    $ HBighting += 1
+    $ HBsighting += 1
     $ RunCount += 1
     $ DragonflyBranch = False
     
@@ -3097,6 +3346,9 @@ label dragon_tile_eightA:
     jump ending
 
 label dragon_tile_eightB:
+
+    scene Lake onlayer master
+
     "{i}The Pack emerges through the tree line, coming across a shimmering lake. The air feels oddly inviting, the surrounding forest growing quiet.{i}"
 
     df "...we're here."
@@ -3144,6 +3396,8 @@ label ending:
 
         "\"Who are you?\""
 
+        scene Void onlayer master
+
         "{i}In the darkness, a pinprick of light appears.{i}"
 
         "Who asked that question?"
@@ -3173,6 +3427,8 @@ label ending:
 
         "\"Who are you?\""
 
+        scene Void onlayer master
+
         "Did that question come from someone else? Or did you whisper it to yourself?"
 
         "{i}You lie in darkness once more. You try to see, try to feel, but are unable to distinguish sensation and memory.{i}"
@@ -3183,6 +3439,7 @@ label ending:
 
         "\"You have changed your scent.\""
 
+        show FishFairy onlayer Foreground
         "{i}You look down, and see a massive koi fish with shimmering butterfly wings. It swims through the dark expanse below, emitting a hot light that cuts through and pierces your soul.{i}"
 
         "\"But I can still recognize you.\""
@@ -3197,6 +3454,8 @@ label ending:
 
         "\"Bring me more memories!\""
 
+        hide FishFairy onlayer Foreground
+
         "{i}In one quick motion, the mouth of the koi Fish closes around you, leaving you once again in darkness.{i}"
 
         "{i}You feel yourself being broken, being shattered and spread once more.{i}"
@@ -3208,8 +3467,13 @@ label ending:
         jump starting_choice
 
     elif RunCount == 3:
+
+        scene Void onlayer master
+
         "..."
+
         "..."
+
         "{i}You've never felt quite so alone.{i}"
 
         "{i}As you soak in the familiar cold darkness, you lie in wait. Just waiting and waiting.{i}"
@@ -3227,7 +3491,7 @@ label ending:
         "And you don't have any other memories. So these ones must be yours."
 
         "\"At last.\""
-
+        show FishFairy onlayer Foreground
         "{i}You turn around, coming face to face with the Fish Fairy again. This time, they are a much smaller size, only a little larger than you.{i}"
 
         "\"You are…different. I no longer recognize you as what you once were.\""
@@ -3249,7 +3513,7 @@ label ending:
         "\"You have changed. The person who was there is gone. In their place, stands you. That seems reason enough to let you go.\""
 
         "{i}The light grows brighter and brighter, as a more gentle warmth washes over you. As everything fades to white, the last thing you remember is the smell of soil and pine.{i}"
-
+        hide FishFairy onlayer Foreground
         scene white with fade
 
         jump epilogue
