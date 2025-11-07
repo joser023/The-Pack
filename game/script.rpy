@@ -43,7 +43,7 @@ default Csighting = 0
 default DFsighting = 0
 
 
-default RunCount = 2  #Tally how many branches the player has done or started
+default RunCount = 0  #Tally how many branches the player has done or started
 
 default MapNumber = 1 #keeping track of your position on the map...mostly
 
@@ -1604,17 +1604,17 @@ label Bear_Tile_3:
     show HSbear onlayer headshot at HS_Left5b, flip_center
     b " Fear is my greatest enemy. If I cannot control the fear that takes over in those moments then my judgement is not sound. I have never encountered or experienced being attacked by pixies before."
 
-    if Bsighting is 0:
+    if Bsighting is 1:
         b "Why did the string lead me through such a dangerous area? Then it helped me in my state of panic. What does this string know that I do not?"
         hide HSbear onlayer headshot
         "The Bear felt unsettled by the idea that this magic string they trust with their life may have a mind of its own."
 
-    if Bsighting is 1:
+    if Bsighting is 2:
         b " If I took my time like last time, maybe I would have realized that the dark forest was not a safe choice. "
         hide HSbear onlayer headshot
         " No, then I would lose the string. I needed to follow the string."
 
-    if Bsighting >= 2:
+    if Bsighting >= 3:
         b "The string knows best. I just need to trust it, but if it's going to put me through a gauntlet like that, I may as well deviate off course to not deal with it."
         b "The string always reappears to me later on so it would simply be an issue of losing time."
     show HSbear onlayer headshot at HS_Left5b, flip_center
@@ -1635,7 +1635,7 @@ label Bear_Tile_3:
 #-----------
 #3rd Run interaction happens here
 #------------
-    if Bsighting >= 2:
+    if Bsighting >= 3:
         scene HollowTree
         hide HSbear onlayer headshot
         t " Lost in thought is the phrase you are looking for stranger."
@@ -1682,8 +1682,6 @@ label Bear_Tile_3:
     "The bear lay there in their mind contemplating what they could do now. Silence permeated the space. The night was quiet in the shaded forest. As it always was."
         
     menu:
-        "Keep calling to the tree?":
-            jump bear_transition_4
         "Sleep for longer?":
             jump bear_transition_4
 
@@ -3568,8 +3566,7 @@ label dragon_tile_fiveA:
 
         "{i}They linger for just a moment more, before Coyote continues moving. They travel this way until the rain clears.{i}"
 
-    label no_carry:
-        c "{i}Coyote shakes their head.{i} I just don't think I can do it. I'm sorry. {i}They whine.{i}"
+        jump dragon_transition_fiveA
 
         if HBsighting >= 1:
             "{i}Hummingbird shakes their head, but bites their tongue before they say anything to Coyote, electing instead to hop back over to the far side of the stump.{i}"
@@ -4028,12 +4025,15 @@ label dragon_tile_sevenA:
 
     label fire_openA:
         df "...be open to whatever we find. Tomorrow our journey ends, so take in whatever the universe has in store for us."
+        "{i}The rest of the animals murmur in agreement, before going to sleep by the warmth of the campfire.{i}"
+        jump dragon_transition_sevenA
+
 
     label fire_carefulA:
         df "...be careful when we approach. Tomorrow our journey ends, and we must greet whatever awaits us with alert and undulled senses."
 
-    "{i}The rest of the animals murmur in agreement, before going to sleep by the warmth of the campfire.{i}"
-    jump dragon_transition_sevenA
+        "{i}The rest of the animals murmur in agreement, before going to sleep by the warmth of the campfire.{i}"
+        jump dragon_transition_sevenA
 
 label dragon_tile_sevenB:
 
