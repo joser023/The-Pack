@@ -43,7 +43,7 @@ default Csighting = 0
 default DFsighting = 0
 
 
-default RunCount = 0  #Tally how many branches the player has done or started
+default RunCount = 2  #Tally how many branches the player has done or started
 
 default MapNumber = 1 #keeping track of your position on the map...mostly
 
@@ -214,7 +214,7 @@ define config.layeredimage_offer_screen = True
 
 
 
-define config.layers = ["master", "Foreground", "transient", "Headshot", "screens", "overlay" ]
+define config.layers = ["master", "Foreground", "transient", "Headshot", "headshot", "screens", "overlay" ]
 
 
 
@@ -1418,9 +1418,10 @@ label rc_tile_8B:
 #-Start Bear Branch
 #------------------------------------------
 label Choose_Bear:
+    show bear onlayer Foreground at select_b
     "The Bear, a stoic grumpy creature."
     "It's strength dominates the forest and its intuition gives its innate {i} path sensing{/i} abilities. "
-
+    hide bear onlayer Foreground
     "Choose the Bear?"
     menu: 
         "Yes":
@@ -1455,11 +1456,13 @@ label Begin_Bear:
 
     " The bear follows the blue string further into the forest. Will there be a reward, or misery at the end?"
     $ Bsighting += 1
-
+    scene map1 onlayer master
     menu:
-        "Take the upper route?":
+        "Take upper route":
+            $ MapNumber = 2.1
             jump Bear_Tile_2
-        "Take the lower route?":
+        "Take lower route":
+            $ MapNumber = 2.2
             jump Bear_Tile_2
 
 #---------------------------
@@ -1473,6 +1476,7 @@ label Begin_Bear:
 
 label Bear_Tile_2:
     hide HSbear onlayer headshot
+    scene Base onlayer master
     "The sun was now past the midway point. The Bear roamed through the forest, rather annoyed as to how long the string goes."
     "It endlessly reaches through the forest, weaving through the trees, the bushes, and the horizon at times."
     show HSbear onlayer headshot at HS_Left5b, flip_center
@@ -1561,8 +1565,26 @@ label Destroy_fairyCircle:
     
     menu:
         "Try to wake up?":
-            jump Bear_Tile_3
+            jump transition_bear_3
         "Try to dream?":
+            jump transition_bear_3
+label transition_bear_3:
+    if MapNumber == 2.1:
+        scene map2_1 onlayer master 
+    elif MapNumber == 2.2:
+        scene map2_2 onlayer master
+    menu:
+        "Take upper route":
+            if MapNumber == 2.1:
+                $ MapNumber = 3.1
+            else:
+                $ MapNumber = 3.2
+            jump Bear_Tile_3
+        "Take lower route":
+            if MapNumber == 2.1:
+                $ MapNumber = 3.2
+            else:
+                $ MapNumber = 3.3
             jump Bear_Tile_3
    
 
@@ -1575,6 +1597,7 @@ label Destroy_fairyCircle:
 #--Begin Bear Tile 3
 #--------------------------
 label Bear_Tile_3:
+    scene Base onlayer master
     "The day flew by instantly as the Bear lay dormant on the forest floor. Nothing disturbed them. Nothing appeared around them. Only the trees watched. The trees said nothing but their eyes and judgement lay on the Bear."
     "Within the confines of the Bear's mind they played the encounter with the pixies multiple times. Trying to decipher what could have been done. What could be done better? Am I equipped to fight magical creatures?"
     "What if they fly? These questions passed through the Bear's mind."
@@ -1660,11 +1683,35 @@ label Bear_Tile_3:
         
     menu:
         "Keep calling to the tree?":
-            jump Bear_Tile4
+            jump bear_transition_4
         "Sleep for longer?":
+            jump bear_transition_4
+
+label bear_transition_4:
+    if MapNumber == 3.1:
+        scene map3_1 onlayer master
+    elif MapNumber == 3.2:
+        scene map3_2 onlayer master
+    else:
+        scene map3_3 onlayer master
+    menu:
+        "Take upper route":
+            if MapNumber == 3.1:
+                $ MapNumber = 4.1
+            elif MapNumber == 3.2:
+                $ MapNumber = 4.2
+            else:
+                $ MapNumber = 4.3
             jump Bear_Tile4
 
-
+        "Take lower route":
+            if MapNumber == 3.1:
+                $ MapNumber = 4.2
+            elif MapNumber == 3.2:
+                $ MapNumber = 4.3
+            else:
+                $ MapNumber = 4.4
+            jump Bear_Tile4
 #---------------------------
 #--End Bear Tile 3
 #--------------------------
@@ -1696,14 +1743,45 @@ label Bear_Tile4:
     hide HSbear onlayer headshot
     "The Bear lay there for some time watching the yearn destroy and meld itself together. It was mesmerizing and very hypnotizing to watch."
     "So much so that the Bear did not realize there were voices getting closer and closer"
+    jump bear_select
 #------------------
 #Player will Choose their duo of animals.
+
 #-------------------
+label bear_select:
     menu: 
         "Meet Hummingbird and Dragonfly?":
-            jump BHD_Tile4
+            jump BHD_select
         "Meet Turtle and Raccoon?":
+            jump BTR_select
+
+label BHD_select:
+    show hummingbird onlayer Foreground at select_h
+    "Hummingbird is small, swift, and endlessly dramatic. Its [[Wind Gale] magic can stir storms or scatter pollen, and it uses [[Flight] to get around."
+    hide hummingbird onlayer Foreground
+    show dragonfly onlayer Foreground at select_d
+    "Dragonfly hovers between seconds, its [[Foresight] allowing glimpses of what the world refuses to show. It speaks softly, but its visions are sharp enough to cut through fate itself."
+    hide dragonfly onlayer Foreground
+    "Pick Hummingbird and Dragonfly?"
+    menu:
+        "Yes":
+            jump BHD_Tile4
+        "No":
+            jump bear_select
+
+label BTR_select:
+    show turtle onlayer Foreground at select_t
+    "Turtle moves with patience carved from stone. Through [[Tidal Memory], it can summon echoes of the past flowing through water or soil, letting time itself whisper what it remembers."
+    hide turtle onlayer Foreground
+    show raccoon onlayer Foreground at select_r
+    "Raccoon is a walking contradiction of chaos and curiosity. With its bottomless [[Magic Pocket], it can pull out anything from crumbs to miracles, though never quite what it expects."
+    hide raccoon onlayer Foreground
+    "Pick Turtle and Raccoon?"
+    menu:
+        "Yes":
             jump BTR_Tile4
+        "No":
+            jump bear_select
 
 
 #---------------------
@@ -1768,16 +1846,44 @@ label BHD_Tile4:
     hide HSdragonfly onlayer headshot
     "So the pack was united. What mysteries would the trio encounter next?"
     #Intentionally delaying it till the end of the tile in case the player decides to back out from the decision
-    $ HBighting += 1
+    $ HBsighting += 1
     $ DFsighting += 1
     
     menu:
         "Follow the Dragonfly througn the meadow?":
-            jump BHD_Tile5
+            jump bear_transition_5B
         "Change course to the hills?":
+            jump bear_transition_5B
+
+label bear_transition_5B:  
+    if MapNumber == 4.1:
+        scene map4_1 onlayer master
+    elif MapNumber == 4.2:
+        scene map4_2 onlayer master
+    elif MapNumber == 4.3:
+        scene map4_3 onlayer master
+    elif MapNumber == 4.4:
+        scene map4_4 onlayer master
+    menu:
+        "Take upper route":
+            if MapNumber == 4.1:
+                $ MapNumber = 5.1
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.4:
+                $ MapNumber = 5.4
+            jump BHD_Tile5 
+
+        "Take lower route" if MapNumber < 4.4:
+            if MapNumber == 4.1:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.4
             jump BHD_Tile5
-
-
 #---------------------
 #- Turtle/Raccoon route Tile4
 #-------------------
@@ -1846,11 +1952,39 @@ label BTR_Tile4:
     hide bear
     menu:
         "Lead the way?":
-            jump BTR_Tile5
+            jump bear_transition_5A
         "Follow the Raccoon?":
-            jump BTR_Tile5
-  
+            jump bear_transition_5A
 
+label bear_transition_5A:  
+    if MapNumber == 4.1:
+        scene map4_1 onlayer master
+    elif MapNumber == 4.2:
+        scene map4_2 onlayer master
+    elif MapNumber == 4.3:
+        scene map4_3 onlayer master
+    elif MapNumber == 4.4:
+        scene map4_4 onlayer master
+    menu:
+        "Take upper route":
+            if MapNumber == 4.1:
+                $ MapNumber = 5.1
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.4:
+                $ MapNumber = 5.4
+            jump BTR_Tile5 
+
+        "Take lower route" if MapNumber < 4.4:
+            if MapNumber == 4.1:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.4
+            jump BTR_Tile5
 #---------------------------
 #--End Bear Tile 4
 #--------------------------
@@ -2065,10 +2199,36 @@ label Detour1:
     "They survived another night and began moving around the stumps once more."
     menu:
         "Leave at dawn?":
-            jump BHD_Tile6
+            jump bear_transition6A
         "Scavenge the area?":
-            jump BHD_Tile6
+            jump bear_transition6A
 
+label bear_transition6A:            
+    if MapNumber == 5.1:
+        scene map5_1 onlayer master
+    elif MapNumber == 5.2:
+        scene map5_2 onlayer master
+    elif MapNumber == 5.3:
+        scene map5_3 onlayer master
+    elif MapNumber == 5.4:
+        scene map5_4 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 5.1:
+            if MapNumber == 5.2:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.4:
+                $ MapNumber = 6.3
+            jump BHD_Tile6
+        "Take lower route" if MapNumber < 5.4:
+            if MapNumber == 5.1:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.2:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.3
+            jump BHD_Tile6
 #---------------------
 #- Turtle/Raccoon route Tile5
 #-------------------
@@ -2249,7 +2409,30 @@ label Defend_Turtle:
 #----
 # BHD Tile 6 route
 #----
-label BHD_Tile6:
+label BHD_Tile6:           
+    if MapNumber == 5.1:
+        scene map5_1 onlayer master
+    elif MapNumber == 5.2:
+        scene map5_2 onlayer master
+    elif MapNumber == 5.3:
+        scene map5_3 onlayer master
+    elif MapNumber == 5.4:
+        scene map5_4 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 5.1:
+            if MapNumber == 5.2:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.4:
+                $ MapNumber = 6.3
+        "Take lower route" if MapNumber < 5.4:
+            if MapNumber == 5.1:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.2:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.3
     scene RainDroplets
     show HSdragonfly onlayer headshot at HS_Left5d, flip_center
     df " Oh dear. This is not good."
@@ -2494,6 +2677,23 @@ label ChaseTile6:
 #- BHD Tile 7 route
 #-------
 label BHD_Tile7:
+    if MapNumber == 6.1:
+        scene map6_1 onlayer master
+    elif MapNumber == 6.2:
+        scene map6_2 onlayer master
+    elif MapNumber == 6.3:
+        scene map6_3 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 6.1:
+            if MapNumber == 6.2:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.3:
+                $ MapNumber = 7.2
+        "Take lower route" if MapNumber < 6.3:
+            if MapNumber == 6.1:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.2:
+                $ MapNumber = 7.2
     hide layer headshot
     scene Campfire
     "The night was dark, emptier than a drained ocean. In the midst of this darkness lay an orb of light. A beacon for all who cared to see."
@@ -2612,6 +2812,23 @@ label BHD_Tile7:
 #- BTR Tile 7 Route
 #------
 label BTR_Tile7:
+    if MapNumber == 6.1:
+        scene map6_1 onlayer master
+    elif MapNumber == 6.2:
+        scene map6_2 onlayer master
+    elif MapNumber == 6.3:
+        scene map6_3 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 6.1:
+            if MapNumber == 6.2:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.3:
+                $ MapNumber = 7.2
+        "Take lower route" if MapNumber < 6.3:
+            if MapNumber == 6.1:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.2:
+                $ MapNumber = 7.2
     show Campfire
     hide layer headshot
     "The day quickly vanished. The fear, adrenaline, and unrest settled as the sun set."
@@ -2746,6 +2963,15 @@ label BTR_Tile7:
 #-BHD Tile 8 route
 #-------
 label BHD_Tile8:
+    if MapNumber == 7.1:
+        scene map7_1 onlayer master
+    elif MapNumber == 7.2:
+        scene map7_2 onlayer master
+    menu:
+        "Take upper route" if MapNumber == 7.2:
+            $ MapNumber = 8
+        "Take lower route" if MapNumber == 7.1:
+            $ MapNumber = 8
     scene Base
     hide layer headshot
     "The Pack was able to navigate through the forest using the Bear's [[path sensing] string, which had returned to them the night before."
@@ -2792,14 +3018,24 @@ label BHD_Tile8:
     hide HSbear onlayer headshot
     "All valid questions, but no one answered them. The Bear saw something below them shining. They weren't sure what it was, but they were attracted to it. As they descended, the water began beating."
     "It got darker and darker. The beating kept going. Then it went quiet."
-    $ BearBranch = True
+    $ BearBranch = False
+    $ RunCount += 1
     scene black with fade
-    return
+    jump ending 
 
 #-------
 #-BTR Tile 8 route
 #-------
 label BTR_Tile8:
+    if MapNumber == 7.1:
+        scene map7_1 onlayer master
+    elif MapNumber == 7.2:
+        scene map7_2 onlayer master
+    menu:
+        "Take upper route" if MapNumber == 7.2:
+            $ MapNumber = 8
+        "Take lower route" if MapNumber == 7.1:
+            $ MapNumber = 8
     hide layer headshot
     scene Base
     "The Pack was able to navigate through the forest using the Bear's [[path sensing] string, which had returned to them the night before."
@@ -2847,9 +3083,10 @@ label BTR_Tile8:
     
 
     "The wave crashed with a hard thud. Consuming all three animals. Each getting pulled into the dark depths of the lake."
-    $ BearBranch = True
+    $ BearBranch = False
+    $ RunCount += 1
     scene black with fade
-    return
+    jump ending
 
 
 #---------------------------
