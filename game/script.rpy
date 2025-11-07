@@ -34,7 +34,7 @@ default Rsighting = 0
 default TLsighting = 0
 
 # Checks to see how many time Hummingbird appears
-default HBighting = 0
+default HBsighting = 0
 
 # Checks to see how many time Coyote appears
 default Csighting = 0
@@ -45,10 +45,12 @@ default DFsighting = 0
 
 default RunCount = 0  #Tally how many branches the player has done or started
 
+default MapNumber = 1 #keeping track of your position on the map...mostly
+
  # Use this to track which branches the players have completed or have not
-default RaccoonBranch = False 
-default BearBranch = False
-default DragonflyBranch = False
+default RaccoonBranch = True
+default BearBranch = True
+default DragonflyBranch = True
 
 
 #i’m taking the filenames based directly on what is in our google drive art folder! I’ll leave comments breaking up the art by category
@@ -57,76 +59,83 @@ default DragonflyBranch = False
 #animal ingame assets . the larger drawings, not the headshots.
 
 
-image bear = “images/FullBody/Bear.png”
-image coyote = “images/FullBody/Coyote.PNG”
-image dragonfly = “images/FullBody/Dragonfly.png”
-image hummingbird = “images/FullBody/Hummingbird.PNG”
-image raccoon = “images/FullBody/Raccoon.PNG”
-image turtle = “images/FullBody/Turtle.PNG”
-image FishFairy = “images/FullBody/KoiFish.png”
+image bear = "images/FullBody/Bear.png"
+image coyote = "images/FullBody/Coyote.PNG"
+image dragonfly = "images/FullBody/Dragonfly.png"
+image hummingbird = "images/FullBody/Hummingbird.PNG"
+image raccoon = "images/FullBody/Raccoon.PNG"
+image turtle = "images/FullBody/Turtle.PNG"
+image FishFairy = "images/FullBody/KoiFish.png"
 
 
 #animal headshots. To abbreviate and differentiate between the ingame PNGS, I’m adding a “HS” before the name of each animal. Capital, so it reads more clearly between the name of the animal.
 
 
-image HSbear = “images/HS/HS-Bear.png”
-image HScoyote = “images/HS/His-Coyote.PNG”
-image HSdragonfly = “images/HS/HS-Dragonfly.png”
-image HShummingbird = “images/HS/HS-Hummingbird.png”
-image HSraccoon = “images/HS/HS-Raccoon.PNG”
-image HSturtle = “images/HS/HS-Turtle.PNG”
-image HSfishfairy = “images/HS/HS-Koi.png”
+image HSbear = "images/HS/HS-Bear.png"
+image HScoyote = "images/HS/His-Coyote.PNG"
+image HSdragonfly = "images/HS/HS-Dragonfly.png"
+image HShummingbird = "images/HS/HS-Hummingbird.png"
+image HSraccoon = "images/HS/HS-Raccoon.PNG"
+image HSturtle = "images/HS/HS-Turtle.PNG"
+image HSfishfairy = "images/HS/HS-Koi.png"
 
 
 # map. The way I structured the naming was with two digits primarily (example, 0.0) the first being the column, the second being the row. So if you wanted the second tile down from column three, it would be 3.2. Think of the numbers like (C.R) , with c/r being column and row respectively.
 
 
-image map1 = “images/Tiles/map1.png”
-image map2.1 = “images/Tiles/map2.1.png”
-image map2.2 = “images/Tiles/map2.2.png”
-image map3.1 = “images/Tiles/map3.1.png”
-image map3.2 = “images/Tiles/map3.2.png”
-image map3.3 = “images/Tiles/map3.3.png”
-image map4.1 = “images/Tiles/map4.1.png”
-image map4.2 = “images/Tiles/map4.2.png”
-image map4.3 = “images/Tiles/map4.3.png”
-image map4.4 = “images/Tiles/map4.4.png”
-image map5.1 = “images/Tiles/map5.1.png”
-image map5.2 = “images/Tiles/map5.2.png”
-image map5.3 = “images/Tiles/map5.3.png”
-image map5.4 = “images/Tiles/map5.4.png”
-image map6.1 = “images/Tiles/map6.1.png”
-image map6.2 = “images/Tiles/map6.2.png”
-image map6.3 = “images/Tiles/map6.3.png”
-image map7.1 = “images/Tiles/map7.1.png”
-image map7.2 = “images/Tiles/map7.2.png”
-image map8 = “images/Tiles/map8.png”
-image mapBlank = “images/Tiles/mapBlank” 
+image map1 = "images/Tiles/map1.png"
+image map2_1 = "images/Tiles/map2.1.png"
+image map2_2 = "images/Tiles/map2.2.png"
+image map3_1 = "images/Tiles/map3.1.png"
+image map3_2 = "images/Tiles/map3.2.png"
+image map3_3 = "images/Tiles/map3.3.png"
+image map4_1 = "images/Tiles/map4.1.png"
+image map4_2 = "images/Tiles/map4.2.png"
+image map4_3 = "images/Tiles/map4.3.png"
+image map4_4 = "images/Tiles/map4.4.png"
+image map5_1 = "images/Tiles/map5.1.png"
+image map5_2 = "images/Tiles/map5.2.png"
+image map5_3 = "images/Tiles/map5.3.png"
+image map5_4 = "images/Tiles/map5.4.png"
+image map6_1 = "images/Tiles/map6.1.png"
+image map6_2 = "images/Tiles/map6.2.png"
+image map6_3 = "images/Tiles/map6.3.png"
+image map7_1 = "images/Tiles/map7.1.png"
+image map7_2 = "images/Tiles/map7.2.png"
+image map8 = "images/Tiles/map8.png"
+image mapBlank = "images/Tiles/mapBlank" 
 
 
 # backgrounds. I noticed the file names were quite long, so I condensed by removing the “BG” from each name when you call the file, and simplifying the longer names. I also removed any spaces. The first initial of each word is capital to help readability.
 
 
-image Base = “images/Background/BG-base.png”
-image BriarElement = “images/Background/BG-Briar Elemental Variant.png”
-image Campfire = “images/Background/BG-Campfire.PNG”
-image DeforestedStumps = “images/Background/BG-Deforested Stumps Variant.png”
-image ElkCarcass = “images/Background/BG-ElkCarcass.png”
-image FairySwarm = “images/Background/BG-FairySwarm.png”
-image FlowerField = “images/Background/BG-FlowerField.png”
-image HollowTree = “images/Background/BG-HollowTree.png”
-image MudPatch = “images/Background/BG-MudPatch.png”
-image MushroomPatch = “images/Background/BG-MushroomPatch.png”
-image RagingRiver = “images/Background/BG-Raging River Variant.png”
-image RainDroplets = “images/Background/BG-RainDroplets.png”
-image SmallLake = “images/Background/BG-SmallLake.png”
-image StrongWind = “images/Background/BG-StrongWind.png”
-image Lake = “images/Background/BG-Lake.png”
+image Base = "images/Background/BG-base.png"
+image BriarElement = "images/Background/BG-Briar Elemental Variant.png"
+image Campfire = "images/Background/BG-Campfire.PNG"
+image DeforestedStumps = "images/Background/BG-Deforested Stumps Variant.png"
+image ElkCarcass = "images/Background/BG-ElkCarcass.png"
+image FairySwarm = "images/Background/BG-FairySwarm.png"
+image FlowerField = "images/Background/BG-FlowerField.png"
+image HollowTree = "images/Background/BG-HollowTree.png"
+image MudPatch = "images/Background/BG-MudPatch.png"
+image MushroomPatch = "images/Background/BG-MushroomPatch.png"
+image RagingRiver = "images/Background/BG-Raging River Variant.png"
+image RainDroplets = "images/Background/BG-RainDroplets.png"
+image SmallLake = "images/Background/BG-SmallLake.png"
+image StrongWind = "images/Background/BG-StrongWind.png"
+image Lake = "images/Background/BG-Lake.png"
+
+define config.layeredimage_offer_screen = True
 
 
-define config.detatched_layers += [ "Background" ]
 
-define config.detatched_layers += [ "Headshot" ]
+
+define config.layers = ["master", "Foreground", "transient", "Headshot", "screens", "overlay" ]
+
+
+
+
+
 
 
 
@@ -171,12 +180,12 @@ label starting_choice:
     #These if statements are using the variable Branch variables to confirm whether the player has completed this branch or not.
     #If they have, the game will not allow them to pick that route again.
     #That way there is no risk of the player repeating the same route over and over again. 
-
-        "Follow the Raccoon" if RaccoonBranch is False:
+    menu:
+        "Follow the Raccoon"  if RaccoonBranch:
             jump Choose_Raccoon
-        "Follow the Bear" if BearBranch is False:
+        "Follow the Bear" if BearBranch:
             jump Choose_Bear
-        "Follow the Dragonfly" if DragonflyBranch is False:
+        "Follow the Dragonfly" if DragonflyBranch:
             jump Choose_Dragonfly
 
 
@@ -209,8 +218,8 @@ label Begin_Raccoon:
 
 
     # Mark that the player has started the Raccoon branch
-    $ RacoonBranch = True
-    $ RunCount += 1
+ 
+    
 
 
     # Tile 1
@@ -247,16 +256,23 @@ label Begin_Raccoon:
 
 
     r "Now... which way was that lake again?"
-    scene map1 onlayer Background
+    scene map1 onlayer master
     menu:
         "Take upper route":
-            
+            $ MapNumber = 2.1
+            jump rc_tile_2
 
         "Take lower route":
+            $ MapNumber = 2.2
+            jump rc_tile_2
+
 
 
     # Tile 2
 
+label rc_tile_2:
+
+    "[MapNumber]"
 
     "Further down, the ground softens to mud. A glint of silver flashes beneath the surface, half-buried like treasure waiting to be found."
 
@@ -318,10 +334,28 @@ label Begin_Raccoon:
 
 
     r "Maybe not everything shiny wants to be found."
+    if MapNumber == 2.1:
+        scene map2_1 onlayer master 
+    elif MapNumber == 2.2:
+        scene map2_2 onlayer master
+    menu:
+        "Take upper route":
+            if MapNumber == 2.1:
+                $ MapNumber = 3.1
+            else:
+                $ MapNumber = 3.2
+            jump rc_tile_3
+        "Take lower route":
+            if MapNumber == 2.1:
+                $ MapNumber = 3.2
+            else:
+                $ MapNumber = 3.3
+            jump rc_tile_3
 
 
     # Tile 3
 
+label rc_tile_3:
 
     "The air smells sweeter as the forest opens again. Light plays on the leaves; each rustle feels like a whisper from something watching kindly, or curiously."
 
@@ -353,12 +387,36 @@ label Begin_Raccoon:
     if RunCount > 1:
         r "At least I'm starting to think before acting. That's progress, right? Baby steps. Stylish baby steps."
 
+    if MapNumber == 3.1:
+        scene map3_1 onlayer master
+    elif MapNumber == 3.2:
+        scene map3_2 onlayer master
+    else:
+        scene map3_3 onlayer master
 
+    menu:
+        "Take upper route":
+            if MapNumber == 3.1:
+                $ MapNumber = 4.1
+            elif MapNumber == 3.2:
+                $ MapNumber = 4.2
+            else:
+                $ MapNumber = 4.3
+            jump rc_tile_4
+
+        "Take lower route":
+            if MapNumber == 3.1:
+                $ MapNumber = 4.2
+            elif MapNumber == 3.2:
+                $ MapNumber = 4.3
+            else:
+                $ MapNumber = 4.4
+            jump rc_tile_4
 
 
 
     # Tile 4 - choose companion pair
-
+label rc_tile_4:
     "They stop, hearing a rustle in the underbrush."
 
 
@@ -444,9 +502,38 @@ label Raccoon_RouteA:
 
     r "Perfect. I like this dynamic already. Let's find out what shiny mistake waits for us next."
 
+    if MapNumber == 4.1:
+        scene map4_1 onlayer master
+    elif MapNumber == 4.2:
+        scene map4_2 onlayer master
+    elif MapNumber == 4.3:
+        scene map4_3 onlayer master
+    elif MapNumber == 4.4:
+        scene map4_4 onlayer master
+    menu:
+        "Take upper route":
+            if MapNumber == 4.1:
+                $ MapNumber = 5.1
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.4:
+                $ MapNumber = 5.4
+            jump rc_tile_5A
+
+        "Take lower route" if MapNumber < 4.4:
+            if MapNumber == 4.1:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.4
+            jump rc_tile_5A
 
     # Tile 5A
 
+label rc_tile_5A:
 
     "The trio stops near a massive hollow tree whose center hums when they speak."
 
@@ -495,9 +582,34 @@ label Raccoon_RouteA:
 
     "They move on, laughter fading into the hollow's hum."
 
-
+    if MapNumber == 5.1:
+        scene map5_1 onlayer master
+    elif MapNumber == 5.2:
+        scene map5_2 onlayer master
+    elif MapNumber == 5.3:
+        scene map5_3 onlayer master
+    elif MapNumber == 5.4:
+        scene map5_4 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 5.1:
+            if MapNumber == 5.2:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.4:
+                $ MapNumber = 6.3
+            jump rc_tile_6A
+        "Take lower route" if MapNumber < 5.4:
+            if MapNumber == 5.1:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.2:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.3
+            jump rc_tile_6A
     # Tile 6A
 
+label rc_tile_6A:
 
     "A roaring river cuts through the forest, water sparkling violently in moonlight."
 
@@ -537,9 +649,29 @@ label Raccoon_RouteA:
 
     "They all laugh as they reach the opposite shore, dripping but alive."
 
+    if MapNumber == 6.1:
+        scene map6_1 onlayer master
+    elif MapNumber == 6.2:
+        scene map6_2 onlayer master
+    elif MapNumber == 6.3:
+        scene map6_3 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 6.1:
+            if MapNumber == 6.2:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.3:
+                $ MapNumber = 7.2
+            jump rc_tile_7A
+        "Take lower route" if MapNumber < 6.3:
+            if MapNumber == 6.1:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.2:
+                $ MapNumber = 7.2
+            jump rc_tile_7A
 
     # Tile 7A
 
+label rc_tile_7A:
 
     "Later, the Pack settles by a quiet stream. Fireflies drift like embers from another world."
 
@@ -579,10 +711,21 @@ label Raccoon_RouteA:
 
     r "You know... I think laughter's like light. Doesn't matter how dark the forest gets-it still finds a way through."
 
+    if MapNumber == 7.1:
+        scene map7_1 onlayer master
+    elif MapNumber == 7.2:
+        scene map7_2 onlayer master
+    menu:
+        "Take upper route" if MapNumber == 7.2:
+            $ MapNumber = 8
+            jump rc_tile_8A
+        "Take lower route" if MapNumber == 7.1:
+            $ MapNumber = 8
+            jump rc_tile_8A
 
        # Tile 8A - Ending
 
-
+label rc_tile_8A:
     "The Pack is able to navigate through the forest, following the faint pull of Turtle's [[Tide Memory] as it tugs them down the trail."
     "Before long, they emerge from the trees, and stand in front of a giant lake."
 
@@ -615,11 +758,15 @@ label Raccoon_RouteA:
     "They kick and struggle, but the pull only grows stronger, like the whole lake is pouring downward beneath them."
     "The surface roils, swallowing their silhouettes until nothing is left but circling ripples on the dark water."
 
-
+    $ Rsighting += 1
+    $ Csighting += 1
+    $ TLsighting += 1
+    $ RunCount += 1
+    $ RaccoonBranch = False
     scene black with fade
 
 
-    return
+    jump ending
 
 
 
@@ -689,9 +836,37 @@ label Raccoon_RouteB:
     hb "We're doomed."
 
 
+    if MapNumber == 4.1:
+        scene map4_1 onlayer master
+    elif MapNumber == 4.2:
+        scene map4_2 onlayer master
+    elif MapNumber == 4.3:
+        scene map4_3 onlayer master
+    elif MapNumber == 4.4:
+        scene map4_4 onlayer master
+    menu:
+        "Take upper route":
+            if MapNumber == 4.1:
+                $ MapNumber = 5.1
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.4:
+                $ MapNumber = 5.4
+            jump rc_tile_5B
+
+        "Take lower route" if MapNumber < 4.4:
+            if MapNumber == 4.1:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.4
+            jump rc_tile_5B
     # Tile 5B
 
-
+label rc_tile_5B:
     "Night falls. The forest glows faintly blue from clusters of mushrooms lighting the path."
 
 
@@ -733,10 +908,34 @@ label Raccoon_RouteB:
 
     r "Close enough."
 
-
+    if MapNumber == 5.1:
+        scene map5_1 onlayer master
+    elif MapNumber == 5.2:
+        scene map5_2 onlayer master
+    elif MapNumber == 5.3:
+        scene map5_3 onlayer master
+    elif MapNumber == 5.4:
+        scene map5_4 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 5.1:
+            if MapNumber == 5.2:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.4:
+                $ MapNumber = 6.3
+            jump rc_tile_6B
+        "Take lower route" if MapNumber < 5.4:
+            if MapNumber == 5.1:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.2:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.3
+            jump rc_tile_6B
     # Tile 6B
 
-
+label rc_tile_6B:
     "A meadow of luminous flowers sways under a faint mist."
 
 
@@ -787,10 +986,28 @@ label Raccoon_RouteB:
 
     b "Don't push it."
 
-
+    if MapNumber == 6.1:
+        scene map6_1 onlayer master
+    elif MapNumber == 6.2:
+        scene map6_2 onlayer master
+    elif MapNumber == 6.3:
+        scene map6_3 onlayer master
+    menu:
+        "Take upper route" if MapNumber > 6.1:
+            if MapNumber == 6.2:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.3:
+                $ MapNumber = 7.2
+            jump rc_tile_7B
+        "Take lower route" if MapNumber < 6.3:
+            if MapNumber == 6.1:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.2:
+                $ MapNumber = 7.2
+            jump rc_tile_7B
     # Tile 7B
 
-
+label rc_tile_7B:
     "Later, the Pack settles by a quiet stream. Fireflies drift like embers from another world."
 
 
@@ -829,10 +1046,21 @@ label Raccoon_RouteB:
 
     r "You know... I think laughter's like light. Doesn't matter how dark the forest gets-it still finds a way through."
 
+    if MapNumber == 7.1:
+        scene map7_1 onlayer master
+    elif MapNumber == 7.2:
+        scene map7_2 onlayer master
+    menu:
+        "Take upper route" if MapNumber == 7.2:
+            $ MapNumber = 8
+            jump rc_tile_8B
+        "Take lower route" if MapNumber == 7.1:
+            $ MapNumber = 8
+            jump rc_tile_8B
 
            # Tile 8B - Ending
 
-
+label rc_tile_8B:
     "The Pack is able to navigate through the forest using Bear's [[Pathsense] string."
     "The thread guides them through the last stretch of trees until the forest opens up around a wide, shimmering lake."
 
@@ -863,11 +1091,16 @@ label Raccoon_RouteB:
     "They fight to swim back, but every stroke only drags them deeper into the invisible current."
     "One by one, they're swallowed by the lake, their shapes vanishing beneath the churning water."
 
+    $ Rsighting += 1
+    $ Bsighting += 1
+    $ HBsighting += 1
+    $ RunCount += 1
+    $ RaccoonBranch = False
 
     scene black with fade
 
 
-    return
+    jump ending
 
 
 #------------------------------------------
@@ -1783,18 +2016,8 @@ label Choose_Dragonfly:
         "Yes":
             jump Begin_Dragonfly
         "No":
-            jump start
-
-label Begin_Dragonfly:
-    "Still in progress... :P Dragonfly got distracted staring at dandelion seeds."
-    $ DragonflyBranch = True
-    jump start
-        "Choose the Dragonfly"
-
-        "Yes":
-            jump Begin_Dragonfly
-        "No":
             jump starting_choice
+
 
 label Begin_Dragonfly:
     "{i} A small Dragonfly emerges from the brush, flitting about lazily through the air. {i}"
@@ -1814,11 +2037,14 @@ label Begin_Dragonfly:
     df "Hmm...now which direction should I go..?"
 
 label dragon_transition_one:
+    scene map1 onlayer master
     menu:
-        "Take the upper route":
+        "Take upper route":
+            $ MapNumber = 2.1
             jump dragon_tile_two
         
-        "Take the lower route":
+        "Take lower route":
+            $ MapNumber = 2.2
             jump dragon_tile_two
 
 label dragon_tile_two:
@@ -1842,11 +2068,23 @@ label dragon_tile_two:
         jump dragon_transition_two
 
 label dragon_transition_two:
+    if MapNumber == 2.1:
+        scene map2_1 onlayer master 
+    elif MapNumber == 2.2:
+        scene map2_2 onlayer master
     menu:
-        "Take the upper route":
+        "Take upper route":
+            if MapNumber == 2.1:
+                $ MapNumber = 3.1
+            else:
+                $ MapNumber = 3.2
             jump dragon_tile_three
         
-        "Take the lower route":
+        "Take lower route":
+            if MapNumber == 2.1:
+                $ MapNumber = 3.2
+            else:
+                $ MapNumber = 3.3
             jump dragon_tile_three
 
 label dragon_tile_three:
@@ -1860,24 +2098,43 @@ label dragon_tile_three:
 
     df "After all, I got through those winds alright. So it all worked out in the end."
 
-    df "I'm sure if there's something really bad to worry about, the universe would let me know somehow."
+    if DFsighting < 1:
+        df "I'm sure if there's something really bad to worry about, the universe would let me know somehow."
+    else:
+        df "Although, perhaps I should be a little more cautious in the future."
 
-    df "Although, perhaps I should be a little more cautious in the future."
+        df "Winds like those make me wish that Hummingbird was around. Even if they always seem so upset."
 
-    df "Winds like those make me wish that Hummingbird was around. Even if they always seem so upset."
-
-    df "A little insect like me could surely use some company on this lone journey."
+    df "At any rate, a little insect like me could surely use some company on this lone journey."
 
     df "Well, I'm sure I'll run into someone eventually. All in good time."
 
     jump dragon_transition_three
 
 label dragon_transition_three:
+    if MapNumber == 3.1:
+        scene map3_1 onlayer master
+    elif MapNumber == 3.2:
+        scene map3_2 onlayer master
+    else:
+        scene map3_3 onlayer master
     menu:
-        "Take the upper route":
+        "Take upper route":
+            if MapNumber == 3.1:
+                $ MapNumber = 4.1
+            elif MapNumber == 3.2:
+                $ MapNumber = 4.2
+            else:
+                $ MapNumber = 4.3
             jump dragon_tile_four
         
-        "Take the lower route":
+        "Take lower route":
+            if MapNumber == 3.1:
+                $ MapNumber = 4.2
+            elif MapNumber == 3.2:
+                $ MapNumber = 4.3
+            else:
+                $ MapNumber = 4.4
             jump dragon_tile_four
 
 label dragon_tile_four:
@@ -1942,9 +2199,10 @@ label dragon_select:
 
             b "Lucky? We're lucky that I got you out of that lake at all."
 
-            r "Well...I guess I could've asked you first before jumping in...sorry about that..."
-
-            r "Bah! I knew exactly what I was doing."
+            if Rsighting >= 1:
+                r "Well...I guess I could've asked you first before jumping in...sorry about that..."
+            else:
+                r "Bah! I knew exactly what I was doing."
             jump bear_raccoon
 
         label look_fine:
@@ -1957,7 +2215,7 @@ label dragon_select:
             b "All right, whatever. We lost a lot of light thanks to your stunt earlier, so we should keep moving."
 
             df "As you wish. I'm just so glad I came across you two. I think this will be a wonderful journey together."
-            jump dragon_transition_four
+            jump dragon_transition_fourB
 
     label ch_select:
         "{i}A bundle of energy, Coyote makes great use of their nose with their [[Scent] ability, and their [[Poison Immunity] lets them identify and consume food that would be deadly to others.{i}"
@@ -1983,22 +2241,77 @@ label dragon_select:
 
             df "Well, we are together now. So let us just be happy that we found one another, yes?"
 
-            hb "{i}shrugs{i} Not entirely sure what there is to be happy about, but you're right. We're stuck together, whether I like it or not."
-
-            hb "{i}shrugs{i} The more the merrier, I suppose. Thats what they say, at least."
+            if HBsighting < 1:
+                hb "{i}shrugs{i} Not entirely sure what there is to be happy about, but you're right. We're stuck together, whether I like it or not."
+            else:
+                hb "{i}shrugs{i} The more the merrier, I suppose. Thats what they say, at least."
 
             c "Then it's settled! We travel!"
-            jump dragon_transition_four
+            jump dragon_transition_fourA
 
-label dragon_transition_four:
-    menu:
-        "Take the upper route":
-            jump dragon_tile_five
+label dragon_transition_fourA:
+    if MapNumber == 4.1:
+        scene map4_1 onlayer master
+    elif MapNumber == 4.2:
+        scene map4_2 onlayer master
+    elif MapNumber == 4.3:
+        scene map4_3 onlayer master
+    elif MapNumber == 4.4:
+        scene map4_4 onlayer master
         
-        "Take the lower route":
-            jump dragon_tile_five
+    menu:
+        "Take upper route":
+            if MapNumber == 4.1:
+                $ MapNumber = 5.1
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.4:
+                $ MapNumber = 5.4
+            jump dragon_tile_fiveA
+        
+        "Take lower route" if MapNumber < 4.4:
+            if MapNumber == 4.1:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.4
+            jump dragon_tile_fiveA
 
-label dragon_tile_five:
+label dragon_transition_fourB:
+    if MapNumber == 4.1:
+        scene map4_1 onlayer master
+    elif MapNumber == 4.2:
+        scene map4_2 onlayer master
+    elif MapNumber == 4.3:
+        scene map4_3 onlayer master
+    elif MapNumber == 4.4:
+        scene map4_4 onlayer master
+        
+    menu:
+        "Take upper route":
+            if MapNumber == 4.1:
+                $ MapNumber = 5.1
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.4:
+                $ MapNumber = 5.4
+            jump dragon_tile_fiveB
+        
+        "Take lower route" if MapNumber < 4.4:
+            if MapNumber == 4.1:
+                $ MapNumber = 5.2
+            elif MapNumber == 4.2:
+                $ MapNumber = 5.3
+            elif MapNumber == 4.3:
+                $ MapNumber = 5.4
+            jump dragon_tile_fiveB
+
+label dragon_tile_fiveA:
     "{i}Coyote trots along happily through the brush, as Dragonfly and Hummingbird follow close behind the best they can.{i}"
 
     hb "Slow down dog! Are you trying to lose us?"
@@ -2094,9 +2407,10 @@ label dragon_tile_five:
 
         "{i}They move right next to the stump.{i}"
 
-        hb "{i}sighs{i} I wasn't sure if you'd actually do it. Alright then, I guess this is happening."
-
-        hb "Ok bud, just try to hold steady and...don't drop us. {i}They gulp nervously.{i}"
+        if HBsighting < 1:
+            hb "{i}sighs{i} I wasn't sure if you'd actually do it. Alright then, I guess this is happening."
+        else:
+            hb "Ok bud, just try to hold steady and...don't drop us. {i}They gulp nervously.{i}"
 
         "{i}Dragonfly and Hummingbird quickly make their way onto Coyote's back, holding onto their fur.{i}"
 
@@ -2131,9 +2445,10 @@ label dragon_tile_five:
     label no_carry:
         c "{i}Coyote shakes their head.{i} I just don't think I can do it. I'm sorry. {i}They whine.{i}"
 
-        "{i}Hummingbird shakes their head, but bites their tongue before they say anything to Coyote, electing instead to hop back over to the far side of the stump.{i}"
-
-        hb "Typical. {i}Chirps disapprovingly.{i} This is why it hardly does any good to travel with others."
+        if HBsighting >= 1:
+            "{i}Hummingbird shakes their head, but bites their tongue before they say anything to Coyote, electing instead to hop back over to the far side of the stump.{i}"
+        else:
+            hb "Typical. {i}Chirps disapprovingly.{i} This is why it hardly does any good to travel with others."
 
         df "There there, it's all right Coyote. It's ok to be afraid."
 
@@ -2148,7 +2463,9 @@ label dragon_tile_five:
         hb "Doesn't seem very likely to me."
 
         "{i}As they sit in the stump, the rain shows no signs of letting up. With each hour that passes, Hummingbird looks more smug, and Dragonfly looks more confused. After most of the day has passed, the rain finally stops, and the Pack continues onward.{i}"
-        jump dragon_transition_five
+        jump dragon_transition_fiveA
+
+label dragon_tile_fiveB:
 
     "{i}As the Pack continues, they spot the nearby figure of a resting animal. As they get closer, they realize that it isn't resting. It's dead.{i}"
 
@@ -2184,9 +2501,10 @@ label dragon_tile_five:
 
     "{i}Raccoon stares at the dead elk in the distance, and then down at the ground.{i}"
 
-    b "{i}Sigh.{i} Look, just be more careful, ok? Stay behind me."
-
-    b "If you have nothing to say for yourself, then just stay back and let me navigate in peace."
+    if Bsighting >= 1:
+        b "{i}Sigh.{i} Look, just be more careful, ok? Stay behind me."
+    else:
+        b "If you have nothing to say for yourself, then just stay back and let me navigate in peace."
 
     b "We've already made too much noise."
     
@@ -2217,17 +2535,67 @@ label dragon_tile_five:
     df "There's always more than one kind of strength. I just don't know if Bear remembers that all the time."
 
     "{i}Dragonfly looks up towards Bear with a kind expression, as Raccoon realizes Bear has been silently listening to their conversation this whole time. Bear looks somewhat embarrassed, and moves forward in silence.{i}"
-    jump dragon_transition_five
+    jump dragon_transition_fiveB
 
-label dragon_transition_five:
+label dragon_transition_fiveA:
+    if MapNumber == 5.1:
+        scene map5_1 onlayer master
+    elif MapNumber == 5.2:
+        scene map5_2 onlayer master
+    elif MapNumber == 5.3:
+        scene map5_3 onlayer master
+    elif MapNumber == 5.4:
+        scene map5_4 onlayer master
+
     menu:
-        "Take the upper route":
-            jump dragon_tile_six
+        "Take upper route" if MapNumber > 5.1:
+            if MapNumber == 5.2:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.4:
+                $ MapNumber = 6.3
+            jump dragon_tile_sixA
         
-        "Take the lower route":
-            jump dragon_tile_six
+        "Take lower route" if MapNumber < 5.4:
+            if MapNumber == 5.1:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.2:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.3
+            jump dragon_tile_sixA
 
-label dragon_tile_six:
+label dragon_transition_fiveB:
+    if MapNumber == 5.1:
+        scene map5_1 onlayer master
+    elif MapNumber == 5.2:
+        scene map5_2 onlayer master
+    elif MapNumber == 5.3:
+        scene map5_3 onlayer master
+    elif MapNumber == 5.4:
+        scene map5_4 onlayer master
+
+    menu:
+        "Take upper route" if MapNumber > 5.1:
+            if MapNumber == 5.2:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.4:
+                $ MapNumber = 6.3
+            jump dragon_tile_sixB
+        
+        "Take lower route" if MapNumber < 5.4:
+            if MapNumber == 5.1:
+                $ MapNumber = 6.1
+            elif MapNumber == 5.2:
+                $ MapNumber = 6.2
+            elif MapNumber == 5.3:
+                $ MapNumber = 6.3
+            jump dragon_tile_sixB
+
+label dragon_tile_sixA:
     "{i}As the Pack makes their way down a small hill, they find themselves facing a large patch of brambles. The sharp thorns look very intimidating.{i}"
 
     df "Interesting. Will you all be ok crossing this?"
@@ -2238,10 +2606,6 @@ label dragon_tile_six:
 
     c "Hold on, what did you say Hummingbird?"
 
-    r "This looks like a job for a professional squeezer! Put me in coach, I'm ready."
-
-    b "Slow and steady, Raccoon. Let's all make sure we stick together."
-
     df "Quiet down everyone! Let us focus on the task at hand."
 
     "{i}As the Pack approaches the briar, there's a sudden low rumbling noise. In a flash, the animals are all thrown backward, as dirt and earth explodes out from under them. The plants roil for a moment, as emerging from the tangle is a walking mass of thorns and bushes, an angry Briar Elemental.{i}"
@@ -2250,68 +2614,35 @@ label dragon_tile_six:
 
     c "Oh man. What do we do? What do we do?"
 
-    b "Get back everyone! Do your best to stay out of its range."
-
-    r "No way! I can handle this. Trust me!"
-
     menu:
 
         "Squeeze through the briar and make a run for it.":
-            jump briar_squeeze
+            jump briar_squeezeA
 
         "Goad the elemental into leaving the thorn patch.":
-            jump briar_goad
-
-        "Fight the elemental [[Strength].":
-            jump briar_strength
-
-        "Run around the elemental quickly to confuse it [[Agility].":
-            jump briar_agility
+            jump briar_goadA
 
         "Blow the vines aside and run through [[Wind Gale].":
-            jump briar_gale
+            jump briar_galeA
 
-    label briar_squeeze:
+    label briar_squeezeA:
         df "Quickly! Everyone make a run for it!"
 
         "{i}The Pack manages to squeeze, trample, or fly their way through the brush, with the elemental right on their heels. They get pricked and poked, but ultimately make it out ok.{i}"
-        jump dragon_transition_six
+        jump dragon_transition_sixA
 
     label briar_goad:
         df "We need to get it away from the briar patch! Then it'll be out of our way!"
-
-        r "Don't worry! I'm a master of distraction! Hey you big ugly blackberry bush! Over here!"
 
         "{i}Coyote looks nervous, but starts yipping at the elemental.{i}" 
         
         c "C-come and get us! I b-bet you can't catch me!"
 
         "{i}As the elemental takes a step out of the briar patch to pursue the animals, it starts to lose its form, as it disconnects from the vines and bushes. Seizing the moment, the Pack makes a quick getaway through the briar patch.{i}"
-        jump dragon_transition_six
+        jump dragon_transition_sixA
 
-    label briar_strength:
-        df "Go Bear! We'll be right behind you!"
 
-        "{i}Bear rushes forward into the brambles, flattening them down as they run. They rear onto their hind legs, and slam their front paws into the elemental with all their might [[Strength].{i}"
-
-        "{i}The others take this opportunity to run past the elemental, while Bear growls and grapples with it. Once they're through, Raccoon calls out to Bear.{i}"
-
-        r "We're good! Get out of there Bear!"
-
-        "{i}Bear manages to untangle themselves from the grasp of the elemental, and runs after the others, as they run until the elemental is far from sight.{i}"
-        jump dragon_transition_six
-
-    label briar_agility:
-        df "Raccoon, go show it your strength!"
-
-        r "Aye aye!"
-
-        "{i}Raccoon runs into the patch, easily dodging the strikes from the elemental’s thorny arms. They run around the elemental over and over again, weaving in and out of its reach [[Agility].{i}" 
-        
-        "{i}After a few minutes, the elemental seems sufficiently tangled up and confused. Raccoon grins proudly to the others, and they all quickly make their way through the briar patch, past the dazed elemental.{i}"
-        jump dragon_transition_six
-
-    label briar_gale:
+    label briar_galeA:
         "{i}Dragonfly looks stunned and overwhelmed. Hummingbird looks between all the animals and the elemental, and huffs.{i}"
 
         hb "All right everyone, stay back!"
@@ -2323,17 +2654,242 @@ label dragon_tile_six:
         hb "Go! Quickly!"
 
         "{i}Coyote looks at Dragonfly, then back at Hummingbird, seeming nervous. Then they take a deep breath, and start running through the path created. Dragonfly quickly follows behind them, and Hummingbird brings up the rear of the Pack, as they safely clear the brush.{i}"
-        jump dragon_transition_six
+        jump dragon_transition_sixA
 
-label dragon_transition_six:
+label dragon_tile_sixB:
+    "{i}As the Pack makes their way down a small hill, they find themselves facing a large patch of brambles. The sharp thorns look very intimidating.{i}"
+
+    df "Interesting. Will you all be ok crossing this?"
+
+    r "This looks like a job for a professional squeezer! Put me in coach, I'm ready."
+
+    b "Slow and steady, Raccoon. Let's all make sure we stick together."
+
+    df "Quiet down everyone! Let us focus on the task at hand."
+
+    "{i}As the Pack approaches the briar, there's a sudden low rumbling noise. In a flash, the animals are all thrown backward, as dirt and earth explodes out from under them. The plants roil for a moment, as emerging from the tangle is a walking mass of thorns and bushes, an angry Briar Elemental.{i}"
+
+    b "Get back everyone! Do your best to stay out of its range."
+
+    r "No way! I can handle this. Trust me!"
+
     menu:
-        "Take the upper route":
-            jump dragon_tile_seven
-        
-        "Take the lower route":
-            jump dragon_tile_seven
 
-label dragon_tile_seven:
+        "Squeeze through the briar and make a run for it.":
+            jump briar_squeezeB
+
+        "Goad the elemental into leaving the thorn patch.":
+            jump briar_goadB
+
+        "Fight the elemental [[Strength].":
+            jump briar_strengthB
+
+        "Run around the elemental quickly to confuse it [[Agility].":
+            jump briar_agilityB
+
+    label briar_squeezeB:
+        df "Quickly! Everyone make a run for it!"
+
+        "{i}The Pack manages to squeeze, trample, or fly their way through the brush, with the elemental right on their heels. They get pricked and poked, but ultimately make it out ok.{i}"
+        jump dragon_transition_sixB
+
+    label briar_goadB:
+        df "We need to get it away from the briar patch! Then it'll be out of our way!"
+
+        r "Don't worry! I'm a master of distraction! Hey you big ugly blackberry bush! Over here!"
+
+        "{i}As the elemental takes a step out of the briar patch to pursue the animals, it starts to lose its form, as it disconnects from the vines and bushes. Seizing the moment, the Pack makes a quick getaway through the briar patch.{i}"
+        jump dragon_transition_sixB
+
+    label briar_strengthB:
+        df "Go Bear! We'll be right behind you!"
+
+        "{i}Bear rushes forward into the brambles, flattening them down as they run. They rear onto their hind legs, and slam their front paws into the elemental with all their might [[Strength].{i}"
+
+        "{i}The others take this opportunity to run past the elemental, while Bear growls and grapples with it. Once they're through, Raccoon calls out to Bear.{i}"
+
+        r "We're good! Get out of there Bear!"
+
+        "{i}Bear manages to untangle themselves from the grasp of the elemental, and runs after the others, as they run until the elemental is far from sight.{i}"
+        jump dragon_transition_sixB
+
+    label briar_agilityB:
+        df "Raccoon, go show it your strength!"
+
+        r "Aye aye!"
+
+        "{i}Raccoon runs into the patch, easily dodging the strikes from the elemental’s thorny arms. They run around the elemental over and over again, weaving in and out of its reach [[Agility].{i}" 
+        
+        "{i}After a few minutes, the elemental seems sufficiently tangled up and confused. Raccoon grins proudly to the others, and they all quickly make their way through the briar patch, past the dazed elemental.{i}"
+        jump dragon_transition_sixB
+
+label dragon_transition_sixA:
+    if MapNumber == 6.1:
+        scene map6_1 onlayer master
+    elif MapNumber == 6.2:
+        scene map6_2 onlayer master
+    elif MapNumber == 6.3:
+        scene map6_3 onlayer master
+        
+    menu:
+        "Take upper route" if MapNumber > 6.1:
+            if MapNumber == 6.2:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.3:
+                $ MapNumber = 7.2
+            jump dragon_tile_sevenA
+        
+        "Take lower route" if MapNumber < 6.3:
+            if MapNumber == 6.1:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.2:
+                $ MapNumber = 7.2
+            jump dragon_tile_sevenA
+
+label dragon_transition_sixB:
+    if MapNumber == 6.1:
+        scene map6_1 onlayer master
+    elif MapNumber == 6.2:
+        scene map6_2 onlayer master
+    elif MapNumber == 6.3:
+        scene map6_3 onlayer master
+        
+    menu:
+        "Take upper route" if MapNumber > 6.1:
+            if MapNumber == 6.2:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.3:
+                $ MapNumber = 7.2
+            jump dragon_tile_sevenB
+        
+        "Take lower route" if MapNumber < 6.3:
+            if MapNumber == 6.1:
+                $ MapNumber = 7.1
+            elif MapNumber == 6.2:
+                $ MapNumber = 7.2
+            jump dragon_tile_sevenB
+
+label dragon_tile_sevenA:
+    "{i}The Pack have settled around a campfire for the night, preparing themselves for what's in store tomorrow.{i}"
+
+    "{i}Dragonfly stares into the fire thoughtfully.{i}"
+
+    df "Tomorrow will likely be the end of our journey [[Foresight]."
+
+    c "{i}Coyote looks to Dragonfly.{i} Are you alright?"
+
+    df "Sort of. It's just that...I always rely on my sight to warn me. To guide me. But recently it's felt a bit more...unreliable."
+
+    hb "So, what? You're not happy because your little unrealistic predictions turned out to not come true?"
+
+    df "I suppose that's one way of putting it. I see us reaching the end of our journey tomorrow, and everything being all right. But for the first time in a while I guess I feel...worried."
+
+    "{i}Hummingbird remains quiet for a moment.{i}" 
+    
+    hb "Yeah, well there's a lot to be worried about."
+
+    df "You would certainly know best about that. It's just that..."
+
+    if DFsighting < 1:
+        df "...I've never needed worry to stay alive so far. I enjoy that, and I want to hold onto it. I don't think I'm ready to let that go."
+    else:
+        df "...I miss when I knew everything would turn out fine. It's hard to deal with worry. But I DO want to help everyone be safe. So I suppose I'll have to rely a bit more on the present, and a bit less on the future."
+
+    "{i}The other animals nod in acknowledgement, then sit back a bit and enjoy the heat of the fire. Dragonfly starts to flutter their wings gently against each other, creating a low humming sound.{i}"
+
+    hb "And they call me the one who hums. You encroaching on my turf?  {i}they say tauntingly.{i}"
+
+    "{i}Dragonfly brings their hum so low that only they can hear it.{i}"
+
+    hb "{i}sigh{i} Jeez, it was just a joke. You can do whatever you want, I don't care."
+
+    df "You did well earlier. I was very glad to have you with us."
+
+    hb "Well...I guess you helped as well. I just wanted to make sure everyone wasn't being dumb."
+
+    df "{i}Chuckles.{i} Yes. And you played a vital role in keeping everyone safe."
+
+    df "I just think that maybe you don't realize how what you say affects others."
+
+    hb "...how do you mean exactly?"
+
+    df "Just that, sometimes even if something is true, saying it can lead to the ones we care about getting hurt. You don't want to hurt any of us, right?"
+
+    hb "...no. I don't. I just want others to-"
+
+    df "-to think like you, right?"
+
+    hb "I guess. I just think it would be easier if everyone was objective all the time."
+
+    df "But does it seem like it's been easier for them to do that? {i} Dragonfly gestures to Coyote.{i}"
+
+    hb "...I guess not."
+
+    hb "...sorry."
+
+    df "{i}Dragonfly smiles.{i} Thank you."
+
+    "{i}Coyote bounds over to Dragonfly and Hummingbird.{i}"
+
+    c "Are you guys talking about the big elemental? That was reeeeal scary! Ooh, and when the rain came down!"
+
+    "{i}Coyote is eating a clutch of small berries pulled off of a nearby bush, deep, blood-red juice smeared all over their snout.{i}"
+
+    "{i}Hummingbird looks at Coyote uneasily.{i}" 
+    
+    hb "Are those...good?"
+
+    c "{i}They nod vigorously.{i}  Suuuper poisonous though. You wouldn't like them [[Poison Immunity]."
+
+    df "{i}Nods.{i} Listen, Coyote. We're quite proud of you. Despite these scary situations, you handled yourself pretty well throughout."
+
+    "{i}Coyote looks up at Dragonfly, awe on their face.{i}" 
+    
+    c "Really?"
+
+    df "Yes. You were decisive, and knew what you had to do."
+
+    if HBsighting < 2:
+        hb "I suppose if you call just looking at everyone else 'being decisive', then sure."
+
+        "{i}Dragonfly looks back at Hummingbird, looking a bit disappointed.{i}"
+    else:
+        "{i}Hummingbird clucks their tongue disapprovingly at Dragonfly's statement, but seems to hold back from saying anything.{i}"
+
+    df "And at any rate, you're a lot more adult than you would believe."
+
+    c "I was just listening to myself instead of others. Is that what you're talking about?"
+
+    df "Yes, that's it exactly! Trust yourself, and you can act independently when the moment calls for it."
+
+    if Csighting < 1:
+        c "hmm...I'm not sure I could do that for a lot of the time. I think I might still need others for help."
+    else:
+        c "I think I can do that. I think I can do that! I can be independent! I can help others figure things out!"
+
+    df "{i}Chuckles.{i} All in good time, all in good time."
+
+    "{i}Dragonfly looks around the campfire at the other two animals beside them.{i}"
+
+    df "All right everyone. Tomorrow..."
+    menu:
+
+        "Be open.":
+            jump fire_openA
+
+        "Be careful.":
+            jump fire_carefulA
+
+    label fire_openA:
+        df "...be open to whatever we find. Tomorrow our journey ends, so take in whatever the universe has in store for us."
+
+    label fire_carefulA:
+        df "...be careful when we approach. Tomorrow our journey ends, and we must greet whatever awaits us with alert and undulled senses."
+
+    "{i}The rest of the animals murmur in agreement, before going to sleep by the warmth of the campfire.{i}"
+    jump dragon_transition_sevenA
+
+label dragon_tile_sevenB:
     "{i}The Pack have settled around a campfire for the night, preparing themselves for what's in store tomorrow.{i}"
 
     "{i}Dragonfly stares into the fire thoughtfully.{i}"
@@ -2344,39 +2900,28 @@ label dragon_tile_seven:
 
     "They're right. We're close. [[Pathsense]."
 
-    c "{i}Coyote looks to Dragonfly.{i} Are you alright?"
-
     r "That's a good thing, right?"
 
     df "Sort of. It's just that...I always rely on my sight to warn me. To guide me. But recently it's felt a bit more...unreliable."
-
-    hb "So, what? You're not happy because your little unrealistic predictions turned out to not come true?"
 
     r "Wait, so your eyes aren't working right?"
 
     df "I suppose that's one way of putting it. I see us reaching the end of our journey tomorrow, and everything being all right. But for the first time in a while I guess I feel...worried."
 
-    "{i}Hummingbird remains quiet for a moment.{i}" 
-    
-    hb "Yeah, well there's a lot to be worried about."
-
     b "It's natural to be worried. That's what keeps us alive, nothing wrong with it."
 
     df "You would certainly know best about that. It's just that..."
 
-    df "...I've never needed worry to stay alive so far. I enjoy that, and I want to hold onto it. I don't think I'm ready to let that go."
-
-    df "...I miss when I knew everything would turn out fine. It's hard to deal with worry. But I DO want to help everyone be safe. So I suppose I'll have to rely a bit more on the present, and a bit less on the future."
+    if DFsighting < 1:
+        df "...I've never needed worry to stay alive so far. I enjoy that, and I want to hold onto it. I don't think I'm ready to let that go."
+    else:
+        df "...I miss when I knew everything would turn out fine. It's hard to deal with worry. But I DO want to help everyone be safe. So I suppose I'll have to rely a bit more on the present, and a bit less on the future."
 
     "{i}The other animals nod in acknowledgement, then sit back a bit and enjoy the heat of the fire. Dragonfly starts to flutter their wings gently against each other, creating a low humming sound.{i}"
-
-    hb "And they call me the one who hums. You encroaching on my turf?  {i}they say tauntingly.{i}"
 
     b "Must you do that? I'm trying to keep watch."
 
     "{i}Dragonfly brings their hum so low that only they can hear it.{i}"
-
-    hb "{i}sigh{i} Jeez, it was just a joke. You can do whatever you want, I don't care."
 
     r "I thought it was nice." 
     
@@ -2384,38 +2929,20 @@ label dragon_tile_seven:
 
     df "You did well earlier. I was very glad to have you with us."
 
-    hb "Well...I guess you helped as well. I just wanted to make sure everyone wasn't being dumb."
-
     r "Really?! {i} Raccoon gets so excited they almost drop their marshmallow in the fire.{i}"
 
     df "{i}Chuckles.{i} Yes. And you played a vital role in keeping everyone safe."
 
-    df "I just think that maybe you don't realize how what you say affects others."
     df "I just think that maybe a certain animal was right about you loving to charge into danger a little too much."
-
-    hb "...how do you mean exactly?"
 
     "{i}Raccoon looks over towards where Bear is.{i}"
     r "Well, they're always saying that."
 
-    df "Just that, sometimes even if something is true, saying it can lead to the ones we care about getting hurt. You don't want to hurt any of us, right?"
     df "Why do you think they're doing that?"
-
-    hb "...no. I don't. I just want others to-"
 
     r "I don't know...I guess because they care about me."
 
-    df "-to think like you, right?"
     df "They do indeed. We all do. And that's why we try to help each other make good decisions. Do you understand?"
-
-
-    hb "I guess. I just think it would be easier if everyone was objective all the time."
-
-    df "But does it seem like it's been easier for them to do that? {i} Dragonfly gestures to Coyote.{i}"
-
-    hb "...I guess not."
-
-    hb "...sorry."
 
     "{i}Raccoon nods quietly.{i}"
     menu:
@@ -2435,7 +2962,8 @@ label dragon_tile_seven:
 
         "{i}Bear obliges, licking a big chunk off of the marshmallow.{i}"
 
-    r "I think...I think I'll listen more to you all from now on. Can never be too careful, right? Hopefully there will be less accidents this way, and...and I'm very glad to be traveling together."
+    if Rsighting >= 2:
+        r "I think...I think I'll listen more to you all from now on. Can never be too careful, right? Hopefully there will be less accidents this way, and...and I'm very glad to be traveling together."
 
     "{i}Bear and Dragonfly nod.{i}"
 
@@ -2461,9 +2989,10 @@ label dragon_tile_seven:
 
     b "Yes...I do know that. And I think you're doing...well, you're certainly trying. And I know that's important."
 
-    b "Listen. Just leave the protecting to me. There are plenty of other things you're good at."
-
-    b "I've seen your strength now. I know that you care, and I think you'll do a great job and protecting people and being strong, in your own way."
+    if Bsighting < 2:
+        b "Listen. Just leave the protecting to me. There are plenty of other things you're good at."
+    else:
+        b "I've seen your strength now. I know that you care, and I think you'll do a great job and protecting people and being strong, in your own way."
 
     r "Really? You mean it? {i} they beam.{i}"
 
@@ -2473,42 +3002,6 @@ label dragon_tile_seven:
 
     b "Now pipe down and finish your marshmallow."
 
-    "{i}Coyote bounds over to Dragonfly and Hummingbird.{i}"
-
-    c "Are you guys talking about the big elemental? That was reeeeal scary! Ooh, and when the rain came down!"
-
-    "{i}Coyote is eating a clutch of small berries pulled off of a nearby bush, deep, blood-red juice smeared all over their snout.{i}"
-
-    "{i}Hummingbird looks at Coyote uneasily.{i}" 
-    
-    hb "Are those...good?"
-
-    c "{i}They nod vigorously.{i}  Suuuper poisonous though. You wouldn't like them [[Poison Immunity]."
-
-    df "{i}Nods.{i} Listen, Coyote. We're quite proud of you. Despite these scary situations, you handled yourself pretty well throughout."
-
-    "{i}Coyote looks up at Dragonfly, awe on their face.{i}" 
-    
-    c "Really?"
-
-    df "Yes. You were decisive, and knew what you had to do."
-
-    hb "I suppose if you call just looking at everyone else 'being decisive', then sure."
-
-    "{i}Dragonfly looks back at Hummingbird, looking a bit disappointed.{i}"
-
-    "{i}Hummingbird clucks their tongue disapprovingly at Dragonfly's statement, but seems to hold back from saying anything.{i}"
-
-    df "And at any rate, you're a lot more adult than you would believe."
-
-    c "I was just listening to myself instead of others. Is that what you're talking about?"
-
-    df "Yes, that's it exactly! Trust yourself, and you can act independently when the moment calls for it."
-
-    c "hmm...I'm not sure I could do that for a lot of the time. I think I might still need others for help."
-
-    c "I think I can do that. I think I can do that! I can be independent! I can help others figure things out!"
-
     df "{i}Chuckles.{i} All in good time, all in good time."
 
     "{i}Dragonfly looks around the campfire at the other two animals beside them.{i}"
@@ -2517,36 +3010,56 @@ label dragon_tile_seven:
     menu:
 
         "Be open.":
-            jump fire_open
+            jump fire_openB
 
         "Be careful.":
-            jump fire_careful
+            jump fire_carefulB
 
-    label fire_open:
+    label fire_openB:
         df "...be open to whatever we find. Tomorrow our journey ends, so take in whatever the universe has in store for us."
 
-    label fire_careful:
+    label fire_carefulB:
         df "...be careful when we approach. Tomorrow our journey ends, and we must greet whatever awaits us with alert and undulled senses."
 
     "{i}The rest of the animals murmur in agreement, before going to sleep by the warmth of the campfire.{i}"
-    jump dragon_transition_seven
+    jump dragon_transition_sevenB
 
-label dragon_transition_seven:
+label dragon_transition_sevenA:
+    if MapNumber == 7.1:
+        scene map7_1 onlayer master
+    elif MapNumber == 7.2:
+        scene map7_2 onlayer master
+
     menu:
-        "Take the upper route":
-            jump dragon_tile_eight
+        "Take upper route" if MapNumber == 7.2:
+            $ MapNumber = 8
+            jump dragon_tile_eightA
         
-        "Take the lower route":
-            jump dragon_tile_eight
+        "Take lower route" if MapNumber == 7.1:
+            $ MapNumber = 8
+            jump dragon_tile_eightA
 
-label dragon_tile_eight:
+label dragon_transition_sevenB:
+    if MapNumber == 7.1:
+        scene map7_1 onlayer master
+    elif MapNumber == 7.2:
+        scene map7_2 onlayer master
+
+    menu:
+        "Take upper route" if MapNumber == 7.2:
+            $ MapNumber = 8
+            jump dragon_tile_eightB
+        
+        "Take lower route" if MapNumber == 7.1:
+            $ MapNumber = 8
+            jump dragon_tile_eightB
+
+label dragon_tile_eightA:
     "{i}The Pack emerges through the tree line, coming across a shimmering lake. The air feels oddly inviting, the surrounding forest growing quiet.{i}"
 
     df "...we're here."
 
     c "Oh boy! We made it to the Lake!"
-
-    b "Be careful. We don't know what will happen here."
 
     "{i}The animals all move closer to the lake, stopping right at the water's edge. Dragonfly looks at the others.{i}"
 
@@ -2556,15 +3069,9 @@ label dragon_tile_eight:
      
     hb "Wow, any sweeter and I would be able to get nectar from you."
 
-    r "Here here!" 
-    
-    "{i}Raccoon smiles a laughs loudly.{i}"
-
     "{i}They all stand there, a lingering question in the air: What now?{i}"
 
     "{i}Dragonfly takes a deep breath, and then starts flying close over the Lake, brushing their legs against the water's surface here and there.{i}"
-
-    "{i}Bear and Raccoon quickly follow, Bear faring quite well in the water. Raccoon behind them momentarily struggles to swim, but quickly finds their stride and follows after, using their tail as a propeller.{i}"
 
     "{i}Hummingbird sighs and shivers slightly, before also starting to slowly fly over the lake. Seeing the other two moving, Coyote quickly joins in, swimming the doggie paddle.{i}"
 
@@ -2579,6 +3086,195 @@ label dragon_tile_eight:
     "{i}They stop buzzing their wings, and let themselves be moved downward. Down, down, down, into the depths of the Lake. Whether they like it or not, the rest of the Pack soon follows them.{i}"
     "{i}As they all sink down, the cold water enveloping them, they're taken by an all-encompassing darkness.{i}"
 
+    $ DFsighting += 1
+    $ Csighting += 1
+    $ HBighting += 1
+    $ RunCount += 1
+    $ DragonflyBranch = False
+    
+    scene black with fade
+    
+    jump ending
+
+label dragon_tile_eightB:
+    "{i}The Pack emerges through the tree line, coming across a shimmering lake. The air feels oddly inviting, the surrounding forest growing quiet.{i}"
+
+    df "...we're here."
+
+    b "Be careful. We don't know what will happen here."
+
+    "{i}The animals all move closer to the lake, stopping right at the water's edge. Dragonfly looks at the others.{i}"
+
+    df "Whatever comes next friends, it has been an honor to travel with you all."
+
+    r "Here here!" 
+    
+    "{i}Raccoon smiles a laughs loudly.{i}"
+
+    "{i}They all stand there, a lingering question in the air: What now?{i}"
+
+    "{i}Dragonfly takes a deep breath, and then starts flying close over the Lake, brushing their legs against the water's surface here and there.{i}"
+
+    "{i}Bear and Raccoon quickly follow, Bear faring quite well in the water. Raccoon behind them momentarily struggles to swim, but quickly finds their stride and follows after, using their tail as a propeller.{i}"
+
+    "{i}As they journey out to the center of the Lake, an ominous feeling that something else is under the water starts to creep through them. Reaching the center, the fly or tread water in silence. Just waiting.{i}"
+
+    "{i}The animals in the water are the first to feel it. The water underneath them, slowly but surely being sucked downward.{i}"
+    
+    "{i}They try to swim upward, but the vacuum of water only grows strong. Then those above the lake feel it as well, as even the air is being sucked into the center of this lake.{i}"
+
+    "{i}As the animals try to fight it, it seems to be no use. Dragonfly tries to escape the force by flying up with all their might, but at the peak of their arc, seems to have some sort of realization.{i}" 
+    
+    "{i}They stop buzzing their wings, and let themselves be moved downward. Down, down, down, into the depths of the Lake. Whether they like it or not, the rest of the Pack soon follows them.{i}"
+    "{i}As they all sink down, the cold water enveloping them, they're taken by an all-encompassing darkness.{i}"
+    
+    $ DFsighting += 1
+    $ Rsighting += 1
+    $ Bsighting += 1
+    $ RunCount += 1
+    $ DragonflyBranch = False
+    
+    scene black with fade
+    
+    jump ending
+
+label ending:
+    if RunCount == 1:
+        "..."
+
+        "\"Who are you?\""
+
+        "{i}In the darkness, a pinprick of light appears.{i}"
+
+        "Who asked that question?"
+
+        "{i}The light feels warm amidst the cold darkness.{i}"
+
+        "{i}The light grows and grows, and with it the warmth, until you are amidst a white hot burning expanse of bright light.{i}"
+
+        "{i}The heat doesn't burn you. You're not even sure you can be burned. But it feels…hostile.{i}"
+
+        "\"I still recognize you, defiler,\" {i}comes a voice. It rumbles like an earthquake and whips around you like a tornado.{i}"
+
+        "\"You have not been forgiven.\""
+
+        "{i}You feel a pressure exerted on you, on whatever representation of yourself exists in this strange dreamscape.{i}"
+
+        "\"Bring me more memories, and we shall see.\""
+
+        "{i}You feel yourself being torn apart and spread, spread across the vast expanse of sky that shimmers above the forest. As the Lake fades into the distance, everything goes black.{i}"
+        
+        scene black with fade
+
+        jump starting_choice
+
+    elif RunCount == 2:
+        "..."
+
+        "\"Who are you?\""
+
+        "Did that question come from someone else? Or did you whisper it to yourself?"
+
+        "{i}You lie in darkness once more. You try to see, try to feel, but are unable to distinguish sensation and memory.{i}"
+
+        "{i}You wait.{i}"
+
+        "{i}...{i}"
+
+        "\"You have changed your scent.\""
+
+        "{i}You look down, and see a massive koi fish with shimmering butterfly wings. It swims through the dark expanse below, emitting a hot light that cuts through and pierces your soul.{i}"
+
+        "\"But I can still recognize you.\""
+
+        "{i}The light swells from the Fish Fairy, reaching a blinding point.{i}"
+
+        "\"I remember you being there. At the scene where one of my own was slain.\""
+        
+        "\"How dare you show yourself here!\""
+
+        "{i}The Fish Fairy lunges upwards towards you, mouth agape.{i}"
+
+        "\"Bring me more memories!\""
+
+        "{i}In one quick motion, the mouth of the koi Fish closes around you, leaving you once again in darkness.{i}"
+
+        "{i}You feel yourself being broken, being shattered and spread once more.{i}"
+
+        "What will the Lake have in store next?"
+        
+        scene black with fade
+
+        jump starting_choice
+
+    elif RunCount == 3:
+        "..."
+        "..."
+        "{i}You've never felt quite so alone.{i}"
+
+        "{i}As you soak in the familiar cold darkness, you lie in wait. Just waiting and waiting.{i}"
+
+        "{i}After a while, You start reflecting on your journey.{i}"
+
+        "You have come so far. Your Pack has come so far."
+
+        "Are the two even different?"
+
+        "Because of course, without You there would be no Pack. And if not for your Pack, You wouldn't be here."
+
+        "You've all been growing and learning, creating new memories together."
+
+        "And you don't have any other memories. So these ones must be yours."
+
+        "\"At last.\""
+
+        "{i}You turn around, coming face to face with the Fish Fairy again. This time, they are a much smaller size, only a little larger than you.{i}"
+
+        "\"You are…different. I no longer recognize you as what you once were.\""
+
+        "{i}The Fish Fairy holds out their fins, and you see a small mote of light held in them. A memory.{i}"
+
+        "{i}The light rises into the air, and grows larger. Within the light you see an image.{i}"
+
+        "{i}You see yourself. You had forgotten what you used to be, what you used to look like.{i}"
+
+        "{i}A dead animal lies nearby, with you standing over it. Why is it there? What were you doing?{i}"
+
+        "{i}As you look at your own expression, you fail to remember what you were doing there. Did you kill that animal? If so, why? Or did you just come across it, having nothing to do with its death?{i}"
+
+        "{i}Whatever the answer was, it certainly didn't change the outcome.{i}"
+
+        "{i}You look back at the Fish Fairy.{i}"
+
+        "\"You have changed. The person who was there is gone. In their place, stands you. That seems reason enough to let you go.\""
+
+        "{i}The light grows brighter and brighter, as a more gentle warmth washes over you. As everything fades to white, the last thing you remember is the smell of soil and pine.{i}"
+
+        scene white with fade
+
+        jump epilogue
+
+label epilogue:
+    scene white
+    "..."
+    
+    "\"Who are you?\""
+
+    "{i}This question is the first thing you think as you wake up.{i}"
+
+    "{i}You are a person, a whole soul within your own body.{i}"
+
+    "{i}But You are not the same as before. Your Pack has changed You. You remember what they remember, and you are as they were.{i}"
+
+    "{i}In our own way, we all have a Pack within us. That group of creatures that talk and snarl and love.{i}"
+
+    "{i}But you are You. Wholly, unique You. And You are here.{i}"
+
+    "{i}Time to go make some more memories.{i}"
+
+    "Thank you for playing!"
+
+    return
 
 
 #------------------------------------------
@@ -2589,6 +3285,6 @@ label dragon_tile_eight:
 
 
 # Using return ends the game but I forgot how change it so it ends depending on a route
-   return
+   
 
 
