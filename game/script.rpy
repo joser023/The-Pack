@@ -1427,7 +1427,7 @@ label Choose_Bear:
         "Yes":
             jump Begin_Bear
         "No":
-            jump start
+            jump starting_choice
 
 
 
