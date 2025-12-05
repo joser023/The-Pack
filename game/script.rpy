@@ -3752,7 +3752,7 @@ label dragon_tile_sixA:
             jump briar_squeezeA
 
         "Goad the elemental into leaving the thorn patch.":
-            jump briar_goadA
+            jump briar_goad
 
         "Blow the vines aside and run through [[Wind Gale].":
             jump briar_galeA
